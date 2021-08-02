@@ -1,0 +1,22 @@
+# shellcheck shell=sh disable=SC3043
+. "$HOME/.x-cmd/boot" 2>/dev/null || eval '$(curl https://get.x-cmd.com)'
+
+BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
+
+i() {
+  if [ ! -d "$BASE_DIR/node_modules" ]; then
+     yarn install
+  else
+     read -p "Is need to remove node_modules (y/n)?:" _IS_NEED
+     _IS_NEED=${_IS_NEED:-y}
+     if echo "$_IS_NEED" | grep -iq "^y" ;then
+        rm -rf $BASE_DIR/node_modules
+        yarn install
+      else 
+        yarn install
+      fi
+  fi
+}
+
+i
+

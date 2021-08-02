@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+# 运行docSearch docker建立搜索索引
+# 根目录需建立.env文件：https://www.algolia.com/apps/CXZ8IP0O5G/api-keys/all
+# APPLICATION_ID=your APPLICATION_ID
+# API_KEY=your API_KEY
+
+BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
+CONFIG_FILE=$BASE_DIRdocs/.vuepress/configs/docSearch/docSearchConfig.json
+
+i() {
+  set -e
+    if [ ! -f "$BASE_DIR/.env" ]; then
+      echo 'not found .env file'
+      exit 0
+    else
+      docker run -it --env-file=.env -e "CONFIG=$(cat $CONFIG_FILE | jq -r tostring)" algolia/docsearch-scraper
+    fi
+  cd -
+}
+
+i

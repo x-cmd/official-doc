@@ -1,0 +1,16 @@
+# shellcheck shell=sh disable=SC3043
+. "$HOME/.x-cmd/boot" 2>/dev/null || eval '$(curl https://get.x-cmd.com)'
+
+BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
+
+d() {
+  if [ ! -d "$BASE_DIR/node_modules" ]; then
+     x i &&
+     yarn docs:dev
+  else
+    yarn docs:dev
+  fi
+}
+
+d
+

@@ -1,0 +1,8 @@
+# shellcheck shell=sh disable=SC3043
+. "$HOME/.x-cmd/boot" 2>/dev/null || eval '$(curl https://get.x-cmd.com)'
+
+b() {
+  yarn docs:build
+}
+
+b
