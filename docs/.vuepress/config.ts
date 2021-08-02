@@ -18,7 +18,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: pageInfo.themeConfig,
 
   define: {
-    __BASE__: "/vuepress-next-template/",
-    __HOME_PAGE_TITLE__: "Qbenben-hello word",
+    __BASE__: "/x-cmd-official-template/"
   },
 })
