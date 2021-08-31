@@ -1,12 +1,9 @@
 ---
 home: true
-heroText: 'hello-word'
-tagline: '帮助你快速搭建vuepress-next静态网站！'
-heroImage: /images/logo.png
-actions:
-  - text: 快速上手
-    link: /helloword.html
-    type: primary
+heroText: null
+tagline: null
+heroImage: null
+pageClass: custom-page-class
 ---
 
 <HomePage />

@@ -5,7 +5,7 @@ const docSearchPlugin: PluginConfig  = [
   '@vuepress/register-components',
   {
     components: {
-      HomePage: path.resolve(__dirname, '../components/HomePage.vue'),
+      HomePage: path.resolve(__dirname, '../components/pages/HomePage.vue'),
     },
   },
 ]

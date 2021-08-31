@@ -2,20 +2,24 @@ import type { NavbarConfig } from '@vuepress/theme-default'
 
 export const zh: NavbarConfig = [
   {
-    text: 'hello',
-    link: '/',
+    text: '文档',
+    link: '/helloword.md',
   },
   {
-    text: 'word',
+    text: '企业版',
+    link: '/helloword.md',
+  },
+  {
+    text: '更多模块',
     children: [
       {
-        text: 'word template',
+        text: 'Shell',
         children: [
           '/helloword.md',
         ],
       },
       {
-        text: 'hello word',
+        text: 'Rust',
         children: [
           '/helloword/README.md'
         ],

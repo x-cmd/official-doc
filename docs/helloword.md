@@ -2,7 +2,7 @@
 lastUpdated: true
 sidebarDepth: 2
 ---
-# hello-word-1 —— 第一模块
+# hello-world-1 —— 第一模块
 
 > 引用
 
@@ -28,8 +28,8 @@ npm install -D vuepress@next
   </CodeGroupItem>
 </CodeGroup>
 
--  hello-word-1
--  hello-word-2
+-  hello-world-1
+-  hello-world-2
 
 - code: `code 1`
 

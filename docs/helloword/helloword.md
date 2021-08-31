@@ -1,4 +1,4 @@
-# hello-word-2 —— 第二模块
+# hello-world-2 —— 第二模块
 
 template 第二分类篇文章
 
@@ -20,8 +20,8 @@ npm install -D vuepress@next
   </CodeGroupItem>
 </CodeGroup>
 
--  hello-word-1
--  hello-word-2
+-  hello-world-1
+-  hello-world-2
 
 - code: `code 1`
 

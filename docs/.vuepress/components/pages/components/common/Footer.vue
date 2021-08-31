@@ -1,8 +1,8 @@
 <template>
   <footer
-    class="items-center text-lg"
+    class="text-center mt-2 p-9 text-gray-400 text-sm"
   >
-  自定义 footer 组件
+  ISC Licensed | Copyright © 2019-present
   </footer>
 </template>
 
@@ -24,7 +24,6 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-    padding: 2.5rem;
-    text-align: center;
+    border-top: 1px solid var(--c-border);
 }
 </style>
