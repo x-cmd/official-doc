@@ -18,6 +18,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: pageInfo.themeConfig,
 
   define: {
-    __BASE__: "/x-cmd-official-template/"
+    __BASE__: "/"
   },
 })
