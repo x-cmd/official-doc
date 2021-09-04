@@ -1,9 +1,22 @@
 #!/usr/bin/env sh
 # shellcheck shell=sh disable=SC3043
 . "$HOME/.x-cmd/boot" 2>/dev/null || eval '$(curl https://get.x-cmd.com)'
+BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
+DIST_PATH=$BASE_DIR/docs/.vuepress/dist
+TEMPLATE_PATH=$BASE_DIR/docs/.vuepress/templates/
+COMMIT_ID=`git rev-parse --short HEAD`
 
 b() {
-  yarn docs:build
+  yarn docs:build &&
+  cp -r $DIST_PATH $TEMPLATE_PATH &&
+  PACKAGE_VERSION=template-${COMMIT_ID} &&
+  mv ${TEMPLATE_PATH}/dist ${TEMPLATE_PATH}/${PACKAGE_VERSION} &&
+  cd $TEMPLATE_PATH && 
+  zip -r ${PACKAGE_VERSION}.zip ${PACKAGE_VERSION} &&
+  cd $BASE_DIR
+  echo $(tput setaf 2)"Packaged successfully." $(tput sgr0) &&
+  echo The package version is $(tput setaf 5)" $PACKAGE_VERSION" $(tput sgr0) &&
+  echo The package address is in$(tput setaf 5)" $TEMPLATE_PATH" $(tput sgr0)
 }
 
 b

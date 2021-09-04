@@ -6,7 +6,7 @@
 # API_KEY=your API_KEY
 
 BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
-CONFIG_FILE=$BASE_DIRdocs/.vuepress/configs/docSearch/docSearchConfig.json
+CONFIG_FILE=$BASE_DIR/docs/.vuepress/configs/docSearch/docSearchConfig.json
 
 i() {
   set -e
