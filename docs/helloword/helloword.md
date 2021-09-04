@@ -2,23 +2,6 @@
 
 template 第二分类篇文章
 
-<CodeGroup>
-  <CodeGroupItem title="YARN" active>
-
-```bash
-yarn add -D vuepress@next
-```
-
-  </CodeGroupItem>
-
-  <CodeGroupItem title="NPM">
-
-```bash
-npm install -D vuepress@next
-```
-
-  </CodeGroupItem>
-</CodeGroup>
 
 -  hello-world-1
 -  hello-world-2

@@ -16,7 +16,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   plugins: pagePlugins,
 
   themeConfig: pageInfo.themeConfig,
-
   define: {
     __BASE__: "/"
   },

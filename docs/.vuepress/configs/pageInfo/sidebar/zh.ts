@@ -3,7 +3,7 @@ import type { SidebarConfig } from '@vuepress/theme-default'
 export const zh: SidebarConfig = {
   '/': [
     {
-      text: 'hello',
+      text: 'markdown语法效果展示',
       children: [
         '/helloword.md',
       ],
