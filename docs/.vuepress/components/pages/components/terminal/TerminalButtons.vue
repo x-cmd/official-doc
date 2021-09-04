@@ -1,7 +1,7 @@
 <template>
-  <div class="flex space-x-2 pb-4">
+  <div class="flex space-x-2">
     <button v-for="(demoInfo, index) in demoInfos" :key="index"
-    class="btn rounded-full py-3 px-6" :class="{active: activeIndex === index}" @click="change(index)">{{demoInfo.textBtn}}</button>
+    class="btn text-sm md:text-lg rounded-full py-3 px-6" :class="{active: activeIndex === index}" @click="change(index)">{{demoInfo.textBtn}}</button>
   </div>
 </template>
 
@@ -38,7 +38,6 @@ export default {
     background-color: var(--c-bg);
     border-color: var(--c-brand);
     display: inline-block;
-    font-size: 1.2rem;
     border-width: 2px;
     border-style: solid;
     transition: background-color .1s ease;

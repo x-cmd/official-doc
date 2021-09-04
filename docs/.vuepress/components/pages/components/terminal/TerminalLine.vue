@@ -3,7 +3,7 @@
     <span class="symbol font-extrabold text-green-500 text-2xl">></span>
     {{ inputText }}
   </p>
-  <p v-if="isShowOutput" class="output font-semibold tracking-wide" v-html="outputText"></p>
+  <p v-if="isShowOutput" class="output font-medium" v-html="outputText"></p>
 </template>
 
 <script>
@@ -24,6 +24,7 @@ export default {
       start: () => {},
       write: () => {},
       clear: () => {},
+      startTextingTimer: null,
       textTimer: null,
       index: 0,
       inputContain: [],
@@ -46,8 +47,10 @@ export default {
         data.outputVal = props.terminalInfo.outputValue || '';
         const delay = props.terminalInfo.delay || 0;
         clearInterval(data.textTimer);
+        clearTimeout(data.startTextingTimer);
         data.textTimer = null;
-        setTimeout(() => {
+        data.startTextingTimer = null;
+        data.startTextingTimer = setTimeout(() => {
           data.isShowInput = props.terminalInfo.type === 'input' 
             || props.terminalInfo.type === 'input-output';
           data.clear();
@@ -57,7 +60,10 @@ export default {
       };
       data.clear = () => {
         data.inputContain = [];
+        clearInterval(data.textTimer);
+        clearTimeout(data.startTextingTimer);
         data.textTimer = null;
+        data.startTextingTimer = null;
         data.index = 0;
         data.inputText = "";
         data.outputText = "";
@@ -75,9 +81,6 @@ export default {
           }, 500);
           return;
         }
-        if (data.textTimer === null) return;
-        data.textTimer = null;
-        clearInterval(data.textTimer);
         data.clear();
         data.isShowInput = false;
         data.isShowOutput = false;
@@ -86,7 +89,6 @@ export default {
     watch(
       () => props.terminalInfo,
       (val) => {
-        if (data.textTimer === null) return;
         clearInterval(data.textTimer);
         data.clear();
         data.inputVal = val.inputValue || '';
@@ -97,9 +99,6 @@ export default {
       }
     )
     onBeforeUnmount(() => {
-      if (data.textTimer === null) return;
-      data.textTimer = null;
-      clearInterval(data.textTimer);
       data.clear();
     });
     const refData = toRefs(data);

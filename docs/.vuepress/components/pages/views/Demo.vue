@@ -1,9 +1,9 @@
 <template>
-  <div class="h-full flex flex-col justify-around items-center space-y-10">
+  <div class="h-full flex flex-col justify-around items-center space-y-5  md:space-y-10">
     <h3 class="demo-title m-0 pt-3 lg:text-4xl">
       <span class="text-green-500 lg:text-3xl">→</span> {{titleText}}
     </h3>
-    <h4 class="demo-describe m-0 pt-0 text-base text-gray-500">
+    <h4 class="demo-describe m-0 pt-0 text-sm md:text-base text-gray-500">
       {{describeText}}
       <router-link :to="link">
         查看更多

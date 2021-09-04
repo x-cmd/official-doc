@@ -21,11 +21,11 @@ export const DEMO_INFO:Array<DemoInfoType>  = [
         <p class="leading-4 my-1" style="color: cyan"> ----------------------</p>
         <p class="leading-4 my-1" style="color: cyan"> < hello world ></p>
         <p class="leading-4 my-1" style="color: cyan"> ----------------------</p>
-        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">             ^__^</p>
-        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">             (oo)\\______</p>
-        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">             (__)\\  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; )\\/\\</p>
-        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">                &nbsp;&nbsp;&nbsp;||-----w |</p>
-        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">                &nbsp;&nbsp;&nbsp;||  &nbsp;&nbsp;       ||</p>
+        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">          ^__^</p>
+        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">          (oo)\\______</p>
+        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">          (__)\\      )\\/\\</p>
+        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">             ||-----w |</p>
+        <p class="leading-4 my-2 whitespace-pre tracking-widest" style="color: cyan">             ||      ||</p>
         `
       }
     ]
@@ -47,9 +47,9 @@ export const DEMO_INFO:Array<DemoInfoType>  = [
         key: 'json-2',
         inputValue: 'cat ./helloworld.json | json_color',
         outputValue: `
-            <p class="leading-4 my-2 whitespace-pre tracking-widest">{</p>
-            <p class="leading-4 my-2 whitespace-pre tracking-widest">&nbsp;&nbsp;<span style="color: cyan">"word"</span><span>:&nbsp;"hello world"</span></p>
-            <p class="leading-4 my-2 whitespace-pre tracking-widest">}</p>
+            <p class="leading-4 my-2 whitespace-pre">{</p>
+            <p class="leading-4 my-2 whitespace-pre">&nbsp;&nbsp;<span style="color: cyan">"word"</span><span>:&nbsp;"hello world"</span></p>
+            <p class="leading-4 my-2 whitespace-pre">}</p>
           `
       }
     ]
