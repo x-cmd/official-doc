@@ -31,6 +31,9 @@ sidebarDepth: 1
 2. list-2
 3. list-3
 
+- [ ] Check Box
+- [x] Checked Box
+
 **粗体**
 
 *斜体*

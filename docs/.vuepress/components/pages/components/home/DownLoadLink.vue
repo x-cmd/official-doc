@@ -6,7 +6,7 @@
         <CodeGroupItem title="Shell">
           <p class="link py-3 px-2 rounded-b-lg flex items-center">
             <span class="select-none symbol font-black text-xl mr-2">></span>
-            <code><span class="text-green-500">eval</span><span class="text-yellow-600"> '$(curl https://get.x-cmd.com)'</span></code>
+            <code><span class="text-green-500">eval</span><span class="text-yellow-600"> "$(curl https://get.x-cmd.com)"</span></code>
             <button class="float-right outline-none border-none bg-transparent" title="copy" type="button" @click="copy">
               <svg v-show="!isClickCopy" class="text-white w-4 h-4 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M384 112v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h80c0-35.29 28.71-64 64-64s64 28.71 64 64h80c26.51 0 48 21.49 48 48zM192 40c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24m96 114v-20a6 6 0 00-6-6H102a6 6 0 00-6 6v20a6 6 0 006 6h180a6 6 0 006-6z"></path></svg>
               <svg v-show="isClickCopy" class="icon text-green-500 w-4 h-4 cursor-default" t="1628132348633" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1994" width="200" height="200"><path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#6CCF00" p-id="1995"></path><path d="M461.23008 602.5216l275.1488-275.1488 72.3968 72.41728-347.5456 347.5456L215.04 501.17632l72.40704-72.41728z" fill="#FFFFFF" p-id="1996"></path></svg>
@@ -41,7 +41,7 @@ export default {
     onMounted(() => {
       data.copy = async () => {
         try {
-          await toClipboard(`eval '$(curl https://get.x-cmd.com)'`);
+          await toClipboard(`eval "$(curl https://get.x-cmd.com)"`);
           data.isClickCopy = true;
           setTimeout(() => {
             data.isClickCopy = false;

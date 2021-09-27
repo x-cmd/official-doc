@@ -14,6 +14,9 @@ export default defineUserConfig<DefaultThemeOptions>({
   bundlerConfig: bunderInfo.bundlerConfig,
 
   plugins: pagePlugins,
+  extendsMarkdown: (md) => {
+    md.use(require('markdown-it-task-lists'));
+  },
 
   themeConfig: pageInfo.themeConfig,
   define: {
