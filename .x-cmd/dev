@@ -1,18 +1,14 @@
-#!/usr/bin/env sh
+# shellcheck shell=bash disable=SC1091,SC2034 #xsh
 
-# shellcheck shell=sh disable=SC3043
-. "$HOME/.x-cmd/boot" 2>/dev/null || eval '$(curl https://get.x-cmd.com)'
+# Section: Arg
+WORK_DIR="$(x wsroot)"
+# EndSection
 
-BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
-
-d() {
-  if [ ! -d "$BASE_DIR/node_modules" ]; then
-     x init &&
-     yarn docs:dev
-  else
+# Section: Main
+if [ ! -d "$WORK_DIR/node_modules" ]; then
+    x init &&
     yarn docs:dev
-  fi
-}
-
-d
-
+else
+  yarn docs:dev
+fi
+# EndSection

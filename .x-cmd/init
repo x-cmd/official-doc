@@ -1,23 +1,21 @@
-#!/usr/bin/env sh
-# shellcheck shell=sh disable=SC3043
-. "$HOME/.x-cmd/boot" 2>/dev/null || eval '$(curl https://get.x-cmd.com)'
+# shellcheck shell=bash disable=SC1091,SC2034 #xsh
 
-BASE_DIR=$(pwd $(dirname ${BASH_SOURCE[0]})/../)
+# Section: Arg
+xrc ui
+WORK_DIR="$(x wsroot)"
+# EndSection
 
-i() {
-  if [ ! -d "$BASE_DIR/node_modules" ]; then
-     yarn install
-  else
-     read -p "Is need to remove node_modules (y/n)?:" _IS_NEED
-     _IS_NEED=${_IS_NEED:-y}
-     if echo "$_IS_NEED" | grep -iq "^y" ;then
-        rm -rf $BASE_DIR/node_modules
-        yarn install
-      else 
-        yarn install
-      fi
-  fi
-}
-
-i
+# Section: Main
+if [ ! -d "$WORK_DIR/node_modules" ]; then
+    yarn install
+else
+    ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
+    if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
+      rm -rf "$WORK_DIR/node_modules"
+      yarn install
+    else 
+      yarn install
+    fi
+fi
+# EndSection
 
