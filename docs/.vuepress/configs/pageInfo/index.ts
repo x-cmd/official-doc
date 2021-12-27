@@ -44,11 +44,11 @@ export const themeConfig: AppOptions["themeConfig"] = {
   navbar: navbar.zh,
   sidebar: sidebar.zh,
   sidebarDepth: 1,
-  repo: 'https://gitee.com/lteam18/x-cmd-doc',
+  repo: 'https://github.com/x-cmd/x-cmd',
   logo: '/images/logo.png',
   lastUpdatedText: '更新时间',
   docsRepo: 'https://gitee.com/lteam18/x-cmd-doc',
-  docsBranch: 'master',
+  docsBranch: 'main',
   docsDir: 'docs',
   editLinkPattern: ':repo/',
 }

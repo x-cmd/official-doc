@@ -47,12 +47,12 @@ export default {
 h2 {
   color: var(--c-text-lightest);
 }
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
   .home .hero .action-button {
   font-size: 1.2rem;
   }
 }
-@media (max-width: 1024px) { 
+@media (max-width: 1024px) {
   .home .hero .action-button {
   font-size: 1rem;
 }

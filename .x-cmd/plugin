@@ -1,0 +1,9 @@
+# shellcheck shell=bash disable=SC1091,SC2034 #xsh
+
+# Section: Arg
+WORK_DIR="$(x wsroot)"
+# EndSection
+
+# Section: Main
+lerna bootstrap
+# EndSection

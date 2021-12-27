@@ -22,7 +22,7 @@ export default defineClientAppSetup(() => {
         };
         let instance = createApp(CodeCopy, {
           parent: el,
-          code: el.querySelector("pre").innerText,
+          code: el.querySelector("pre, code[class*='pre-']").innerText,
           options: options,
         });
         let childEl = document.createElement("div");
@@ -31,7 +31,7 @@ export default defineClientAppSetup(() => {
 
         el.classList.add("code-copy-added");
       });
-    }, 100);
+    }, 500);
   };
 
   onMounted(() => {

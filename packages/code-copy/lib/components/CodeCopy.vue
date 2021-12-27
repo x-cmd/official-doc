@@ -3,8 +3,8 @@
     <svg
       @click="copyToClipboard"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       :class="iconClass"
       :style="alignStyle"
@@ -125,7 +125,7 @@ svg {
   right: 7.5px;
   opacity: 0.75;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 19;
 }
 
 svg.hover {
