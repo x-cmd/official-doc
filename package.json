@@ -1,10 +1,14 @@
 {
-  "name": "vuepress-next-template",
+  "private": true,
+  "name": "x-cmd-doc",
   "version": "0.0.1",
-  "description": "fastly get vuepress next template",
+  "description": "x-cmd document",
   "main": "index.js",
   "repository": "https://github.com/Zhengqbbb/vuepress-next-template.git",
   "author": "Zhengqbbb <1074059947@qq.com>",
+  "workspaces": [
+    "packages/*"
+  ],
   "license": "MIT",
   "scripts": {
     "docs:dev": "vuepress dev docs --clean-cache",
@@ -12,12 +16,16 @@
     "docs:info": "vuepress info"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.22",
     "@vuepress/plugin-register-components": "^2.0.0-beta.22",
     "@vuepress/plugin-search": "^2.0.0-beta.22",
     "autoprefixer": "^10.3.1",
     "eslint-config-vuepress-typescript": "^2.2.1",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0",
     "postcss": "^8.3.0",
     "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5",
@@ -28,5 +36,13 @@
   },
   "dependencies": {
     "markdown-it-task-lists": "^2.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": [
+        "lint-staged"
+      ]
+    }
   }
 }

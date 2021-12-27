@@ -1,0 +1,27 @@
+{
+  "name": "@x-cmd/vuepress-plugin-clipboard",
+  "version": "0.0.1",
+  "description": "Vuepress plugin - copy clipboard",
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "plugin",
+    "code-clipboard",
+    "copy",
+    "clipboard"
+  ],
+  "homepage": "https://github.com/x-cmd",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-cmd"
+  },
+  "author": "zhengqbbb",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ]
+}

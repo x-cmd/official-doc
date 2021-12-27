@@ -76,7 +76,7 @@ export const config: UserConfig = {
 ```
 
 ### 导入代码
-@[code](./hello.sh)
+@[code](./code/hello.sh)
 ### 代码块组合
 #### 1. 标签写法
 <CodeGroup>

@@ -11,6 +11,6 @@ CONFIG_FILE=$WORK_DIR/docs/.vuepress/configs/docSearch/docSearchConfig.json
 # EndSection
 
 # Section: Main
-[ ! -f "$WORK_DIR/.env" ] && printf "%s\n" "Not found env file" &&return
+[ ! -f "$WORK_DIR/.env" ] && printf "%s\n" "Not found env file" && return
 docker run -it --env-file=.env -e "CONFIG=$(cat "${CONFIG_FILE}" | x jq -r tostring)" algolia/docsearch-scraper
 # EndSection
