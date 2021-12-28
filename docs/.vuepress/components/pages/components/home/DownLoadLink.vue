@@ -22,9 +22,7 @@
 </template>
 
 <script>
-import { reactive, toRefs, onMounted } from "vue";
-import useClipboard from "vue-clipboard3";
-
+// import { reactive, toRefs, onMounted } from "vue";
 export default {
   setup(props) {
   },
