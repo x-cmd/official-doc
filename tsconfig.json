@@ -4,6 +4,7 @@
   "files": [],
   "include": [
     "docs/.vuepress/**/*",
-    "package.json"
+    "**/*.ts",
+    "**/*.vue",
   ]
 }

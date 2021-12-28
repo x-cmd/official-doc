@@ -20,7 +20,7 @@
           <Card title="安全性" context="安全" />
           <Card title="企业级" context="我们提供专业的企业版，为企业提供一站式混合云管理" link linkText="查看详情" linkUrl="/helloword.html" />
         </div>
-        <Footer class=" m-auto w-3/5"/>
+        <Footer class="m-auto w-3/5"/>
       </div>
     </div>
   </div>

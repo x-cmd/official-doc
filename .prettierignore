@@ -1,0 +1,10 @@
+# Ignore
+dist
+template
+node_modules
+/docs/.vuepress/public
+/*.md
+/*.html
+.gitee
+.git
+.vscode
