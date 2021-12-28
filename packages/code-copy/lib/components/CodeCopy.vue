@@ -3,8 +3,6 @@
     <svg
       @click="copyToClipboard"
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
       viewBox="0 0 24 24"
       :class="iconClass"
       :style="alignStyle"
@@ -26,7 +24,7 @@
 
 <script>
 export default {
-  name: "CodeCopy",
+  name: 'CodeCopy',
   props: {
     parent: Object,
     code: String,
@@ -37,25 +35,25 @@ export default {
       backgroundColor: String,
       successText: String,
       successTextColor: String,
-      staticIcon: Boolean,
-    },
+      staticIcon: Boolean
+    }
   },
   data() {
     return {
       success: false,
       originalBackground: null,
-      originalTransition: null,
+      originalTransition: null
     };
   },
   computed: {
     alignStyle() {
       let style = {};
-      style[this.options.align] = "7.5px";
+      style[this.options.align] = '7.5px';
       return style;
     },
     iconClass() {
-      return this.options.staticIcon ? "" : "hover";
-    },
+      return this.options.staticIcon ? '' : 'hover';
+    }
   },
   mounted() {
     this.originalTransition = this.parent.style.transition;
@@ -73,7 +71,7 @@ export default {
         ? {
             r: parseInt(result[1], 16),
             g: parseInt(result[2], 16),
-            b: parseInt(result[3], 16),
+            b: parseInt(result[3], 16)
           }
         : null;
     },
@@ -86,11 +84,11 @@ export default {
           () => {}
         );
       } else {
-        let copyelement = document.createElement("textarea");
+        let copyelement = document.createElement('textarea');
         document.body.appendChild(copyelement);
         copyelement.value = this.code;
         copyelement.select();
-        document.execCommand("Copy");
+        document.execCommand('Copy');
         copyelement.remove();
 
         this.setSuccessTransitions();
@@ -100,7 +98,7 @@ export default {
       clearTimeout(this.successTimeout);
 
       if (this.options.backgroundTransition) {
-        this.parent.style.transition = "background 350ms";
+        this.parent.style.transition = 'background 350ms';
 
         let color = this.hexToRgb(this.options.backgroundColor);
         this.parent.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.1)`;
@@ -114,18 +112,50 @@ export default {
         }
         this.success = false;
       }, 500);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style scoped>
+@media (max-width: 1024px) {
+  div svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  div svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  div svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
 svg {
+  z-index: 19;
+  width: 1.4rem;
+  height: 1.4rem;
   position: absolute;
-  right: 7.5px;
+  right: 0.3rem;
   opacity: 0.75;
   cursor: pointer;
-  z-index: 19;
+}
+
+span {
+  position: absolute;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  right: 2.5rem;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
 svg.hover {
@@ -134,15 +164,6 @@ svg.hover {
 
 svg:hover {
   opacity: 1 !important;
-}
-
-span {
-  position: absolute;
-  font-size: 0.85rem;
-  line-height: 1.2rem;
-  right: 40px;
-  opacity: 0;
-  transition: opacity 500ms;
 }
 
 .success {
