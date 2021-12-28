@@ -4,7 +4,7 @@
     <div class="flex home hero items-center space-y-0 flex-col xl:flex-row md:space-y-4 md:space-x-6">
       <CodeGroup class="text-sm lg:text-2xl md:text-3xl sm:text-lx w-full">
         <CodeGroupItem title="Shell" class="language-bash">
-          <p class="link py-3 px-2 rounded-b-lg flex items-center">
+          <p class="link py-3 px-2 mx-2 rounded-b-lg flex items-center">
             <span class="select-none symbol font-black text-xl mr-2">></span>
             <code class="pre-bash"><span class="text-green-500">eval</span><span class="text-yellow-600"> "$(curl https://get.x-cmd.com)"</span></code>
           </p>
@@ -33,9 +33,13 @@ export default {
 
 <style lang="scss" scoped>
 @media (max-width: 419px) {
-  :deep .code-group__nav {
+  :deep(.code-group__nav) {
     margin-left: 0rem;
     margin-right: 0rem;
+    border-radius: 6px;
+  }
+  :deep(div[class*=language-]){
+    margin: 0;
     border-radius: 6px;
   }
 }

@@ -9,8 +9,11 @@ export const bundlerConfig: AppOptions["bundlerConfig"] = {
   postcss: {
     postcssOptions:{
       plugins: [
-        require('tailwindcss'),
-          require('autoprefixer')
+          require('tailwindcss'),
+          require('autoprefixer'),
+          require('cssnano')({
+            preset: 'default'
+        }),
       ]
     }
   },
