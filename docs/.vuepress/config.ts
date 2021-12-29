@@ -1,7 +1,7 @@
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
-import { pageInfo, bunderInfo } from './configs';
-import pagePlugins from './plugins';
+import { defineUserConfig } from "vuepress";
+import type { DefaultThemeOptions } from "vuepress";
+import { bunderInfo, pageInfo } from "./configs";
+import pagePlugins from "./plugins";
 
 export default defineUserConfig<DefaultThemeOptions>({
   lang: pageInfo.lang,
@@ -15,11 +15,11 @@ export default defineUserConfig<DefaultThemeOptions>({
 
   plugins: pagePlugins,
   extendsMarkdown: (md) => {
-    md.use(require('markdown-it-task-lists'));
+    md.use(require("markdown-it-task-lists"));
   },
 
   themeConfig: pageInfo.themeConfig,
   define: {
     __BASE__: "/"
-  },
-})
+  }
+});
