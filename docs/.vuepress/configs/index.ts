@@ -1,2 +1,2 @@
-export * as pageInfo from './pageInfo'
-export * as bunderInfo from './bunder'
+export * as pageInfo from "./pageInfo";
+export * as bunderInfo from "./bunder";

@@ -6,7 +6,7 @@
   <p v-if="isShowOutput" class="output font-medium" v-html="outputText"></p>
 </template>
 
-<script>
+<script lang="ts">
 import { reactive, toRefs, onMounted, onBeforeUnmount, watch } from "vue";
 
 export default {
@@ -41,7 +41,7 @@ export default {
         }
       };
       data.start = () => {
-        data.isShowOutput = props.terminalInfo.type === 'output' 
+        data.isShowOutput = props.terminalInfo.type === 'output'
           || props.terminalInfo.type === 'input-output';
         data.inputVal = props.terminalInfo.inputValue || '';
         data.outputVal = props.terminalInfo.outputValue || '';
@@ -51,7 +51,7 @@ export default {
         data.textTimer = null;
         data.startTextingTimer = null;
         data.startTextingTimer = setTimeout(() => {
-          data.isShowInput = props.terminalInfo.type === 'input' 
+          data.isShowInput = props.terminalInfo.type === 'input'
             || props.terminalInfo.type === 'input-output';
           data.clear();
           data.inputContain = data.inputVal.split("");
@@ -93,7 +93,7 @@ export default {
         data.clear();
         data.inputVal = val.inputValue || '';
         data.outputVal = val.outputValue || '';
-        data.isShowOutput = val.type === 'output' 
+        data.isShowOutput = val.type === 'output'
         || val.type === 'input-output';
         data.start();
       }

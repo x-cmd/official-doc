@@ -1,37 +1,43 @@
 <template>
-  <div class="fullPage" ref="fullPageRef">
+  <div ref="fullPageRef" class="fullPage">
     <div
-      class="fullPageContainer"
       ref="fullPageContainer"
+      class="fullPageContainer"
       @mousewheel="mouseWheelHandle"
       @DOMMouseScroll="mouseWheelHandle"
       @touchmove="touchMoveHandle"
       @touchstart="touchStartHandle"
     >
       <div class="section section1">
-        <Content @next="next"/>
+        <Content @next="next" />
       </div>
       <div class="section section2">
-        <Demo @next="next" :pageIndex="fullpage.current" />
+        <Demo :page-index="fullpage.current" @next="next" />
       </div>
       <div class="section section3">
-        <div class="cards-group h-4/5 flex flex-col md:flex-row justify-center items-center space-y-5 md:space-y-0 md:space-x-3">
-          <Card title="功能强大" context="X-Cmd可以在各种常见的操作系统和常见的shell中流畅运行。让shell拥有了无限的可能，却又不失shell本来的魅力" />
-          <Card title="安全性" context="安全" />
-          <Card title="企业级" context="我们提供专业的企业版，为企业提供一站式混合云管理" link linkText="查看详情" linkUrl="/helloword.html" />
+        <div class="cards-group h-4/5 flex flex-col justify-center items-center space-y-5 md:space-x-3 xl:flex-row xl:space-y-0">
+          <Card title="增强终端" context="使用X-Cmd的增强命令，操作简单，功能丰富，轻松打造你的最强终端。带你体验终端新世界" />
+          <Card title="云脚本" context="X-Cmd提供云脚本存储库，存放的你发布的脚本文件，让你在POSIX Shell环境进行快捷拉取和使用" />
+          <Card
+            link
+            link-url="/helloword.html"
+            link-text="查看详情"
+            title="云管理"
+            context="保证安全性情况下，利用POSIX Shell的兼容能力和轻量化的核心包体积，体验方便快捷的云服务管理"
+          />
         </div>
-        <Footer class="m-auto w-3/5"/>
+        <Footer class="m-auto w-3/5" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { reactive, toRefs, onMounted, ref } from "vue";
+import { onMounted, reactive, ref, toRefs } from "vue";
+import Card from "./components/common/Card.vue";
+import Footer from "./components/common/Footer.vue";
 import Content from "./views/Content.vue";
 import Demo from "./views/Demo.vue";
-import Footer from "./components/common/Footer.vue";
-import Card from "./components/common/Card.vue";
 
 export default {
   components: {
@@ -41,8 +47,8 @@ export default {
     Card
   },
   setup(props) {
-    let fullPageRef = ref(null);
-    let fullPageContainer = ref(null);
+    const fullPageRef = ref(null);
+    const fullPageContainer = ref(null);
     // data
     const data = reactive({
       pageTotal: 3,
@@ -51,7 +57,7 @@ export default {
       fullpage: {
         current: 1, // 当前的页面编号
         isScrolling: false, // 是否在滚动,是为了防止滚动多页，需要通过一个变量来控制是否滚动
-        deltaY: 0, // 返回鼠标滚轮的垂直滚动量，保存的鼠标滚动事件的deleteY,用来判断是往下还是往上滚
+        deltaY: 0 // 返回鼠标滚轮的垂直滚动量，保存的鼠标滚动事件的deleteY,用来判断是往下还是往上滚
       },
       toggleSidebar: () => {},
       next: () => {}, // 往下切换
@@ -60,7 +66,7 @@ export default {
       directToMove: () => {},
       mouseWheelHandle: () => {},
       touchMoveHandle: () => {},
-      touchStartHandle: () => {},
+      touchStartHandle: () => {}
     });
 
     onMounted(() => {
@@ -69,7 +75,7 @@ export default {
       };
 
       data.next = () => {
-        let len = data.pageTotal; // 页面的个数
+        const len = data.pageTotal; // 页面的个数
         if (data.fullpage.current + 1 <= len) {
           // 如果当前页面编号+1 小于总个数，则可以执行向下滑动
           data.fullpage.current += 1; // 页面+1
@@ -91,15 +97,15 @@ export default {
         // 为了防止滚动多页，需要通过一个变量来控制是否滚动
         data.fullpage.isScrolling = true;
         data.directToMove(index);
-        //执行滚动
+        // 执行滚动
         setTimeout(() => {
-          //这里的动画是1s执行完，使用setTimeout延迟1s后解锁
+          // 这里的动画是1s执行完，使用setTimeout延迟1s后解锁
           data.fullpage.isScrolling = false;
         }, 1500);
       };
 
       data.directToMove = (index) => {
-        //获取屏幕的宽度
+        // 获取屏幕的宽度
         let height = fullPageRef._value.clientHeight;
         // 获取执行tarnsform的元素
         let scrollPage = fullPageContainer;
@@ -164,15 +170,15 @@ export default {
     return {
       fullPageRef,
       fullPageContainer,
-      ...refData,
+      ...refData
     };
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .fullPage {
-  height: calc(100vh - 3.6rem); //一定要设置，保证占满
+  height: calc(100vh - 3.8rem); //一定要设置，保证占满
   overflow: hidden; //一定要设置，多余的先隐藏
   background-color: var(--c-bg);
 }
@@ -185,7 +191,7 @@ export default {
   overflow-y: hidden;
   width: 100%;
   height: 100%;
-  background-image:linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 .dark .section {
   background-image: none;

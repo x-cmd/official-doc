@@ -1,5 +1,5 @@
 <template>
-  <div class="card px-6 py-3 rounded-md m-0.5 lg:h-1/3 w-3/4 md:w-1/5">
+  <div class="card px-6 py-3 rounded-md m-0.5 w-3/4 xl:w-1/5 xl:h-1/3">
     <h3 class="title">{{title}}</h3>
     <div class="context">{{context}}</div>
     <div class="link  overflow-hidden" v-if="link">

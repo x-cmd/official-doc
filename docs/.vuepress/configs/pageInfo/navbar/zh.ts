@@ -1,29 +1,31 @@
-import type { NavbarConfig } from '@vuepress/theme-default'
+import type { NavbarConfig } from "@vuepress/theme-default";
 
 export const zh: NavbarConfig = [
   {
-    text: '文档',
-    link: '/helloword.md',
+    text: "文档",
+    link: "/helloword.md"
   },
   {
-    text: '企业版',
-    link: '/helloword.md',
+    text: "企业版",
+    link: "/helloword.md"
   },
   {
-    text: '更多模块',
+    text: "更多模块",
     children: [
       {
-        text: 'Shell',
+        text: "Shell",
+        // prettier-ignore
         children: [
-          '/helloword.md',
-        ],
+          "/helloword.md"
+        ]
       },
       {
-        text: 'Rust',
+        text: "Rust",
+        // prettier-ignore
         children: [
-          '/helloword/README.md'
-        ],
-      },
-    ],
+          "/helloword/README.md"
+        ]
+      }
+    ]
   }
-]
+];

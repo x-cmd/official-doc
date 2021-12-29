@@ -10,13 +10,6 @@
           </p>
         </CodeGroupItem>
       </CodeGroup>
-      <!-- <p class="md:text-3xl text-md">or</p>
-      <div class=" lg:text-2xl md:text-4xl text-md">
-        <a
-          class="nav-link action-button secondary"
-          href="https://github.com/"
-          >安装包下载</a>
-      </div> -->
     </div>
   </div>
 </template>
