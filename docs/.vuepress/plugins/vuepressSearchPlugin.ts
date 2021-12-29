@@ -1,16 +1,16 @@
-import type { Page, PluginConfig } from 'vuepress'
+import type { Page, PluginConfig } from "vuepress";
 
-const vuepressSearchPlugin: PluginConfig  =  [
-  '@vuepress/plugin-search',
+const vuepressSearchPlugin: PluginConfig = [
+  "@vuepress/plugin-search",
   {
     // 排除首页
-    isSearchable: (page: Page) => page.path !== '/',
+    isSearchable: (page: Page) => page.path !== "/",
     locales: {
-      '/': {
-        placeholder: '搜索',
-      },
-    },
+      "/": {
+        placeholder: "搜索"
+      }
+    }
   }
-]
+];
 
 export default vuepressSearchPlugin;
