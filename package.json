@@ -11,8 +11,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs --clean-cache",
-    "docs:build": "vuepress build docs --clean-cache",
+    "docs:dev": "vuepress dev docs --clean-cache  --dest dist",
+    "docs:build": "vuepress build docs --clean-cache  --dest dist",
     "docs:info": "vuepress info",
     "commit": "cz"
   },
