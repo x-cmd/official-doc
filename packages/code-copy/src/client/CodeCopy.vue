@@ -4,8 +4,7 @@
       @click="copyToClipboard"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      :class="iconClass"
-      :style="alignStyle"
+      :class="[iconClass, alignClass]"
     >
       <path fill="none" d="M0 0h24v24H0z" />
       <path
@@ -14,8 +13,8 @@
       />
     </svg>
     <span
-      :class="success ? 'success' : ''"
-      :style="{ color: options.successTextColor, ...alignStyle }"
+      :class="[success ? 'success' : '', alignClass]"
+      :style="{ color: options.successTextColor }"
     >
       {{ options.successText }}
     </span>
@@ -32,7 +31,7 @@ export default {
       align: String,
       color: String,
       backgroundTransition: Boolean,
-      backgroundColor: String,
+      backgroundTransitionColor: String,
       successText: String,
       successTextColor: String,
       staticIcon: Boolean
@@ -46,10 +45,8 @@ export default {
     };
   },
   computed: {
-    alignStyle() {
-      let style = {};
-      style[this.options.align] = '7.5px';
-      return style;
+    alignClass() {
+      return this.options.align;
     },
     iconClass() {
       return this.options.staticIcon ? '' : 'hover';
@@ -99,9 +96,10 @@ export default {
 
       if (this.options.backgroundTransition) {
         this.parent.style.transition = 'background 350ms';
-
-        let color = this.hexToRgb(this.options.backgroundColor);
-        this.parent.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.1)`;
+        let transColor = this.options.backgroundTransitionColor
+        transColor = transColor.indexOf('#') !== -1 ? transColor : "#282c34";
+        let color = this.hexToRgb(transColor);
+        this.parent.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.7)`;
       }
 
       this.success = true;
@@ -130,6 +128,9 @@ export default {
     width: 1.3rem;
     height: 1.3rem;
   }
+  div .top {
+    top: 0.6rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -140,7 +141,7 @@ export default {
 }
 
 svg {
-  z-index: 19;
+  z-index: 9;
   width: 1.4rem;
   height: 1.4rem;
   position: absolute;
@@ -148,12 +149,25 @@ svg {
   opacity: 0.75;
   cursor: pointer;
 }
+.code-group .top{
+  top: -2rem;
+}
+
+.top {
+  top: 0.4rem;
+  right: 2rem
+}
+
+.bottom {
+  bottom: 1rem;
+  right: 0.3rem;
+}
 
 span {
   position: absolute;
   font-size: 0.85rem;
   line-height: 1.2rem;
-  right: 2.5rem;
+  right: 3.5rem!important;
   opacity: 0;
   transition: opacity 500ms;
 }

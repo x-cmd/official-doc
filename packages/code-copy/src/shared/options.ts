@@ -1,65 +1,3 @@
-# vuepress-plugin-clipboard
-
-<p>
-<a href="https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/blog/packages/clipboard">
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/github/stars/zhengqbbb/zhengqbbb.github.io?style=social"/>
-</a>
-<a href="https://www.npmjs.com/package/vuepress-plugin-clipboard">
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm" src="https://img.shields.io/npm/v/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm-download" src="https://img.shields.io/npm/dm/vuepress-plugin-clipboard.svg?style=flat-square&logo=npm"/>
-<img style="display: inline-block;margin-right: 0.4rem;" alt="npm-size" src="https://img.shields.io/bundlephobia/min/vuepress-plugin-clipboard?style=flat-square&logo=npm"/>
-</a>
-</p>
-
-Home: https://www.qbenben.com/docs/play/vuepress-plugin-clipboard
-
-Base: [snippets](https://github.com/Snippetors/snippets)
-
-Source: [Github](https://github.com/Zhengqbbb/zhengqbbb.github.io/tree/blog/packages/clipboard)
-
-Vuepress2 code-copy plugin
-
-## Install
-
-```bash
-yarn add -D vuepress-plugin-clipboard
-# or
-npm install -D vuepress-plugin-clipboard
-```
-
-## Use JS:
-
-```js
-// .vuepress/config.js
-module.exports = {
-  plugins: [
-    [
-      "vuepress-plugin-clipboard", {options...}
-    ]
-  ]
-}
-```
-
-## Use TS:
-```ts
-// .vuepress/config.ts
-import type { DefaultThemeOptions } from '@vuepress/theme-default'
-import type { ClipboardOptions } from 'vuepress-plugin-clipboard'
-
-export default defineUserConfig<DefaultThemeOptions>({
-  plugins: [
-    [
-      'vuepress-plugin-clipboard',
-      {
-        // options...
-      } as ClipboardOptions,
-    ]
-  ]
-});
-```
-
-## Options:
-```ts
 export interface ClipboardOptions {
     /**
      * @description: Copy icon is only visible when hovering over code block or is always visible.
@@ -124,10 +62,3 @@ export interface ClipboardOptions {
      */
     successTextColor: string;
 }
-
-
-
-```
-## License
-
-[MIT](https://github.com/Snippetors/snippets/blob/main/LICENSE)
