@@ -1,27 +1,33 @@
 {
-  "name": "@x-cmd/vuepress-plugin-clipboard",
-  "version": "0.0.1",
-  "description": "Vuepress plugin - copy clipboard",
+  "name": "@x-cmd/vuepress-plugin-code-copy",
+  "version": "1.0.0",
+  "description": "vuepress-plugin-code-copy",
   "keywords": [
+    "vuepress2",
     "vuepress-plugin",
-    "vuepress",
-    "plugin",
     "code-clipboard",
-    "copy",
+    "codecopy",
+    "code-copy",
     "clipboard"
   ],
-  "homepage": "https://github.com/x-cmd",
+  "homepage": "https://www.x-cmd.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x-cmd"
+    "url": "https://github.com/x-cmd/x-cmd"
   },
-  "author": "zhengqbbb",
+  "author": "zhengqbbb <zhengqiubin@x-cmd.com>",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "scripts": {
+    "build": "tsc -b tsconfig.build.json && yarn copy",
+    "clean": "rimraf lib *.tsbuildinfo",
+    "copy": "cpx \"src/**/*.{css,vue}\" lib"
   },
-  "main": "lib/index.js",
   "files": [
     "lib"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

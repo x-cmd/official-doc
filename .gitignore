@@ -6,3 +6,9 @@ templates
 .env
 .DS_Store
 *.log
+
+# Dist files
+lib/
+
+# Typescript build info
+*.tsbuildinfo
