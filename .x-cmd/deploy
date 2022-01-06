@@ -4,7 +4,7 @@
 WORK_DIR="$(x wsroot)"
 GITEE_URL=gitee.com:lteam18/x-cmd-doc.git
 GITHUB_URL=github.com:Zhengqbbb/dev-template.git
-BRANCH_NAME=main
+BRANCH_NAME=gh-page
 DIST_PATH="$WORK_DIR"/dist
 
 page_deploy(){
