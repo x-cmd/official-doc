@@ -83,7 +83,7 @@ export const config: UserConfig = {
   <CodeGroupItem title="YARN" active>
 
 ```bash{1}
-yarn add -D vuepress@next
+yarn add -D vuepress@next ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 yarn add -D vuepress@next
 ```
 

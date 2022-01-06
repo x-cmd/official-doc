@@ -1,3 +1,4 @@
+import type { MarkdownOptions } from "@vuepress/markdown";
 import type { AppOptions, HeadConfig } from "vuepress";
 import * as navbar from "./navbar";
 import * as sidebar from "./sidebar";
@@ -49,5 +50,12 @@ export const themeConfig: AppOptions["themeConfig"] = {
   docsRepo: "https://gitee.com/lteam18/x-cmd-doc",
   docsBranch: "main",
   docsDir: "docs",
-  editLinkPattern: ":repo/"
+  editLinkPattern: ":repo/",
+  backToHome: "> cd $HOME"
+};
+
+export const markdownConfig: MarkdownOptions = {
+  code: {
+    lineNumbers: false
+  }
 };

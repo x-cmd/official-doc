@@ -13,3 +13,5 @@ export type DemoInfoType = {
   link: string;
   terminalInfo: Array<TerminalInfoType>;
 };
+
+export * from "./termData";

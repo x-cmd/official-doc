@@ -4,7 +4,7 @@ import type { ClipboardOptions } from "../shared";
 
 export * from "../shared";
 
-const genDefaultOption = (options: ClipboardOptions):Record<string, any> => {
+const genDefaultOption = (options: ClipboardOptions): Record<string, any> => {
   const defaultOpt = {
     staticIcon: options.staticIcon === true,
     align: options.align || "bottom",
@@ -14,9 +14,9 @@ const genDefaultOption = (options: ClipboardOptions):Record<string, any> => {
     backgroundTransition: options.backgroundTransition !== false,
     backgroundTransitionColor: options.backgroundTransitionColor || "var(--code-bg-color)",
     successTextColor: options.successTextColor || "var(--c-brand-light)",
-    successText: options.successText || "Copied!",
-  }
-  return defaultOpt
+    successText: options.successText || "Copied!"
+  };
+  return defaultOpt;
 };
 
 const ClipboardPlugin: Plugin<ClipboardOptions> = (options: ClipboardOptions, app) => {
@@ -27,10 +27,8 @@ const ClipboardPlugin: Plugin<ClipboardOptions> = (options: ClipboardOptions, ap
     },
     multiple: false,
     clientAppEnhanceFiles: path.resolve(__dirname, "../client/clientAppEnhance.js"),
-    clientAppSetupFiles: path.resolve(__dirname, "../client/clientAppSetup.js"),
+    clientAppSetupFiles: path.resolve(__dirname, "../client/clientAppSetup.js")
   };
 };
 
 export default ClipboardPlugin;
-
-

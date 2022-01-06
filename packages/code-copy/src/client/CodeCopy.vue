@@ -118,8 +118,8 @@ export default {
 <style scoped>
 @media (max-width: 1024px) {
   div svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 
@@ -142,20 +142,20 @@ export default {
 
 svg {
   z-index: 9;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   position: absolute;
   right: 0.3rem;
   opacity: 0.75;
   cursor: pointer;
 }
-.code-group .top{
+.code-group .top {
   top: -2rem;
 }
 
 .top {
   top: 0.4rem;
-  right: 2rem
+  right: 2rem;
 }
 
 .bottom {
@@ -167,7 +167,7 @@ span {
   position: absolute;
   font-size: 0.85rem;
   line-height: 1.2rem;
-  right: 3.5rem!important;
+  right: 3.5rem !important;
   opacity: 0;
   transition: opacity 500ms;
 }

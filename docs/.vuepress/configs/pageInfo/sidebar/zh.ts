@@ -4,6 +4,7 @@ export const zh: SidebarConfig = {
   "/": [
     {
       text: "markdown语法效果展示",
+      collapsible: true,
       // prettier-ignore
       children: [
         "/helloword.md"
@@ -13,6 +14,7 @@ export const zh: SidebarConfig = {
   "/helloword/": [
     {
       text: "Hello",
+      collapsible: true,
       // prettier-ignore
       children: [
         "/helloword/README.md",

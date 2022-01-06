@@ -1,4 +1,4 @@
-import type { DemoInfoType } from "../types";
+import type { DemoInfoType } from ".";
 
 export const DEMO_INFO: Array<DemoInfoType> = [
   {
