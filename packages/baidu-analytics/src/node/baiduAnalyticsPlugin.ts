@@ -7,7 +7,7 @@ export interface BaiduAnalyticsPluginOptions {
 
 export const baiduTongjiPlugin: Plugin<BaiduAnalyticsPluginOptions> = ({ id }, app) => {
   const plugin: PluginObject = {
-    name: "@x-cmd/plugin-baidu-analytics"
+    name: "@x-cmd/vuepress-plugin-baidu-analytics"
   };
 
   if (!id) {
