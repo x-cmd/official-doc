@@ -18,7 +18,7 @@
 
 <script>
 import { reactive, toRefs, onMounted } from "vue";
-import { DEMO_INFO } from '../../tools';
+import { DEMO_INFO } from "../../shared";
 import Terminal from "../components/terminal/Terminal.vue";
 import TerminalButtons from "../components/terminal/TerminalButtons.vue";
 import DownSign from "../components/common/DownSign.vue";

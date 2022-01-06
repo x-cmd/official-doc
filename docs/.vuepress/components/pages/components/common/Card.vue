@@ -46,7 +46,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   color: var(--c-text-light);
-  background: var(--c-bg-card);
+  background: var(--c-bg-lightest);
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
   .title {
     color: var(--c-text);

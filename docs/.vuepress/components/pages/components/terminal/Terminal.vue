@@ -47,6 +47,7 @@ export default {
   overflow-y: auto;
   max-height: 60%;
   background: var(--code-bg-color);
+  box-shadow: var(--code-box-shadow);
 }
 p {
   color: var(--c-brand-text);

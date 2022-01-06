@@ -5,7 +5,7 @@ export const codeCopyPlugin: PluginConfig = [
   "@x-cmd/vuepress-plugin-code-copy",
   {
     staticIcon: true,
-    align: "bottom",
+    align: "top",
     delay: 500
   } as ClipboardOptions
 ];

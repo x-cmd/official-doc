@@ -150,12 +150,12 @@ svg {
   cursor: pointer;
 }
 .code-group .top {
-  top: -2rem;
+  top: -2.2rem;
 }
 
 .top {
-  top: 0.4rem;
-  right: 2rem;
+  top: 0.3rem;
+  right: 0.6rem;
 }
 
 .bottom {
@@ -167,7 +167,7 @@ span {
   position: absolute;
   font-size: 0.85rem;
   line-height: 1.2rem;
-  right: 3.5rem !important;
+  right: 4.5rem !important;
   opacity: 0;
   transition: opacity 500ms;
 }
