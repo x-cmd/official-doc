@@ -1,6 +1,10 @@
 # x-cmd-doc
 
-- 使用x-cmd
+- 使用x-cmd 进行管理
+
+```bash
+eval "$(curl https://get.x-cmd.com)"
+```
 
 ## 前置需要
 
@@ -11,6 +15,7 @@ x init code
 ```
 
 ### Node版本：>14
+
 ```bash
 # 使用nvm进行更换Node版本
 x install nvm
