@@ -54,7 +54,7 @@ export const DEMO_INFO: Array<DemoInfoType> = [
   {
     title: "x cowsay",
     textBtn: "cowsay",
-    link: "/core/cowsay.html",
+    link: "/enhance/cowsay.html",
     describe: "哞哞哞哞哞哞哞哞哞哞哞哞",
     terminalInfo: [
       {
@@ -84,7 +84,7 @@ export const DEMO_INFO: Array<DemoInfoType> = [
     title: "json",
     textBtn: "json",
     describe: "查询，操作json文件",
-    link: "/helloword/",
+    link: "/core/json.html",
     terminalInfo: [
       {
         type: "input",
