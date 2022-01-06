@@ -11,6 +11,7 @@ export default defineClientAppSetup(() => {
   const page = usePageData();
 
   const update = () => {
+    if (page.value.path === "/") return;
     setTimeout(() => {
       document.querySelectorAll(options.selector).forEach((el) => {
         if (el.classList.contains("code-copy-added") || el.querySelector("pre, code[class*='pre-']") === null) return;
