@@ -21,7 +21,11 @@ export const bundlerConfig: AppOptions["bundlerConfig"] = {
   viteOptions: {
     css: {
       postcss: {
-        plugins: [require("tailwindcss"), require("autoprefixer")]
+        // eslint-disable-next-line prettier/prettier
+        plugins: [
+          require("tailwindcss"),
+          require("autoprefixer")
+        ]
       }
     }
   }

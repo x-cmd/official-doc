@@ -1,7 +1,9 @@
 ---
-lastUpdated: true
+title: x cat
+description: x-cmd增强 cat 命令
 sidebarDepth: 1
 ---
+
 # 一级标题 —— md效果展示
 
 ## 二级标题

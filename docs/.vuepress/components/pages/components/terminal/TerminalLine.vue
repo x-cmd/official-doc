@@ -68,7 +68,7 @@ export default {
         data.inputText = "";
         data.outputText = "";
       };
-      if (props.pageIndex === 2) {
+      if (props.pageIndex === 2 || !props.pageIndex) {
         data.start()
       }
     });

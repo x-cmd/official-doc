@@ -19,9 +19,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     pagePlugins.docSearchPlugin,
     pagePlugins.pwaPlugin,
     pagePlugins.pwaPopupPlugin,
-    pagePlugins.registerComponentPlugin,
-    pagePlugins.googleAnalytics,
-    pagePlugins.BaiduAnalytics
+    pagePlugins.registerComponentPlugin
   ],
   themeConfig: pageInfo.themeConfig,
   markdown: pageInfo.markdownConfig,

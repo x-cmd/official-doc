@@ -13,7 +13,8 @@ export const registerComponentPlugin: PluginConfig = [
   "@vuepress/register-components",
   {
     components: {
-      HomePage: path.resolve(__dirname, "../components/pages/HomePage.vue")
+      HomePage: path.resolve(__dirname, "../components/pages/HomePage.vue"),
+      Terminal: path.resolve(__dirname, "../components/pages/components/terminal/DocTerminal.vue")
     }
   }
 ];

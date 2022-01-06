@@ -8,6 +8,9 @@
 body {
   overflow: overlay;
 }
+strong {
+  font-weight: 800;
+}
 
 :root {
   // brand colors
@@ -181,7 +184,6 @@ code {
   color: var(--inline-code-color);
   padding: 0.25rem 0.5rem;
   font-size: .85em;
-  background-color: var(--inline-code-bg-color);
   border-radius: 3px;
   overflow-wrap: break-word;
   transition: background-color var(--t-color),color var(--t-color);

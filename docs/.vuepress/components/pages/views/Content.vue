@@ -13,7 +13,7 @@
           让终端有无限可能！
         </h2>
         <div class="actions hero w-36 md:w-40 overflow-hidden">
-          <router-link class="nav-link action-button primary" to="/helloword.html">快速上手 →</router-link>
+          <router-link class="nav-link action-button primary" to="/guide/start.html">快速上手 →</router-link>
         </div>
       </div>
     </div>

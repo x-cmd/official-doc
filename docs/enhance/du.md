@@ -1,7 +1,9 @@
 ---
-lastUpdated: true
+title: x du
+description: x-cmd增强 du 命令
 sidebarDepth: 1
 ---
+
 # 一级标题 —— md效果展示
 
 ## 二级标题
