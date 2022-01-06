@@ -17,6 +17,20 @@ else
 		none)
 			:
 		;;
+		code)
+			while read -r s; do
+				code --install-extension "$s" --force
+			done <<A
+zokugun.explicit-folding
+esbenp.prettier-vscode
+stylelint.vscode-stylelint
+bradlc.vscode-tailwindcss
+ms-vscode.vscode-typescript-tslint-plugin
+johnsoncodehk.volar
+dbaeumer.vscode-eslint
+A
+
+		;;
 		update|*)
 			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
 				if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
@@ -32,11 +46,12 @@ fi
 
 # Section: Advise
 if ___x_cmd_is_suitable_advise_env; then
-		# init is advise keyword
+	# init is advise keyword
     x advise rm "init" "init"
     advise "init" "init" - <<A
 {
     "all": "--- delete lock file adn reinstall all dependencies",
+    "code": "--- install VSCode plugin for x-cmd doc",
     "none": "--- check node_modules file and auto install dependencies",
     "update": "--- update all dependencies"
 }
