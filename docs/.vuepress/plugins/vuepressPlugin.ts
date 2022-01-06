@@ -19,7 +19,7 @@ export const registerComponentPlugin: PluginConfig = [
 ];
 
 /**
- * @description: Search Plugin
+ * @description: Vuepress Document Search Plugin
  */
 export const docSearchPlugin: PluginConfig = [
   "@vuepress/plugin-docsearch",
@@ -31,6 +31,9 @@ export const docSearchPlugin: PluginConfig = [
   } as DocsearchOptions
 ];
 
+/**
+ * @description: Vuepress Search Plugin
+ */
 export const vuepressSearchPlugin: PluginConfig = [
   "@vuepress/plugin-search",
   {
@@ -45,7 +48,7 @@ export const vuepressSearchPlugin: PluginConfig = [
 ];
 
 /**
- * @description: PWA
+ * @description: PWA Plugin
  */
 export const pwaPlugin: PluginConfig = [
   "@vuepress/pwa",
@@ -54,6 +57,9 @@ export const pwaPlugin: PluginConfig = [
   } as PwaPluginOptions
 ];
 
+/**
+ * @description: PWA Popup Plugin
+ */
 export const pwaPopupPlugin: PluginConfig = [
   "@vuepress/plugin-pwa-popup",
   {
@@ -71,11 +77,11 @@ export const pwaPopupPlugin: PluginConfig = [
 ];
 
 /**
- * @description: Analytics Plugin
+ * @description: Google Analytics Plugin
  */
 export const googleAnalytics: PluginConfig = [
   "@vuepress/plugin-google-analytics",
   {
-    id: "G-"
+    id: "G-8R2K3ZRCY6"
   } as GoogleAnalyticsPluginOptions
 ];
