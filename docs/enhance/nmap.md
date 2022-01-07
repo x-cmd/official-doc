@@ -1,16 +1,16 @@
 ---
-title: x ls
+title: x nmap
 description: x-cmd增强 ls 命令
 sidebarDepth: 1
 lastUpdated: true
 ---
 
 # x ls
-
 增强输出文件列表
-> 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行分发托管，达到在不同环境下的快速安装使用。
+> 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行下载托管，达到在不同环境下的快速安装。
 
 <Terminal :docIndex="0"/>
+
 
 ## 概要
 x ls [[ OPTION ]...](#命令选项) [ FILE ]...

@@ -1,6 +1,6 @@
 <template>
   <p class="input leading-4 whitespace-pre" v-if="isShowInput">
-    <span class="symbol font-extrabold text-green-500 text-2xl">></span>
+    <span class="symbol font-extrabold text-green-500 text-xl">❯</span>
     {{ inputText }}
   </p>
   <p v-if="isShowOutput" class="output font-medium" v-html="outputText"></p>

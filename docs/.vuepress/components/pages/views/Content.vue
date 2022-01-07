@@ -9,11 +9,11 @@
       <div class="right">
         <h1 class="text-center text-2xl md:text-6xl">X-Cmd</h1>
         <h2 class="description border-0 text-base md:text-2xl">
-          轻量级、跨平台，功能强大的终端插件 <br />
-          让终端有无限可能！
+          轻量级、跨平台，功能强大的命令行工具 <br />
+          让命令行有无限可能！
         </h2>
         <div class="actions hero w-36 md:w-40 overflow-hidden">
-          <router-link class="nav-link action-button primary" to="/guide/start.html">快速上手 →</router-link>
+          <router-link class="nav-link action-button primary" to="/guide/">快速上手 →</router-link>
         </div>
       </div>
     </div>

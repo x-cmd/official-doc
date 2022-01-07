@@ -77,4 +77,4 @@ x ls [[ OPTION ]...](#命令选项) [ FILE ]...
 - **--no-user** : 禁止用户字段
 - **--no-time** : 抑制时间字段
 
-> 更新内容可查看 [exa 文档查阅](https://github.com/ogham/exa)
+> 更多内容可查看 [exa 文档查阅](https://github.com/ogham/exa)

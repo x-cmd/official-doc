@@ -18,13 +18,7 @@
         <div class="cards-group h-4/5 flex flex-col justify-center items-center space-y-5 md:space-x-3 xl:flex-row xl:space-y-0">
           <Card title="增强终端" context="使用X-Cmd的增强命令，操作简单，功能丰富，轻松打造你的最强终端。带你体验终端新世界" />
           <Card title="云脚本" context="X-Cmd提供云脚本存储库，存放的你发布的脚本文件，让你在POSIX Shell环境进行快捷拉取和使用" />
-          <Card
-            link
-            link-url="/helloword.html"
-            link-text="查看详情"
-            title="云管理"
-            context="保证安全性情况下，利用POSIX Shell的兼容能力和轻量化的核心包体积，体验方便快捷的云服务管理"
-          />
+          <Card link link-url="/guide/" link-text="查看详情" title="云管理" context="保证安全性情况下，利用POSIX Shell的兼容能力和轻量化的核心包体积，体验方便快捷的云服务管理" />
         </div>
         <Footer class="m-auto w-3/5" />
       </div>
