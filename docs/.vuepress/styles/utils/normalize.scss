@@ -1,0 +1,36 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: overlay;
+}
+
+strong {
+  font-weight: 600;
+}
+
+dt {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+dd {
+  margin: 0.2rem 0 0.8rem 0;
+  margin-inline-start: 6%;
+}
+
+mark {
+  margin: 0;
+  padding: 0 1.1rem;
+  border-radius: 7.5px;
+  color: var(--mark-color);
+  background: var(--mark-bg);
+  text-shadow: var(--mark-shadow);
+  font-weight: 500;
+  box-decoration-break: clone;
+  a {
+    font-weight: 600;
+    color: var(--c-text-hightlight);
+  }
+}

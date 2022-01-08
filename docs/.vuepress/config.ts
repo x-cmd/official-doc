@@ -16,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   // eslint-disable-next-line prettier/prettier
   plugins: [
     pagePlugins.codeCopyPlugin,
+    pagePlugins.sassPalettePlugin,
     pagePlugins.docSearchPlugin,
     pagePlugins.pwaPlugin,
     pagePlugins.pwaPopupPlugin,
@@ -25,5 +26,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   markdown: pageInfo.markdownConfig,
   extendsMarkdown: (md) => {
     md.use(require("markdown-it-task-lists"));
+    md.use(require("markdown-it-mark"));
+    md.use(require("markdown-it-deflist"));
   }
 });

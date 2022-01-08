@@ -1,0 +1,30 @@
+code {
+  color: var(--inline-code-color);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85em;
+  border-radius: 3px;
+  overflow-wrap: break-word;
+  transition: background-color var(--t-color), color var(--t-color);
+}
+
+div[class*="language-"] {
+  position: relative;
+  background-color: var(--code-bg-color);
+  border-radius: 5px;
+  box-shadow: var(--code-box-shadow);
+  &::before {
+    top: 0.6em;
+    right: 3em;
+  }
+}
+
+.code-group {
+  box-shadow: var(--code-box-shadow);
+  border-radius: 6px;
+  div[class*="language-"] {
+    box-shadow: none;
+  }
+  div[class*="language-"]::before {
+    top: -2.7em;
+  }
+}

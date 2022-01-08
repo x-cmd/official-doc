@@ -1,23 +1,19 @@
 ---
 title: x theme
-description: x-cmd 终端主题命令
+description: x-cmd 终端命令行主题命令
 sidebarDepth: 1
 lastUpdated: true
 ---
 
-# x ls
-增强输出文件列表
-> 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行下载托管，达到在不同环境下的快速安装。
+# x theme
+#### 命令行主题
 
-<Terminal :docIndex="0"/>
+<Terminal class="mt-3" :docIndex="0"/>
 
 
 ## 概要
-x ls [[ OPTION ]...](#命令选项) [ FILE ]...
 
-::: tip
-`x ll` 命令等同 `x ls -l` 输出长列表命令
-:::
+==x theme [[ subcommand ]...](#子命令)==
 
 ## 描述
 
@@ -28,13 +24,16 @@ x ls [[ OPTION ]...](#命令选项) [ FILE ]...
 - **树视图**：标准tree工具是内置的。
 - **Git支持**：查看每个文件的暂存和未暂存状态，就在标准视图中。也适用于树状视图，以获取存储库的高级概览。
 
-## 命令选项
+## 子命令
 
 ### 显示选项
 
-- **-1 , --oneline** : 每行显示一个条目
-- **-G , --grid** : 将条目显示为网格（默认）
-- **-l , --long** : 显示扩展细节和属性
+- **-1 , --oneline**
+    - 每行显示一个条目
+- **-G , --grid**
+    - 将条目显示为网格（默认）
+- **-l , --long**
+    - 显示扩展细节和属性
 - **-R , --recurse** : 递归到目录
 - **-T , --tree** : 作为树递归到目录中
 - **-x , --across** : 对网格进行排序，而不是向下排序

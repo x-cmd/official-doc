@@ -26,7 +26,8 @@ lastUpdated: true
   <a href="https://x-cmd.com/guide/">文档</a>
 </p>
 
-<br>
+
+**X is everything**
 
 **轻量级、跨平台，功能强大的命令行工具<br>
 让命令行有无限可能！**
@@ -38,9 +39,6 @@ lastUpdated: true
 - **云脚本**：脚本托管，随处可用。
 - **云管理**：云服务管理方便快捷。
 - **增强终端**：X-Cmd 对社区中常用的工具进行的托管分发，使用命令行工具告别下载问题。
-
-
-**相信在你上手过后你会感叹：X is everything!**
 
 ## 安装
 ```bash

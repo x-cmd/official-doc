@@ -1,0 +1,70 @@
+@import "./palette";
+
+:root {
+  // brand colors
+  --c-brand: #{$l--brand};
+  --c-brand-light: #{$l--brand-light};
+  --c-brand-text: #{$lightColor10};
+
+  // background colors
+  --c-bg: #{$lightColor10};
+  --c-bg-lightless: #{$lightLess};
+  --c-bg-light: #{$lightLight};
+  --c-bg-lighter: #{$lightLighter};
+  --c-bg-navbar: var(--c-bg);
+  --c-bg-sidebar: var(--c-bg);
+  --c-bg-arrow: #{$greyColor};
+  --c-bg-card: #{$lightColor10};
+
+  // text colors
+  --c-text: #{$l--textColor};
+  --c-text-accent: var(--c-brand);
+  --c-text-light: #{$l--textColorLight};
+  --c-text-lighter: #{$l--textColorLighter};
+  --c-text-lightest: #{$l--textColorLightest};
+  --c-text-hightlight: #{$l--textColorHightLight};
+  --c-text-quote: #{$l--textColorQuote};
+
+  // border colors
+  --c-border: #{$l--borderColor};
+  --c-border-dark: #{$l--borderColorDark};
+  --c-card-shadow: #{$l--cardShadow};
+  // custom container colors
+  --c-info: #007bff;
+  --c-tip: #42b983;
+  --c-tip-title: #359368;
+  --c-warning: #f4cd00;
+  --c-warning-title: #c1a200;
+  --c-danger: #f55;
+  --c-danger-title: #ff2222;
+
+  // badge component colors
+  --c-badge-tip: var(--c-tip);
+  --c-badge-warning: var(--c-warning);
+  --c-badge-danger: var(--c-danger);
+
+  // code blocks vars
+  --code-bg-color: #{$codeBgColor};
+  --code-hl-bg-color: #{$l--codeHighlightBgColor};
+  --code-ln-color: #{$inlineCodeText};
+  --code-ln-wrapper-width: #{$inlineCodeTextWidth};
+  --code-box-shadow: #{$codeBoxShadow};
+
+  // font vars
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+
+  // layout vars
+  --navbar-height: 3.6rem;
+  --navbar-padding-v: 0.7rem;
+  --navbar-padding-h: 1.5rem;
+  --sidebar-width: 20rem;
+  --sidebar-width-mobile: calc(var(--sidebar-width) * 0.82);
+  --content-width: 740px;
+  --homepage-width: 100%;
+
+  //mark
+  --mark-color: #{$l--markColor};
+  --mark-bg: #{$l--linearBG};
+  --mark-shadow: #{$l--markBoxShadow};
+}

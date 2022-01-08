@@ -1,6 +1,7 @@
 import type { Page, PluginConfig } from "@vuepress/core";
 import type { DocsearchOptions } from "@vuepress/plugin-docsearch";
 import type { GoogleAnalyticsPluginOptions } from "@vuepress/plugin-google-analytics";
+import type { PalettePluginOptions } from "@vuepress/plugin-palette";
 import type { PwaPluginOptions } from "@vuepress/plugin-pwa";
 import type { PwaPopupPluginOptions } from "@vuepress/plugin-pwa-popup";
 import type { SearchPluginOptions } from "@vuepress/plugin-search";
@@ -17,6 +18,17 @@ export const registerComponentPlugin: PluginConfig = [
       Terminal: path.resolve(__dirname, "../components/pages/components/terminal/DocTerminal.vue")
     }
   }
+];
+
+/**
+ * @description: sass variables import
+ */
+export const sassPalettePlugin: PluginConfig = [
+  "@vuepress/plugin-palette",
+  {
+    preset: "sass",
+    userPaletteFile: ".vuepress/styles/vars/palette.scss"
+  } as PalettePluginOptions
 ];
 
 /**

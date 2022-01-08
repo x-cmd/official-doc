@@ -1,5 +1,5 @@
 declare module "*.vue" {
-  // eslint-disable-next-line import/default
-  import Vue from "vue";
-  export default Vue;
+  import type { ComponentOptions } from "vue";
+  const comp: ComponentOptions;
+  export default comp;
 }

@@ -1,0 +1,100 @@
+// responsive breakpoints
+$MQLarge: 1200px !default;
+$MQIpad: 1023px !default;
+$MQNarrow: 959px !default;
+$MQMobile: 719px !default;
+$MQMobileNarrow: 419px !default;
+
+// code languages
+$codeLang: 'c' 'cpp' 'cs' 'css' 'dart' 'docker' 'fs' 'go' 'html' 'java' 'js'
+  'json' 'kt' 'less' 'makefile' 'md' 'php' 'py' 'rb' 'rs' 'sass' 'scss' 'sh'
+  'styl' 'ts' 'toml' 'vue' 'yml' !default;
+
+// base colors
+$darkColor10: rgba(30, 35, 42, 1);
+$darkColor9: rgba(30, 35, 42, .9);
+$darkColor8: rgba(30, 35, 42, .8);
+$darkColor7: rgba(30, 35, 42, .7);
+$darkColor6: rgba(30, 35, 42, .6);
+$darkColor5: rgba(30, 35, 42, .5);
+$darkColor4: rgba(30, 35, 42, .4);
+$darkColor3: rgba(30, 35, 42, .3);
+$darkColor2: rgba(30, 35, 42, .2);
+$darkColor1: rgba(30, 35, 42, .1);
+$darkLess: #2a2f35;
+$darkLight: #343c47;
+$darkLighter: #373a43;
+$darkLightest: #2a2f35;
+
+$lightColor10: rgba(255, 255, 255, 1);
+$lightColor9: rgba(255, 255, 255, .9);
+$lightColor8: rgba(255, 255, 255, .8);
+$lightColor7: rgba(255, 255, 255, .7);
+$lightColor6: rgba(255, 255, 255, .6);
+$lightColor5: rgba(255, 255, 255, .5);
+$lightColor4: rgba(255, 255, 255, .4);
+$lightColor3: rgba(255, 255, 255, .3);
+$lightColor2: rgba(255, 255, 255, .2);
+$lightColor1: rgba(255, 255, 255, .1);
+$lightLess: #f3fff8;
+$lightLight: #f1f1f1;
+$lightLighter: #f6f6f6;
+
+$greyColor: #ccc;
+$l--markColor: #2c3e50;
+$d--markColor: rgba(255, 255, 255, 1);
+
+// code colors
+$codeColor: rgba(27, 31, 35, 0.05) !default;
+$codeBgColor: #282c34 !default;
+$codeBgColor: #282c34 !default;
+$l--codeHighlightBgColor: rgba(15, 15, 15, 0.66) !default;
+$d--codeHighlightBgColor: #363b46 !default;
+
+$inlineCodeText: #a8a6a6 !default;
+$inlineCodeTextWidth: 3.5rem !default;
+
+// shadow colors
+$l--cardShadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !default;
+$d--cardShadow: 0px 1px 3px 0px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 2px 1px -1px rgb(0 0 0 / 12%);
+$boxShadow: 0 1px 8px 0 $darkColor1 !default;
+$boxShadowHover: 0 2px 16px 0 $darkColor2 !default;
+$boxShadowDark: 0 1px 8px 0 $darkColor6 !default;
+$boxShadowHoverDark: 0 2px 16px 0 $darkColor7 !default;
+$codeBoxShadow: 0 4px 9px rgb(0 0 0 / 30%) !default;
+
+$l--markBoxShadow: -12px 12px 9.8px rgba(130, 255, 173,0.7), 21px -18.1px 7.3px rgba(255, 255, 255,1), -18.1px -27.3px 30px rgba(255, 255, 255,1) !default;
+$d--markBoxShadow: none !default;
+
+// border colors
+$l--borderColor: #eaecef !default;
+$l--borderColorDark: #dfe2e5 !default;
+$d--borderColor: #3e4c5a !default;
+$d--borderColorDark: #34404c !default;
+
+// text colors
+$l--textColor: #2c3e50 !default;
+$l--textColorLight: #3a5169 !default;
+$l--textColorLighter: #4e6e8e !default;
+$l--textColorLightest: #6a8bad !default;
+$l--textColorHightLight: $darkColor10 !default;
+$l--textColorAccent: $lightColor10 !default;
+$l--textColorQuote: #999999 !default;
+
+$d--textColor: $lightColor8 !default;
+$d--textColorLight: #96a7b7 !default;
+$d--textColorLighter: #8b9eb0 !default;
+$d--textColorLightest: #8094a8 !default;
+$d--textColorHightLight: $lightColor10 !default;
+
+
+// theme primary colors
+$l--brand: #3eaf7c !default;
+$l--brand-light: #4abf8a !default;
+
+$d--brand: #3aa675 !default;
+$d--brand-light: #349469 !default;
+
+// background colors
+$l--linearBG: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgba(130, 255, 173,1.25) 2.4%, rgba(130, 255, 173,0.5) 5.8%, rgba(130, 255, 173,0.1) 93%, rgb(130 255 173 / 20%) 96%, rgba(130, 255, 1732,0) 98%), linear-gradient(183deg, rgba(130, 255, 173,0) 0%, rgba(130, 255, 173,0.3) 7.9%, rgba(130, 255, 173,0) 15%)  !default;
+$d--linearBG: linear-gradient(104deg, rgba(130, 255, 173,0) 0.9%, rgb(60 174 99) 2.4%, rgb(34 172 82 / 60%) 5.8%, rgb(130 255 173 / 40%) 93%, rgb(17 136 58 / 80%) 96%, rgb(130 255 255 / 0%) 98%), linear-gradient(183deg, rgb(34 138 69) 0%, rgb(189 243 208 / 40%) 7.9%, rgb(229 241 233 / 0%) 15%)  !default;

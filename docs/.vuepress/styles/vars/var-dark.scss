@@ -1,0 +1,34 @@
+@import "./palette";
+
+html.dark {
+  // brand colors
+  --c-brand: #{$d--brand};
+  --c-brand-light: #{$d--brand-light};
+
+  // background colors
+  --c-bg: #{$darkColor10};
+  --c-bg-lightless: #{$darkLess};
+  --c-bg-light: #{$darkLight};
+  --c-bg-lighter: #{$darkLighter};
+  --c-bg-lightest: #{$darkLightest};
+  --c-bg-card: #{$codeBgColor};
+
+  // text colors
+  --c-text: #{$d--textColor};
+  --c-text-light: #{$d--textColorLight};
+  --c-text-lighter: #{$d--textColorLighter};
+  --c-text-lightest: #{$d--textColorLightest};
+  --c-text-hightlight: #{$d--textColorHightLight};
+
+  // border colors
+  --c-border: #{$d--borderColor};
+  --c-border-dark: #{$d--borderColorDark};
+  --c-card-shadow: #{$d--cardShadow};
+
+  // code blocks vars
+  --code-hl-bg-color: #{$d--codeHighlightBgColor};
+  //mark
+  --mark-color: #{$d--markColor};
+  --mark-bg: #{$d--linearBG};
+  --mark-shadow: #{$d--markBoxShadow};
+}
