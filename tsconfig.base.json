@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "composite": true,
+    "esModuleInterop": true,
     "declaration": true,
     "declarationMap": false,
     "lib": ["DOM", "ES2020"],
