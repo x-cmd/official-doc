@@ -40,6 +40,9 @@ build_doc() {
 build_plugin() {
   	lerna run build && lerna bootstrap
 }
+build_clean() {
+  	lerna run clean
+}
 ###
   # 运行docSearch docker建立搜索索引
   # 根目录需建立.env文件：https://www.algolia.com/apps/CXZ8IP0O5G/api-keys/all
@@ -56,6 +59,7 @@ build_docSearch() {
 # Section: Main
 case "${1}" in
 	plugin) 						build_plugin 				;;
+	clean) 							build_clean 				;;
 	search|docSearch)				build_docSearch 			;;
 	doc|*)							build_doc					;;
 esac
@@ -67,6 +71,7 @@ if ___x_cmd_is_suitable_advise_env; then
     advise "build" - <<A
 {
     "plugin": "--- build the plugin And link node_modules",
+    "clean": "--- plugins build file clean",
     "search": "--- build the algolia document search index",
     "doc": "--- build the doc",
 }
