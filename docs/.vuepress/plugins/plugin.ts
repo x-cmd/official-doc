@@ -1,6 +1,6 @@
-import type { PluginConfig } from "@vuepress/core";
 import type { BaiduAnalyticsPluginOptions } from "@x-cmd/vuepress-plugin-baidu-analytics";
 import type { ClipboardOptions } from "@x-cmd/vuepress-plugin-code-copy";
+import type { PluginConfig } from "vuepress";
 
 /**
  * @description: Code Copy Plugin

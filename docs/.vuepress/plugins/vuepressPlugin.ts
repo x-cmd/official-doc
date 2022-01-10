@@ -1,4 +1,3 @@
-import type { Page, PluginConfig } from "@vuepress/core";
 import type { DocsearchOptions } from "@vuepress/plugin-docsearch";
 import type { GoogleAnalyticsPluginOptions } from "@vuepress/plugin-google-analytics";
 import type { PalettePluginOptions } from "@vuepress/plugin-palette";
@@ -6,6 +5,7 @@ import type { PwaPluginOptions } from "@vuepress/plugin-pwa";
 import type { PwaPopupPluginOptions } from "@vuepress/plugin-pwa-popup";
 import type { SearchPluginOptions } from "@vuepress/plugin-search";
 import { path } from "@vuepress/utils";
+import type { Page, PluginConfig } from "vuepress";
 
 /**
  * @description: Register Components
