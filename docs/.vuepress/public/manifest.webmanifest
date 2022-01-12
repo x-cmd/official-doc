@@ -1,7 +1,7 @@
 {
   "name": "X-Cmd",
   "short_name": "X-Cmd",
-  "description": "X-Cmd is a terminal plugin",
+  "description": "X-Cmd a powerful terminal tool",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",

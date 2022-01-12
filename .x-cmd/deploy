@@ -1,11 +1,41 @@
 # shellcheck shell=bash disable=SC1091,SC2034 #xsh
 
 # Section: Arg
+xrc ui
+x log init official
+
 WORK_DIR="$(x wsroot)"
-GITEE_URL=gitee.com:lteam18/x-cmd-doc.git
+DEPLOY_TARGET_DIR="/Users/qbenben/project/lteam/x-cmd/official-website"
+DEPLOY_TARGET_FOLDER="docs"
+GITEE_URL=gitee.com:x-cmd/official-website.git
 GITHUB_URL=github.com:Zhengqbbb/dev-template.git
-BRANCH_NAME=gh-page
+BRANCH_NAME=main
 DIST_PATH="$WORK_DIR"/dist
+COMMIT_ID="$(git rev-parse --short HEAD)"
+BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
+PACKAGE_VERSION=${BRANCH_INFO}-${COMMIT_ID}
+
+deploy_official() {
+    [ ! -d "$DEPLOY_TARGET_DIR/$DEPLOY_TARGET_FOLDER" ] && \
+        official_log error "Not find deploy dir: $(ui yellow underline "$DEPLOY_TARGET_DIR/$DEPLOY_TARGET_FOLDER")" && return 1
+    [ ! -d "$DIST_PATH" ] && \
+        official_log error "Not find source => $(ui yellow underline $DEPLOY_TARGET_DIR)" && \
+        official_log info 'try run ' "$(ui bold cyan \`x build\`)" && return 1
+
+    cp -r "$DIST_PATH" "$DEPLOY_TARGET_DIR"
+    rm -rf "${DEPLOY_TARGET_DIR:?}/${DEPLOY_TARGET_FOLDER}" &&
+    cd $DEPLOY_TARGET_DIR &&
+    mv dist docs &&
+    [ -d "$DEPLOY_TARGET_DIR/$DEPLOY_TARGET_FOLDER" ] &&
+    official_log info "Successfully move deploy dir" &&
+    git add -A &&
+    git commit -m "deploy(official): deploy official. verison is $PACKAGE_VERSION" &&
+    git push origin head &&
+    official_log info "$(ui bold green '🎉 Successfully deploy. 📦 Verison: ')" "$(ui magenta bold "$PACKAGE_VERSION")" &&
+    return 0
+
+    official_log error "$(ui error 'Deploy Fali')" && return 1
+}
 
 page_deploy(){
     [ -d "$DIST_PATH/.git" ] && rm -rf "$DIST_PATH/.git"
@@ -19,11 +49,7 @@ page_deploy(){
 # EndSection
 
 # Section: Main
-
-cd "$WORK_DIR"/dist || exit
-# 如果是发布到自定义域名
-echo 'dev.qbenben.com' > CNAME
-# page_deploy "$GITEE_URL"
-page_deploy "$GITHUB_URL"
+deploy_official "$GITEE_URL"
+# deploy_official "$GITHUB_URL"
 
 # EndSection

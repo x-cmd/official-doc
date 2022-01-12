@@ -40,6 +40,7 @@ build_doc() {
 build_plugin() {
   	lerna run build && lerna bootstrap
 }
+
 build_clean() {
   	lerna run clean
 }
@@ -54,14 +55,23 @@ build_docSearch() {
   	[ ! -f "$env_file_path" ] && echo 'APPLICATION_ID=your_algolia_application_id' >> "$env_file_path" && echo 'APPLICATION_ID=your_algolia_api_key' >> "$env_file_path" && return
 	docker run -it --env-file=.env -e "CONFIG=$(cat "${DOC_SEARCH_CONFIG_FILE}" | x jq -r tostring)" algolia/docsearch-scraper
 }
+
+build_collect() {
+	# 百度站长收录
+	local BAIDU_TOKEN
+	BAIDU_TOKEN="$(cat "$WORK_DIR/.env" | grep 'BAIDU_TOKEN')"
+	local TOKEN="${BAIDU_TOKEN#*=}"
+	[ -z "$TOKEN" ] && return 0
+	curl -H 'Content-Type:text/plain' --data-binary @urls.txt "http://data.zz.baidu.com/urls?site=$WEB_SIT&token=$TOKEN"
+}
 # EndSection
 
 # Section: Main
 case "${1}" in
-	plugin) 						build_plugin 				;;
-	clean) 							build_clean 				;;
-	search|docSearch)				build_docSearch 			;;
-	doc|*)							build_doc					;;
+	plugin) 						build_plugin 							;;
+	clean) 							build_clean 							;;
+	search|docSearch)				build_docSearch && build_collect   		;;
+	doc|*)							build_doc								;;
 esac
 # EndSection
 
@@ -72,7 +82,7 @@ if ___x_cmd_is_suitable_advise_env; then
 {
     "plugin": "--- build the plugin And link node_modules",
     "clean": "--- plugins build file clean",
-    "search": "--- build the algolia document search index",
+    "search": "--- build baidu collect and document search index",
     "doc": "--- build the doc",
 }
 A
