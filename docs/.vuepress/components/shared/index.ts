@@ -1,4 +1,4 @@
-export type TerminalInfoType = {
+export type TerminalCommandType = {
   type: "input-output" | "input" | "output";
   key: string | number;
   inputValue?: string;
@@ -6,12 +6,13 @@ export type TerminalInfoType = {
   delay?: number;
 };
 
-export type DemoInfoType = {
+export type TerminalInfoType = {
   title: string;
+  isBanner: boolean;
   textBtn: string;
   describe: string;
   link: string;
-  terminalInfo: Array<TerminalInfoType>;
+  terminalInfo: Array<TerminalCommandType>;
 };
 
 export * from "./termData";

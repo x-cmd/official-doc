@@ -125,18 +125,11 @@ export default {
 
 @media (max-width: 768px) {
   div svg {
-    width: 1.3rem;
-    height: 1.3rem;
-  }
-  div .top {
-    top: 0.6rem;
-  }
-}
-
-@media (max-width: 640px) {
-  div svg {
     width: 1rem;
     height: 1rem;
+  }
+  div .top {
+    top: 0.4rem;
   }
 }
 

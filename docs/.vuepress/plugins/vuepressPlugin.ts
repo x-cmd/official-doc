@@ -15,7 +15,7 @@ export const registerComponentPlugin: PluginConfig = [
   {
     components: {
       HomePage: path.resolve(__dirname, "../components/pages/HomePage.vue"),
-      Terminal: path.resolve(__dirname, "../components/pages/components/terminal/DocTerminal.vue")
+      Terminal: path.resolve(__dirname, "../components/Terminal.vue")
     }
   }
 ];

@@ -5,6 +5,8 @@
 
 @use "./components/plugin.scss";
 @use "./components/code.scss";
+@use "./components/terminal.scss";
+@use "./components/home.scss";
 
 @tailwind components;
 @tailwind utilities;

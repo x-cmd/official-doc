@@ -1,9 +1,10 @@
-import type { DemoInfoType } from ".";
+import type { TerminalInfoType } from ".";
 
-export const DEMO_INFO: Array<DemoInfoType> = [
+export const DEMO_INFO: Array<TerminalInfoType> = [
   {
     title: "x ls",
     textBtn: "x ls",
+    isBanner: true,
     link: "/enhance/ls.html",
     describe: "显示文件目录信息",
     terminalInfo: [
@@ -54,6 +55,7 @@ export const DEMO_INFO: Array<DemoInfoType> = [
   {
     title: "x cowsay",
     textBtn: "cowsay",
+    isBanner: true,
     link: "/enhance/cowsay.html",
     describe: "哞哞哞哞哞哞哞哞哞哞哞哞",
     terminalInfo: [
@@ -83,6 +85,7 @@ export const DEMO_INFO: Array<DemoInfoType> = [
   {
     title: "json",
     textBtn: "json",
+    isBanner: false,
     describe: "查询，操作json文件",
     link: "/core/json.html",
     terminalInfo: [

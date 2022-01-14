@@ -1,0 +1,35 @@
+@import "../vars/palette";
+.term-bold {
+  font-weight: 700;
+}
+.term-green {
+  color: var(--code-green);
+}
+
+.term-blue {
+  color: var(--code-blue);
+
+  &.bold {
+    color: var(--code-bold-blue);
+  }
+}
+
+.term-red {
+  color: var(--code-red);
+}
+
+.term-magenta {
+  color: var(--code-magenta);
+}
+
+.term-cyan {
+  color: var(--code-cyan);
+}
+
+.term-yellow {
+  color: var(--code-yellow);
+}
+
+.term-grey {
+  color: var(--code-grey);
+}

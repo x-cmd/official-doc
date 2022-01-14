@@ -5,14 +5,18 @@ xrc ui
 WORK_DIR="$(x wsroot)"
 # EndSection
 
+rm_react_type() {
+	[ -d "$WORK_DIR/node_modules/@types/react" ] && rm -rf "$WORK_DIR/node_modules/@types/react"
+}
+
 # Section: Main
 if [ ! -d "$WORK_DIR/node_modules" ]; then
-    yarn install && x build plugin
+    yarn install && x build plugin && rm_react_type
 else
 	case "${1:=repo}" in
 		all)
-			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-			yarn install && x build plugin
+			rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock" &&
+			yarn install && x build plugin && rm_react_type
 		;;
 		none)
 			:
@@ -36,9 +40,9 @@ A
 			ui prompt "$(ui bold green 'Is need to remove node_modules (Y/n)')" _IS_NEED
 				if [ -z "$_IS_NEED" ] || [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
 				rm -rf "$WORK_DIR/node_modules"
-				yarn install && x build plugin
+				yarn install && x build plugin && rm_react_type
 				else
-				yarn install && x build plugin
+				yarn install && x build plugin && rm_react_type
 				fi
 		;;
 	esac
