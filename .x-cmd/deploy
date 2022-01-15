@@ -38,6 +38,8 @@ deploy_official() {
 }
 
 page_deploy(){
+    cd "$WORK_DIR"/dist || exit
+    echo 'dev.qbenben.com' > CNAME
     [ -d "$DIST_PATH/.git" ] && rm -rf "$DIST_PATH/.git"
     git init
     git remote add origin git@"$1"
@@ -50,6 +52,6 @@ page_deploy(){
 
 # Section: Main
 deploy_official "$GITEE_URL"
-# deploy_official "$GITHUB_URL"
+# page_deploy "$GITHUB_URL"
 
 # EndSection
