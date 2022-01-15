@@ -104,18 +104,54 @@
 }
 
 @media (max-width: $MQMobile) {
-  .custom-home-page .home {
-    .hero {
-      img {
-        display: none;
+  .custom-home-page {
+    .home {
+      padding: 1.2rem 0 0;
+      .hero {
+        img {
+          display: none;
+        }
+        .action-button {
+          font-size: 0.8rem;
+          padding: 0.5rem 0.6rem;
+        }
       }
-      .action-button {
+      .footer {
         font-size: 0.8rem;
-        padding: 0.5rem 0.6rem;
       }
     }
-    .footer {
-      font-size: 0.8rem;
+    .downLoadLink-group {
+      code {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $MQMobileNarrow) {
+  .custom-home-page {
+    .home {
+      .hero {
+        h1 {
+          font-size: 1.8rem;
+        }
+        .description {
+          font-size: 0.9rem;
+        }
+        .action-button {
+          font-size: 0.6rem;
+          padding: 0.3rem 0.4rem;
+        }
+      }
+
+      .footer {
+        font-size: 0.8rem;
+      }
+    }
+    .downLoadLink-group {
+      code {
+        font-size: 0.6rem;
+      }
     }
   }
 }

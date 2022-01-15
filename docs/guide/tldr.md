@@ -9,7 +9,7 @@ lastUpdated: true
 增强输出文件列表
 > 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行下载托管，达到在不同环境下的快速安装。
 
-<Terminal :docIndex="0"/>
+<Terminal :termIndex="0"/>
 
 
 ## 概要

@@ -11,7 +11,7 @@
       <span class="switch-btn"></span>
       <span class="switch-btn"></span>
       <span class="switch-btn"></span>
-      <RouterLink v-if="isHomeTerminal" to="/guide/">查看更多</RouterLink>
+      <RouterLink v-if="isHomeTerminal" class="switch-link" to="/guide/">查看更多</RouterLink>
     </div>
     <TerminalCommand
       v-for="terminalCommand in terminalCommands"
@@ -87,7 +87,7 @@ onMounted(() => {
     return;
   }
   if (termIndex.value !== -1) activeIndex.value = termIndex.value;
-  if (!isArray(DEMO_INFO[activeIndex.value])) return;
+  if (!isArray(DEMO_INFO[activeIndex.value].terminalInfo)) return;
   terminalCommands.value = DEMO_INFO[activeIndex.value].terminalInfo;
   isTerminalVisible.value = true;
 });

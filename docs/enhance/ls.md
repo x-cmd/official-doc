@@ -7,7 +7,7 @@ lastUpdated: true
 
 # x ls
 
-<Terminal :docIndex="0"/>
+<Terminal :termIndex="0"/>
 
 ## 概要
 ==x ls [[ OPTION ]...](#命令选项) [ FILE ]...==  —  增强输出文件列表
