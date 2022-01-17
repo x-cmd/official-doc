@@ -5,7 +5,22 @@ code {
   border-radius: 3px;
   overflow-wrap: break-word;
   transition: background-color var(--t-color), color var(--t-color);
+  box-shadow: inset 1px 1px 3px var(--c-box-shadow-color), inset -1px -1px 3px var(--c-box-shadow-color-diff);
 }
+
+.code-group__nav-tab{
+  margin-right: 0.65rem;
+  transition: box-shadow .2s ease-in-out;
+  box-shadow: -1px -1px 1px #505050, 1px 1px 6px #000;
+  &:hover, &:active {
+    box-shadow: inset 1px 1px 3px #000000, inset -3px -3px 6px #505050;
+    color: var(--c-brand-light);
+  }
+}
+.code-group__nav-tab-active {
+  box-shadow: inset 1px 1px 3px #000000, inset -3px -3px 6px #505050;
+}
+
 
 div[class*="language-"] {
   position: relative;
@@ -15,6 +30,9 @@ div[class*="language-"] {
   &::before {
     top: 0.6em;
     right: 3em;
+  }
+  code {
+    box-shadow: none;
   }
 }
 

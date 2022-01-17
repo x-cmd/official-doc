@@ -7,7 +7,7 @@
   --c-brand-text: #{$lightColor10};
 
   // background colors
-  --c-bg: #{$lightColor10};
+  --c-bg: #{$lightColorMain};
   --c-bg-lightless: #{$lightLess};
   --c-bg-light: #{$lightLight};
   --c-bg-lighter: #{$lightLighter};
@@ -29,9 +29,12 @@
   --c-border: #{$l--borderColor};
   --c-border-dark: #{$l--borderColorDark};
   --c-card-shadow: #{$l--cardShadow};
+  --c-box-shadow-color: #{$l--box-shadow-color};
+  --c-box-shadow-color-diff: #{$l--box-shadow-color-diff};
   // custom container colors
   --c-info: #007bff;
   --c-tip: #42b983;
+  --c-tip-bg: #{$lightColorMain};
   --c-tip-title: #359368;
   --c-warning: #f4cd00;
   --c-warning-title: #c1a200;

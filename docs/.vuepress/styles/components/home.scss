@@ -5,10 +5,19 @@
   margin: 0 auto;
   max-width: 740px;
   padding: 3.6rem 2rem 0;
+  border-radius: 6px;
+  box-shadow: 6px 6px 12px var(--c-box-shadow-color), -6px -6px 12px var(--c-box-shadow-color-diff);
   .home {
+    --navbar-padding-top: 1.2rem;
     box-sizing: border-box;
     height: calc(100vh - var(--navbar-height) - 0.4rem);
-    padding-top: 1.2rem;
+    padding-top: var(--navbar-padding-top);
+    .theme-default-content {
+      height: calc(100vh - var(--navbar-height) - 0.4rem - var(--navbar-padding-top));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
     .hero {
       display: flex;
       align-items: center;
@@ -32,13 +41,25 @@
       }
       .action-button {
         font-size: 1rem;
+        border: none;
+        transition: all 0.2s ease;
+        box-shadow: 6px 6px 12px var(--c-box-shadow-color), -6px -6px 12px var(--c-box-shadow-color-diff);
+        border-color: var(--c-border);
         padding: 0.6rem 0.8rem;
+        &:active,
+        &:focus,
+        &:hover {
+          background: none;
+          color: var(--c-brand-light);
+          box-shadow: inset 2px 2px 4px var(--c-box-shadow-color),
+            inset -1px -1px 4px var(--c-box-shadow-color-diff);
+        }
       }
     }
     .footer {
       font-size: 1rem;
-      margin-top: 2rem;
-      padding: 0.4rem;
+      margin-top: 1rem;
+      padding: 0.5rem 0;
     }
   }
   .downLoadLink-group {
@@ -64,7 +85,78 @@
     }
   }
 }
+.terminal-btn-group-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .symbol {
+    background-color: var(--c-bg-lighter);
+    border-radius: 4px;
+    color: var(--code-grey);
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.75rem;
+    padding: 0 0.45rem;
+    transition: background-color 0.1s ease;
+    user-select: none;
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 2px 2px 12px var(--c-box-shadow-color), -2px -2px 12px var(--c-box-shadow-color-diff);
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--c-brand);
+      box-shadow: inset 2px 2px 4px var(--c-box-shadow-color),
+        inset -1px -1px 4px var(--c-box-shadow-color-diff);
+    }
+  }
+}
 
+.terminal-btn-group {
+  display: inline-block;
+  margin: 0.6rem 0.6rem 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  border-radius: 4px;
+  padding: 1rem 1rem 0.5rem 1rem;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  box-shadow: inset 3px 3px 4px var(--c-box-shadow-color), inset -1px -1px 4px var(--c-box-shadow-color-diff);
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  & > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 0.8rem;
+  }
+  .btn {
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.1rem;
+    overflow: hidden;
+    padding: 0.5rem 0.8rem;
+    text-overflow: ellipsis;
+    transition: background-color 0.1s ease;
+    white-space: nowrap;
+    width: 6.5rem;
+    color: var(--c-text);
+    box-shadow: 3px 3px 6px var(--c-box-shadow-color), -3px -3px 6px var(--c-box-shadow-color-diff);
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--c-brand);
+      box-shadow: 1px 1px 2px var(--c-box-shadow-color), -1px -1px 2px var(--c-box-shadow-color-diff);
+    }
+    &.active {
+      color: var(--c-brand);
+      box-shadow: inset 2px 2px 4px var(--c-box-shadow-color),
+        inset -1px -1px 4px var(--c-box-shadow-color-diff);
+    }
+  }
+}
 @media (max-width: $MACBook) {
   .custom-home-page {
     .home {
@@ -85,6 +177,11 @@
       }
     }
   }
+  .terminal-btn-group-container {
+    .symbol {
+      font-size: 0.45rem;
+    }
+  }
 }
 
 @media (max-width: $MQLarge) {
@@ -97,6 +194,7 @@
 
 @media (max-width: $MQNarrow) {
   .custom-home-page {
+    box-shadow: none;
     .downLoadLink-group {
       width: 100%;
     }
@@ -106,7 +204,7 @@
 @media (max-width: $MQMobile) {
   .custom-home-page {
     .home {
-      padding: 1.2rem 0 0;
+      padding: 0.8rem 0 0;
       .hero {
         img {
           display: none;
@@ -140,7 +238,8 @@
         }
         .action-button {
           font-size: 0.6rem;
-          padding: 0.3rem 0.4rem;
+          padding: 0.5rem 0.2rem;
+          width: 5rem;
         }
       }
 
@@ -152,6 +251,16 @@
       code {
         font-size: 0.6rem;
       }
+    }
+  }
+  .terminal-btn-group-container {
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    padding-bottom: 0.7rem;
+    .btn {
+      font-size: 0.6rem;
+      padding: 0.5rem 0.2rem;
+      width: 5rem;
     }
   }
 }

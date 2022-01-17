@@ -1,5 +1,6 @@
 <template>
   <div class="terminal-btn-group-container">
+    <div class="symbol green bold" @click="left">❮</div>
     <div class="terminal-btn-group">
       <button
         v-for="(demoInfo, index) in termianlContainer"
@@ -11,6 +12,7 @@
         {{ demoInfo.textBtn }}
       </button>
     </div>
+    <div class="symbol green bold" @click="right">❯</div>
   </div>
 </template>
 
@@ -28,5 +30,24 @@ defineProps({
     required: true
   }
 });
+
+const left = (): void => {
+  document.querySelector<HTMLElement>(".terminal-btn-group")!.scrollTo({
+    left: 0,
+    behavior: "smooth"
+  });
+};
+
+const right = (): void => {
+  document.querySelector<HTMLElement>(".terminal-btn-group")!.scrollTo({
+    left: getSiteWidth(),
+    behavior: "smooth"
+  });
+};
+
+const getSiteWidth = () => {
+  const container = document.querySelector<HTMLElement>(".terminal-btn-group");
+  return container ? container.offsetWidth : 0;
+};
 </script>
 <style lang="scss" scoped></style>

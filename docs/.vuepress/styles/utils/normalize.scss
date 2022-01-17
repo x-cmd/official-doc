@@ -1,3 +1,4 @@
+@import "../vars/palette";
 :root {
   scroll-behavior: smooth;
 }
@@ -9,6 +10,33 @@ body {
 strong {
   font-weight: 600;
 }
+table {
+  padding: 0.85rem;
+
+}
+thead {
+  box-shadow: 3px 0px 6px var(--c-box-shadow-color),-3px -3px 6px var(--c-box-shadow-color-diff);
+}
+tbody {
+  box-shadow: 3px 3px 6px var(--c-box-shadow-color),-3px -0px 6px var(--c-box-shadow-color-diff);
+}
+tr {
+  border: none;
+  border-right: 1px solid var(--c-border-dark);
+  border-bottom: 1px solid var(--c-border-dark);
+}
+th, td {
+  border: none;
+  padding: 0.6em 1em;
+  border-right: 1px solid var(--c-border-dark);
+  border-bottom: 1px solid var(--c-border-dark);
+}
+
+dl {
+  padding: 1rem;
+  box-shadow: 6px 6px 12px var(--c-box-shadow-color), -6px -6px 12px var(--c-box-shadow-color-diff);
+  border-radius: 8px;
+}
 
 dt {
   font-size: 18px;
@@ -17,7 +45,7 @@ dt {
 
 dd {
   margin: 0.2rem 0 0.8rem 0;
-  margin-inline-start: 6%;
+  margin-inline-start: 3rem;
 }
 
 mark {
@@ -34,3 +62,4 @@ mark {
     color: var(--c-text-hightlight);
   }
 }
+

@@ -6,7 +6,6 @@ heroImage: null
 title: 首页
 description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具
 pageClass: custom-home-page
-footer: 'Copyright © 2020-2022 Li Junhao (l@x-cmd.com)'
 ---
 <header class="hero">
     <img src="/images/logo.png" alt="X-Cmd-LOGO" class="medium-zoom-image">

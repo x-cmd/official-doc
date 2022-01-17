@@ -41,11 +41,24 @@ lastUpdated: true
 - **增强终端**：X-Cmd 对社区中常用的工具进行的托管分发，使用命令行工具告别下载问题。
 
 ## 安装
+<CodeGroup>
+  <CodeGroupItem title="curl" active>
+
 ```bash
 eval "$(curl https://get.x-cmd.com)"
 ```
 
-> 前置需要： [curl](https://curl.se/download.html)，可在终端中输入 `curl --help` 查看是否安装。
+  </CodeGroupItem>
+
+  <CodeGroupItem title="wget">
+
+```bash
+eval "$(wget -O - https://get.x-cmd.com/dev)"
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
 
 ## 版权
 Copyright © 2020-present, Li Junhao (l@x-cmd.com).<br>

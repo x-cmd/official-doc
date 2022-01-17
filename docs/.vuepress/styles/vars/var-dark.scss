@@ -19,14 +19,21 @@ html.dark {
   --c-text-lighter: #{$d--textColorLighter};
   --c-text-lightest: #{$d--textColorLightest};
   --c-text-hightlight: #{$d--textColorHightLight};
+  --c-text-quote: #b5b5b5;
 
   // border colors
   --c-border: #{$d--borderColor};
   --c-border-dark: #{$d--borderColorDark};
   --c-card-shadow: #{$d--cardShadow};
+  --c-box-shadow-color: #{$d--box-shadow-color};
+  --c-box-shadow-color-diff: #{$d--box-shadow-color-diff};
+
+  // container
+  --c-tip-bg: linear-gradient(145deg, #{$d--box-shadow-color}, #{$d--box-shadow-color-diff});
 
   // code blocks vars
   --code-hl-bg-color: #{$d--codeHighlightBgColor};
+
   //mark
   --mark-color: #{$d--markColor};
   --mark-bg: #{$d--linearBG};
