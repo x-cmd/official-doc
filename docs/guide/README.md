@@ -53,7 +53,7 @@ eval "$(curl https://get.x-cmd.com)"
   <CodeGroupItem title="wget">
 
 ```bash
-eval "$(wget -O - https://get.x-cmd.com/)"
+eval "$(wget -qO- "https://get.x-cmd.com")"
 ```
 
   </CodeGroupItem>

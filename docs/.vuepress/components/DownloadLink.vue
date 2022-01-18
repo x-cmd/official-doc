@@ -22,7 +22,7 @@
             <span class="downLoadLink-symbol term-green">❯</span>
             <code class="pre-bash downLoadLink-code"
               ><span class="term-green">eval</span
-              ><span class="term-yellow"> "$(wget -O - https://get.x-cmd.com)"</span></code
+              ><span class="term-yellow"> "$(wget -qO- "https://get.x-cmd.com")"</span></code
             >
           </p>
           <CodeCopy

@@ -11,7 +11,7 @@
       <span class="switch-btn"></span>
       <span class="switch-btn"></span>
       <span class="switch-btn"></span>
-      <RouterLink v-if="isHomeTerminal" class="switch-link" to="/guide/">
+      <RouterLink v-if="isHomeTerminal" class="switch-link" :to="infoLink">
         <VIcon title="more infomation" label="more infomation" name="morehoriz" />
       </RouterLink>
     </div>
@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { isArray } from "@vuepress/shared";
-import { onBeforeUnmount, onMounted, ref, toRefs } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref, toRefs } from "vue";
 import type { PropType } from "vue";
 import { DEMO_INFO } from "./shared";
 import type { TerminalCommandType, TerminalInfoType } from "./shared";
@@ -55,6 +55,9 @@ const isHomeTerminal = ref(false);
 const termianlContainer = ref<Array<TerminalInfoType>>([]);
 const terminalCommands = ref<Array<TerminalCommandType>>([]);
 const termianlSwiperTimer = ref<number | undefined>(undefined);
+const infoLink = computed(() => {
+  return DEMO_INFO[activeIndex.value].link;
+});
 
 const toggleActive = (index: number): void => {
   clearSwiper();
