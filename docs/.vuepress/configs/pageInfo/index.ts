@@ -13,7 +13,7 @@ export const base = "/";
 export const title = `X-Cmd`;
 
 export const description = "X-Cmd 一个快速，跨平台功能强大的终端插件，让你的终端有无限可能!";
-
+/* eslint-disable prettier/prettier */
 export const headConfig: HeadConfig[] = [
   ["meta", { name: "application-name", content: "X-Cmd" }],
   ["meta", { name: "apple-mobile-web-app-title", content: "X-Cmd" }],
@@ -44,7 +44,6 @@ export const themeConfig: AppOptions["themeConfig"] = {
   navbar: navbar.zh,
   sidebar: sidebar.zh,
   sidebarDepth: 1,
-  repo: "https://github.com/x-cmd/x-cmd",
   logo: "/images/logo.png",
   lastUpdatedText: "更新时间",
   docsRepo: "https://gitee.com/lteam18/x-cmd-doc",

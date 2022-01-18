@@ -10,11 +10,12 @@
   .home {
     --navbar-padding-top: 1.2rem;
     box-sizing: border-box;
-    height: calc(100vh - var(--navbar-height) - 0.4rem);
+    height: auto;
     padding-top: var(--navbar-padding-top);
+    margin-bottom: 20px;
     .theme-default-content {
-      height: calc(100vh - var(--navbar-height) - 0.4rem - var(--navbar-padding-top));
       display: flex;
+      height: auto;
       flex-direction: column;
       justify-content: space-around;
     }
@@ -57,9 +58,40 @@
       }
     }
     .footer {
-      font-size: 1rem;
-      margin-top: 1rem;
+      font-size: 0.9rem;
+      margin: 1rem 0 38px 0;
       padding: 0.5rem 0;
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2px 0;
+        & > :not([hidden]) ~ :not([hidden]) {
+          margin-left: 0.8rem;
+        }
+        svg {
+          border-radius: 50%;
+          padding: 0.2rem;
+          box-shadow: var(--c-box-shadow-color) 4px 3px 3px 0px, var(--c-box-shadow-color-diff) -1px -1px 0px;
+          color: var(--code-grey);
+          transition: all 0.2s ease-in-out;
+          &:hover,
+          &:active,
+          &:focus {
+            box-shadow: inset 2px 2px 4px var(--c-box-shadow-color),
+              inset -1px -1px 4px var(--c-box-shadow-color-diff);
+            color: var(--c-text);
+          }
+        }
+      }
+      a {
+        color: var(--c-text-lighter);
+      }
+      .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+      }
     }
   }
   .downLoadLink-group {
@@ -67,6 +99,10 @@
     margin: 0 auto 1.3rem;
     position: relative;
     width: 86%;
+    .downLoadLink-link{
+      overflow-x: auto;
+      white-space: nowrap;
+    }
     .downLoadLink-symbol {
       margin: 0 0.3rem 0 0.5rem;
     }
@@ -157,6 +193,44 @@
     }
   }
 }
+
+@media (min-height: 900px) {
+  .custom-home-page {
+    .home {
+      height: calc(100vh - var(--navbar-height) - 0.4rem - 20px);
+    }
+  }
+}
+
+@media (min-width: $Screen4k) {
+  .custom-home-page {
+    max-width: 900px;
+    .home {
+      .hero {
+        img {
+          max-height: 220px;
+        }
+        h1 {
+          font-size: 3rem;
+        }
+        .description {
+          font-size: 1.4rem;
+        }
+        .action-button {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .downLoadLink-group {
+      width: 80%;
+      font-size: 1.2rem;
+      code {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
 @media (max-width: $MACBook) {
   .custom-home-page {
     .home {
@@ -179,7 +253,7 @@
   }
   .terminal-btn-group-container {
     .symbol {
-      font-size: 0.45rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -198,6 +272,15 @@
     .downLoadLink-group {
       width: 100%;
     }
+    .home {
+      .footer {
+        font-size: 0.8rem;
+        .copyright {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
   }
 }
 
@@ -214,14 +297,19 @@
           padding: 0.5rem 0.6rem;
         }
       }
-      .footer {
-        font-size: 0.8rem;
-      }
     }
     .downLoadLink-group {
       code {
         font-size: 0.8rem;
       }
+    }
+  }
+  .terminal-btn-group-container {
+    padding: 0.8rem 1rem 0.5rem 1rem;
+    .btn {
+      font-size: 0.8rem;
+      padding: 0.5rem 0.6rem;
+      width: 4.5rem;
     }
   }
 }

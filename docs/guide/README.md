@@ -53,7 +53,7 @@ eval "$(curl https://get.x-cmd.com)"
   <CodeGroupItem title="wget">
 
 ```bash
-eval "$(wget -O - https://get.x-cmd.com/dev)"
+eval "$(wget -O - https://get.x-cmd.com/)"
 ```
 
   </CodeGroupItem>
@@ -62,4 +62,4 @@ eval "$(wget -O - https://get.x-cmd.com/dev)"
 
 ## 版权
 Copyright © 2020-present, Li Junhao (l@x-cmd.com).<br>
-X-Cmd is [Apache License 2.0](https://github.com/x-cmd/x-cmd/blob/main/LICENSE) licensed.
+The source code is licensed under **GPL v3**. License is available [here](https://github.com/x-cmd/x-cmd/blob/main/LICENSE).

@@ -79,24 +79,26 @@
   }
 }
 
-.home-terminal {
-  flex: 1;
-  min-height: 20rem;
+.home-terminal,
+.doc-terminal {
+  height: 22rem;
 }
 
-.doc-terminal {
-  min-height: 22rem;
+@media (min-width: $Screen4k) {
+  .home-terminal {
+    height: 26rem;
+  }
 }
 
 @media (max-width: $MACBook) {
   .home-terminal {
-    min-height: 15rem;
+    height: 15rem;
   }
 }
 
 @media (max-width: $MQLarge) {
   .home-terminal {
-    min-height: 24rem;
+    height: 24rem;
   }
 }
 
@@ -109,16 +111,16 @@
     }
   }
   .doc-terminal {
-    min-height: 18rem;
+    height: 20rem;
   }
 }
 
 @media (max-width: $MQMobileNarrow) {
   .home-terminal {
-    min-height: 16rem;
+    height: 12rem;
   }
 
-  .home-terminal{
+  .home-terminal {
     margin-left: -1.6rem;
     margin-right: -1.6rem;
   }
@@ -126,6 +128,6 @@
 
 @media (max-width: $MQMobileNarrowSmall) {
   .home-terminal {
-    min-height: 13rem;
+    height: 13rem;
   }
 }

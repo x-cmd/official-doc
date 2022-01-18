@@ -11,7 +11,9 @@
       <span class="switch-btn"></span>
       <span class="switch-btn"></span>
       <span class="switch-btn"></span>
-      <RouterLink v-if="isHomeTerminal" class="switch-link" to="/guide/">查看更多</RouterLink>
+      <RouterLink v-if="isHomeTerminal" class="switch-link" to="/guide/">
+        <VIcon title="more infomation" label="more infomation" name="morehoriz" />
+      </RouterLink>
     </div>
     <TerminalCommand
       v-for="terminalCommand in terminalCommands"
