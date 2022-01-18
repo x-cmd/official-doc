@@ -138,6 +138,13 @@ html.dark .DocSearch {
   }
 }
 
+@media (max-width: $MQMobile) {
+  .navbar {
+    box-shadow: none;
+    border-bottom: 1px solid var(--c-border);
+  }
+}
+
 @media (min-width: $MQMobile) {
   .navbar-dropdown-wrapper .navbar-dropdown {
     border: none;
