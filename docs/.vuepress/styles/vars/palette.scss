@@ -72,7 +72,7 @@ $boxShadowDark: 0 1px 8px 0 $darkColor6 !default;
 $boxShadowHoverDark: 0 2px 16px 0 $darkColor7 !default;
 $codeBoxShadow: 0 4px 9px rgb(0 0 0 / 30%) !default;
 
-$l--markBoxShadow: -12px 12px 9.8px rgba(130, 255, 173,0.7), 21px -18.1px 7.3px rgba(255, 255, 255,1), -18.1px -27.3px 30px rgba(255, 255, 255,1) !default;
+$l--markBoxShadow: -12px 12px 9.8px rgb(130 255 173 / 70%), 4px -4px 7.3px rgb(255 255 255), -18.1px -27.3px 30px rgb(255 255 255) !default;
 $d--markBoxShadow: none !default;
 
 // border colors

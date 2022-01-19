@@ -10,7 +10,6 @@ export type TerminalInfoType = {
   title: string;
   isBanner: boolean;
   textBtn: string;
-  describe: string;
   link: string;
   terminalInfo: Array<TerminalCommandType>;
 };

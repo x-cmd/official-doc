@@ -1,6 +1,6 @@
 ---
 title: x ls
-description: x-cmd增强 ls 命令
+description: x-cmd 增强 ls 命令 | 文件列表展示命令
 sidebarDepth: 1
 lastUpdated: true
 ---
@@ -10,14 +10,14 @@ lastUpdated: true
 <Terminal :termIndex="0"/>
 
 ## 概要
-==x ls [[ OPTION ]...](#命令选项) [ FILE ]...==  —  增强输出文件列表
+==x ls [[ OPTION ]...](#命令选项) [ Folder ]...==  ——  增强输出文件列表
 
 > 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行分发托管，达到在不同环境下的快速安装使用。
 
 <br>
 
-::: tip
-==x ll== 命令等同 `x ls -l` 输出长列表命令
+::: tip 提示
+`x ll` 命令等同 `x ls -l` 输出长列表命令
 :::
 
 ## 描述

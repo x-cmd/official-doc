@@ -1,33 +1,37 @@
 @import "../vars/palette";
 .term-bold {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .term-green {
-  color: var(--code-green);
+  color: var(--code-green) !important;
 }
 
 .term-blue {
-  color: var(--code-blue);
+  color: var(--code-blue) !important;
 
   &.bold {
-    color: var(--code-bold-blue);
+    color: var(--code-bold-blue) !important;
   }
 }
 
 .term-red {
-  color: var(--code-red);
+  color: var(--code-red) !important;
 }
 
 .term-magenta {
-  color: var(--code-magenta);
+  color: var(--code-magenta) !important;
 }
 
 .term-cyan {
-  color: var(--code-cyan);
+  color: var(--code-cyan) !important;
 }
 
 .term-yellow {
-  color: var(--code-yellow);
+  color: var(--code-yellow) !important;
+}
+
+.term-orange {
+  color: var(--code-orange) !important;
 }
 
 .term-grey {
@@ -79,7 +83,10 @@
   }
 }
 
-.home-terminal,
+.home-terminal {
+  height: 21rem;
+}
+
 .doc-terminal {
   height: 22rem;
 }

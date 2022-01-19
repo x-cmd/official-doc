@@ -1,79 +1,49 @@
 ---
 title: x theme
-description: x-cmd 终端命令行主题命令
+description: x-cmd 终端命令行主题 | 快速管理终端主题命令 | zsh主题 | bash主题 | ash主题 | dash主题
 sidebarDepth: 1
 lastUpdated: true
 ---
 
 # x theme
-#### 命令行主题
 
-<Terminal class="mt-3" :docIndex="0"/>
-
+<Terminal :termIndex="1"/>
 
 ## 概要
 
-==x theme [[ subcommand ]...](#子命令)==
+==x theme [[ subcommand ]...](#子命令)== ——  管理命令行主题
 
 ## 描述
 
-`x ls` 是 Unix 和 Linux 操作系统附带的古老文件列表命令行程序的现代替代品，赋予它更多功能和更好的默认值。它使用颜色来区分文件类型和元数据。它了解符号链接、扩展属性和 Git。它体积小、速度快，而且只有一个二进制文件，相比传统的 `ls` 命令 `x ls` 功能更强大、对用户更友好。
+`x theme` 命令可以帮助你快速管理当前终端的命令行主题，基于标准的POSIX规范进行编写，可在常见的操作系统Shell中使用，比如 bash 和 zsh，可在不同环境下快速获得命令行主题。
 
-- **颜色**：不同类型的文件和数据将采用不同的颜色，并且将为当前用户突出显示用户和组列。
-- **信息**：显示文件的扩展属性，以及标准文件系统信息，例如 权限，大小和文件创建更新的日期和时间。
-- **树视图**：标准tree工具是内置的。
-- **Git支持**：查看每个文件的暂存和未暂存状态，就在标准视图中。也适用于树状视图，以获取存储库的高级概览。
+- **联动能力**：`x theme` 会与其他命令进行联动调整颜色做到**风格统一化**，免去了配置种种困难。
+- **体积小，按需引入**：单个 theme 文件体积**不超过 6KB**，并且按需引入下载，占据空间小。
+- **兼容性强**：`x theme` 采用标准的POSIX规范进行编写，做到**一次设置，跨端使用**。
+- **Zsh支持**： 在注重 Zsh 配置交互的同时，我们还提供 `x theme zinit` [命令](#zsh支持)可快速初始化的Zsh环境。
 
 ## 子命令
 
-### 显示选项
+ls
+:  显示所有的主题列表
 
-- **-1 , --oneline**
-    - 每行显示一个条目
-- **-G , --grid**
-    - 将条目显示为网格（默认）
-- **-l , --long**
-    - 显示扩展细节和属性
-- **-R , --recurse** : 递归到目录
-- **-T , --tree** : 作为树递归到目录中
-- **-x , --across** : 对网格进行排序，而不是向下排序
-- **-F , --classify** : 按文件名显示类型指示器
-- **--icons** : 显示图标
-- **--no-icons** : 不显示图标（总是覆盖 --icons）
+use  \<theme name\>
+:   ==根据主题名称，设置当前的命令行主题==
 
-### 过滤选项
+try  \<theme name\>
+:   根据主题名称，设置当前终端会话的命令行主题
 
-- **-a , --all** : 显示隐藏和“点”前缀文件
-- **-d , --list-dirs** : 像普通文件一样列出目录
-- **-L , --level=(depth)** : 限制递归深度
-- **-r , --reverse** : 反转排序顺序
-- **-s , --sort=(field)** : 按哪个字段排序
-- **--group-directories-first** : 在其他文件之前列出目录
-- **-D , --only-dirs** : 只列出目录
-- **--git-ignore** : 忽略中提到的文件.gitignore
-- **-I , --ignore-glob=(globs)** : 要忽略的文件的全局模式（管道分隔）
+unset
+:   取消设置命令行主题
 
-### 长视图选项
 
-- **-b** , **--binary** : 列出带有二进制前缀的文件大小
-- **-B** , **--bytes** : 以字节为单位列出文件大小，不带任何前缀
-- **-g** , **--group** : 列出每个文件的组
-- **-h** , **--header** : 为每一列添加一个标题行
-- **-H** , **--links** : 列出每个文件的硬链接数
-- **-i** , **--inode** : 列出每个文件的 inode 编号
-- **-m** , **--modified** : 使用修改后的时间戳字段
-- **-S** , **--blocks** : 列出每个文件的文件系统块数
-- **-t** , **--time=(field)** : 使用哪个时间戳字段
-- **-u** , **--accessed** : 使用访问的时间戳字段
-- **-U** , **--created** : 使用创建的时间戳字段
-- **-@** , **--extended** : 列出每个文件的扩展属性和大小
-- **--changed** : 使用改变的时间戳字段
-- **--git** : 列出每个文件的 Git 状态，如果被跟踪或忽略
-- **--time-style** : 如何格式化时间戳
-- **--no-permissions** : 禁止权限字段
-- **--octal-permissions** : 以八进制格式列出每个文件的权限
-- **--no-filesize** : 取消文件大小字段
-- **--no-user** : 禁止用户字段
-- **--no-time** : 抑制时间字段
+### Zsh支持
+<Badge type="tip" text="提示" vertical="middle" /> 仅在 Zsh 环境下才能使用
 
-> 更多内容可查看 [exa 文档查阅](https://github.com/ogham/exa)
+```bash
+x theme zinit
+```
+
+- 自动加载并设置 一款默认主题 ( ys )
+- 自动加载并设置 Zsh 官方插件 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- 下载一款 Powerline 风格字体

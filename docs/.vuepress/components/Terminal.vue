@@ -56,13 +56,13 @@ const termianlContainer = ref<Array<TerminalInfoType>>([]);
 const terminalCommands = ref<Array<TerminalCommandType>>([]);
 const termianlSwiperTimer = ref<number | undefined>(undefined);
 const infoLink = computed(() => {
-  return DEMO_INFO[activeIndex.value].link;
+  return termianlContainer.value[activeIndex.value]?.link;
 });
 
 const toggleActive = (index: number): void => {
   clearSwiper();
   activeIndex.value = index;
-  terminalCommands.value = DEMO_INFO[activeIndex.value].terminalInfo;
+  terminalCommands.value = termianlContainer.value[activeIndex.value]?.terminalInfo;
   startSwiper();
 };
 

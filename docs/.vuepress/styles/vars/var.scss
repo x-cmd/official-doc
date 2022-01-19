@@ -52,13 +52,16 @@
   --code-ln-color: #{$inlineCodeText};
   --code-ln-wrapper-width: #{$inlineCodeTextWidth};
   --code-box-shadow: #{$codeBoxShadow};
+  --inline-code-color: #0b564a;
 
-  --code-bold-blue: #2563eb;
+  --code-bold-blue: #3b82f6;
+  --code-blue: #2563eb;
   --code-green: #10b981;
   --code-red: #f87171;
   --code-magenta: #ec4899;
-  --code-cyan: aqua;
-  --code-yellow: #d97706;
+  --code-cyan: #1ed2d2;
+  --code-orange: #d97706;
+  --code-yellow: #fcd805;
   --code-grey: #9ca3af;
 
   // font vars

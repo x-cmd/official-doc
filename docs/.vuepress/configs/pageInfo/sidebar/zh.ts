@@ -20,7 +20,6 @@ export const zh: SidebarConfig = {
       "/guide/install.md",
       "/guide/tldr.md",
       "/guide/advise.md",
-      "/guide/cowsay.md",
       "/guide/workspace.md",
       ]
     },
@@ -30,13 +29,13 @@ export const zh: SidebarConfig = {
       // prettier-ignore
       children: [
         "/enhance/ls.md",
-        "/enhance/cd.md",
-        "/enhance/du.md",
-        "/enhance/cat.md",
-        "/enhance/jq.md",
-        "/enhance/yq.md",
-        "/enhance/nmap.md",
-        "/enhance/openssl.md",
+        // "/enhance/cd.md",
+        // "/enhance/du.md",
+        // "/enhance/cat.md",
+        // "/enhance/jq.md",
+        // "/enhance/yq.md",
+        // "/enhance/nmap.md",
+        // "/enhance/openssl.md",
       ]
     }
   ]
