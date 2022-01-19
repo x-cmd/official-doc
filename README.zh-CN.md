@@ -11,16 +11,14 @@ eval "$(curl https://get.x-cmd.com)"
 ### VSCode 插件
 
 ```bash
-x init code
+x install code-plugin
 ```
 
-### Node版本：>14
+### nvm
 
 ```bash
 # 使用nvm进行更换Node版本
 x install nvm
-nvm install 14
-nvm use 14
 ```
 
 ## 工作区命令
