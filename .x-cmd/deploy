@@ -20,8 +20,8 @@ deploy_official() {
         official_log info 'try run ' "$(ui bold cyan \`x build\`)" && return 1
 
     cp -r "$DIST_PATH" "$DEPLOY_TARGET_DIR"
-    rm -rf "${DEPLOY_TARGET_DIR:?}/${DEPLOY_TARGET_FOLDER}" &&
     cd $DEPLOY_TARGET_DIR &&
+    mv docs "docs-$(date '+%Y%m%d-%H%M%S')" &&
     mv dist docs &&
     [ -d "$DEPLOY_TARGET_DIR/$DEPLOY_TARGET_FOLDER" ] &&
     official_log info "Successfully move deploy dir" &&
