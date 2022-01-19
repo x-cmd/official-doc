@@ -2,9 +2,11 @@ node_modules/
 .temp/
 lib/
 dist/
+templates/
 !.vuepress/
 !.*.js
 .eslintrc.js
 commitlint.config.js
+tailwind.config.js
 postcss.config.js
 

@@ -1,23 +1,29 @@
 {
-  "private": true,
   "name": "x-cmd-doc",
   "version": "0.0.1",
+  "private": true,
   "description": "x-cmd document",
-  "main": "index.js",
   "repository": "https://github.com/Zhengqbbb/vuepress-next-template.git",
+  "license": "MIT",
   "author": "Zhengqbbb <1074059947@qq.com>",
+  "main": "index.js",
   "workspaces": [
     "packages/*"
   ],
-  "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs --clean-cache",
-    "docs:build": "vuepress build docs --clean-cache  --dest dist",
-    "docs:info": "vuepress info",
     "commit": "cz",
-    "serve": "anywhere -h localhost -d dist",
-    "prepare": "husky install"
+    "docs:build": "vuepress build docs --clean-cache  --dest dist",
+    "docs:dev": "vuepress dev docs --clean-cache",
+    "docs:info": "vuepress info",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "prepare": "husky install",
+    "serve": "anywhere -h localhost -d dist"
   },
+  "lint-staged": {
+    "*.{js,ts,vue}": "eslint --fix",
+    "package.json": "sort-package-json"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
@@ -52,10 +58,10 @@
     "prettier": "^2.2.1",
     "sass": "^1.43.4",
     "sass-loader": "^12.2.0",
+    "sort-package-json": "^1.53.1",
     "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5",
     "vuepress": "^2.0.0-beta.32",
     "vuepress-vite": "^2.0.0-beta.32"
-  },
-  "dependencies": {}
+  }
 }

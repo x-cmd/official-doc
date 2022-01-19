@@ -7,9 +7,6 @@ x log init official
 WORK_DIR="$(x wsroot)"
 DEPLOY_TARGET_DIR="/Users/qbenben/project/lteam/x-cmd/official-website"
 DEPLOY_TARGET_FOLDER="docs"
-GITEE_URL=gitee.com:x-cmd/official-website.git
-GITHUB_URL=github.com:Zhengqbbb/dev-template.git
-BRANCH_NAME=main
 DIST_PATH="$WORK_DIR"/dist
 COMMIT_ID="$(git rev-parse --short HEAD)"
 BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
@@ -30,28 +27,15 @@ deploy_official() {
     official_log info "Successfully move deploy dir" &&
     git add -A &&
     git commit -m "deploy(official): deploy official. verison is $PACKAGE_VERSION" &&
-    git push origin head &&
+    xws push &&
     official_log info "$(ui bold green '🎉 Successfully deploy. 📦 Verison: ')" "$(ui magenta bold "$PACKAGE_VERSION")" &&
     return 0
 
     official_log error "$(ui error 'Deploy Fali')" && return 1
 }
 
-page_deploy(){
-    cd "$WORK_DIR"/dist || exit
-    echo 'dev.qbenben.com' > CNAME
-    [ -d "$DIST_PATH/.git" ] && rm -rf "$DIST_PATH/.git"
-    git init
-    git remote add origin git@"$1"
-    git checkout -b $BRANCH_NAME
-    git add -A
-    git commit -m 'deploy'
-    git push -f git@"$1" $BRANCH_NAME
-}
 # EndSection
 
 # Section: Main
 deploy_official "$GITEE_URL"
-# page_deploy "$GITHUB_URL"
-
 # EndSection
