@@ -2,6 +2,7 @@
 
 # Section: Arg
 xrc ui
+WEB_SITE='www.x-cmd.com'
 WORK_DIR="$(x wsroot)"
 COMMIT_ID="$(git rev-parse --short HEAD)"
 BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
@@ -20,6 +21,9 @@ build_doc() {
 	fi
 	rm -rf "$DIST_PATH"
 	yarn docs:build &&
+	cd "$DIST_PATH" &&
+	echo "$WEB_SITE" > CNAME &&
+	cd "$WORK_DIR" &&
 	mkdir -p "$TEMPLATE_PATH" &&
 	cp -r "$DIST_PATH" "$TEMPLATE_PATH/${PACKAGE_VERSION}" &&
 	cd "$TEMPLATE_PATH" &&
