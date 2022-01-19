@@ -2,7 +2,7 @@
 
 ```bash
 # development
-x dev
+x serve
 
 # build
 x build
