@@ -35,7 +35,7 @@ lastUpdated: true
 - **轻量化**：X-Cmd 的安装包不超过 300 KB。
 - **兼容性**：X-Cmd 符合POSIX标准，可以在常见的shell当中使用。
 - **语义化**：子命令符合对象设计语义化，轻松记住使用方法。
-- **交互强**：终端主题？命令补全？快来探索 [x theme](/guide/theme) | [x advise](/guide/advise)。
+- **交互强**：终端主题？命令补全？快来探索 [x theme](/guide/theme.html) | [x advise](/guide/advise.html)。
 - **云脚本**：脚本托管，随处可用。
 - **云管理**：云服务管理方便快捷。
 - **增强终端**：X-Cmd 对社区中常用的工具进行的托管分发，使用命令行工具告别下载问题。

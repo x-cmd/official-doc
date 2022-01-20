@@ -9,14 +9,12 @@
 
 <url>
   <loc>https://www.x-cmd.com/</loc>
-  <image:image>
-    <image:loc>https://www.x-cmd.com//images/logo.png</image:loc>
-  </image:image>
+  <mobile:mobile type="pc,mobile"></mobile:mobile>
   <lastmod>2022-01-20T02:44:10+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.x-cmd.com/guide.html</loc>
+  <loc>https://www.x-cmd.com/guide/</loc>
   <lastmod>2022-01-20T02:44:10+00:00</lastmod>
   <priority>0.80</priority>
 </url>
