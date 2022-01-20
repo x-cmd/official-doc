@@ -37,6 +37,11 @@
   --search-item-text-color: var(--c-text-lighter);
   --search-item-focus-bg-color: var(--c-bg-light);
 }
+.DocSearch-Hits mark {
+  border-radius: 0;
+  padding: 0;
+  text-shadow: none;
+}
 
 // plugin-docsearch
 .theme-container {

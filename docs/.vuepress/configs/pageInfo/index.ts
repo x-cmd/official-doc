@@ -48,7 +48,7 @@ export const themeConfig: AppOptions["themeConfig"] = {
   sidebarDepth: 1,
   logo: "/images/logo.png",
   lastUpdatedText: "更新时间",
-  docsRepo: "https://gitee.com/lteam18/x-cmd-doc",
+  docsRepo: "https://github.com/x-cmd/official-doc",
   docsBranch: "main",
   docsDir: "docs",
   editLinkPattern: ":repo/",
