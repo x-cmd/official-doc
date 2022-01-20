@@ -15,6 +15,8 @@ export const title = `X-Cmd`;
 export const description = "X-Cmd 一个快速，跨平台功能强大的终端插件，让你的终端有无限可能!";
 /* eslint-disable prettier/prettier */
 export const headConfig: HeadConfig[] = [
+  ["meta", { name: "google-site-verification", content: "_18qqOuIfzijSG7HV3nMHul_TLcD5hnpJBB0m3omcN0" }],
+  ["meta", { name: "baidu-site-verification", content: "code-94Da26LdEW" }],
   ["meta", { name: "application-name", content: "X-Cmd" }],
   ["meta", { name: "apple-mobile-web-app-title", content: "X-Cmd" }],
   ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],

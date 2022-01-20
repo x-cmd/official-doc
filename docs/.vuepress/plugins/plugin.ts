@@ -20,6 +20,6 @@ export const codeCopyPlugin: PluginConfig = [
 export const BaiduAnalytics: PluginConfig = [
   "@x-cmd/vuepress-plugin-baidu-analytics",
   {
-    id: "dbf4327a921eac36c68ec119c80f31b9"
+    id: "bf054898b9d0571dbc66734813899364"
   } as BaiduAnalyticsPluginOptions
 ];

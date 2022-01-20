@@ -1,6 +1,6 @@
 ---
 title: x proxy
-description: x-cmd 代理管理代理切换命令行工具，快速切换常见包管理工具的命令行代理（例如：maven, npm, pip, cargo, go 等），并且可在常见的Linux系统中的包管理工具达到快速换源（例如：apt, apk, yum, pacman 等）以及命令行的代理（例如：http/https）
+description: x-cmd 代理管理代理切换命令行工具，快速切换常见包管理工具的镜像源（例如：maven, npm, pip, cargo, go 等），并且可在常见的Linux系统中的包管理工具达到快速换源（例如：apt, apk, yum, pacman 等）以及命令行的代理（例如：http/https）
 sidebarDepth: 1
 lastUpdated: true
 ---
@@ -50,7 +50,7 @@ unset
 :  取消设置当前终端会话的所有http/https代理
 
 \<module name\> url
-:   列出所有的镜像源列表
+:   列出模块支持的所有的镜像源列表
 
 \<module name\> set, replace [镜像源]
 :   ==设置更换镜像源 | 不输入[镜像源]将使用默认官方镜像源==

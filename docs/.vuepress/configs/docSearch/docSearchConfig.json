@@ -11,10 +11,9 @@
       "default_value": "Documentation"
     },
     "lvl1": ".theme-default-content h1",
-    "lvl2": ".theme-default-content h2",
-    "lvl3": ".theme-default-content h3",
-    "lvl4": ".theme-default-content h4",
-    "lvl5": ".theme-default-content h5",
+    "lvl2": ".theme-default-content mark",
+    "lvl3": ".theme-default-content dl",
+    "lvl4": ".theme-default-content dd",
     "text": ".theme-default-content p, .theme-default-content li",
     "lang": {
       "selector": "/html/@lang",
