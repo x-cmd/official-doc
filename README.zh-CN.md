@@ -25,7 +25,7 @@ x install nvm
 
 ```bash
 # 开发调试
-x serve
+x dev
 
 # 打包
 x build

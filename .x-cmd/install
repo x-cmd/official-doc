@@ -7,7 +7,9 @@ WORK_DIR="$(x wsroot)"
 
 # Section: Main
 use_npm_verison() {
-	[ -z "$(command -v nvm)" ] && return 0
+	[ -z "$(command -v nvm)" ] \
+		&& printf "%s\n" "not command nvm, try run \`x install nvm\`" \
+		&& return 0
 	nvm use
 }
 
@@ -27,7 +29,7 @@ else
 			:
 		;;
 		nvm)
-			curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+			xrc install && install nvm
 		;;
 		code-plugin)
 			while read -r s; do
@@ -63,9 +65,7 @@ if ___x_cmd_is_suitable_advise_env; then
     x advise rm "init" "init"
     advise "init" "init" - <<A
 {
-    "all": "--- delete lock file adn reinstall all dependencies",
-    "code": "--- install VSCode plugin for x-cmd doc",
-    "none": "--- check node_modules file and auto install dependencies",
+    "all": "--- delete lock file and reinstall all dependencies",
     "update": "--- update all dependencies"
 }
 A

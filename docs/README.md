@@ -8,7 +8,7 @@ description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具
 pageClass: custom-home-page
 ---
 <header class="hero">
-    <img src="/images/logo.png" alt="X-Cmd-LOGO" class="medium-zoom-image">
+    <img src="/images/logo.png" alt="x-cmd-LOGO" class="medium-zoom-image">
     <div class="page-description">
         <h1 id="main-title">X-Cmd</h1>
         <p class="description">轻量级，跨平台，功能强大的命令行工具</p>

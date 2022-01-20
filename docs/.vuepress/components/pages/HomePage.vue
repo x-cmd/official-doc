@@ -9,12 +9,12 @@
       <a target="_blank" href="https://gitee.com/x-cmd/x-cmd">
         <VIcon title="Gitee" label="Gitee" name="gitee" />
       </a>
-      <a target="_blank" href="mailto:l@x-cmd.com">
+      <a target="_blank" href="mailto:official@x-cmd.com">
         <VIcon title="Email" label="Email" name="email" />
       </a>
     </div>
     <div class="copyright">
-      <span>GPL 3.0 Licensed | Copyright &copy; 2020-2022 Li Junhao |&nbsp;</span>
+      <span>GPL 3.0 Licensed | Copyright &copy; 2021-2022 Li Junhao |&nbsp;</span>
       <span>
         <a target="_blank" href="https://beian.miit.gov.cn/"> 粤ICP备2021166893号-1 </a>
       </span>

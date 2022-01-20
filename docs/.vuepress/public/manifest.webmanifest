@@ -1,7 +1,7 @@
 {
-  "name": "X-Cmd",
-  "short_name": "X-Cmd",
-  "description": "X-Cmd a powerful terminal tool",
+  "name": "X-cmd",
+  "short_name": "X-cmd",
+  "description": "X-cmd a powerful terminal tool",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",
