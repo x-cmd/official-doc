@@ -53,9 +53,9 @@ if ___x_cmd_is_suitable_advise_env; then
     x advise rm "collect"
     advise "collect" - <<A
 {
-    "baidu": "add baidu search collect",
-    "google": "add google search collect",
-    "bing": "add bing search collect",
+    "baidu": "--- update baidu search collect",
+    "google": "--- update google search collect",
+    "bing": "--- update bing search collect",
 }
 A
 fi

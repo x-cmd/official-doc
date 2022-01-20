@@ -1,6 +1,6 @@
 ---
 title: x advise
-description: x advise, 终端命令行补全管理工具, 命令行tab补全, 终端tab补全
+description: x advise, 终端命令行补全管理工具, 命令行tab补全, 终端tab补全，快速生成命令行补全
 sidebarDepth: 1
 lastUpdated: true
 ---

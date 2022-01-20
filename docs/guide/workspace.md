@@ -1,6 +1,6 @@
 ---
 title: workspace
-description: x-cmd workspace 工作区脚本, 脚本管理项目
+description: x-cmd workspace 工作区脚本, 脚本管理项目，轻松搞定代码项目管理
 sidebarDepth: 1
 lastUpdated: true
 ---

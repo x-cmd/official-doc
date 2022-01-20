@@ -4,7 +4,7 @@ heroText: null
 tagline: null
 heroImage: null
 title: 首页
-description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具
+description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具| x-cmd是符合 POSIX Shell标准 编写的命令行工具，支持脚本云存储(script hub)，脚本云托管，一句开启终端命令行主题，和命令行补全等
 pageClass: custom-home-page
 ---
 <header class="hero">
