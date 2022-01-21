@@ -1,32 +1,36 @@
 <template>
-  <div
-    v-if="isTerminalVisible"
-    :class="type"
-    class="terminal"
-    @mouseenter="clearSwiper"
-    @mouseleave="startSwiper"
-    @touchstart="clearSwiper"
-  >
-    <div class="switch-btns">
-      <span class="switch-btn"></span>
-      <span class="switch-btn"></span>
-      <span class="switch-btn"></span>
-      <RouterLink v-if="isHomeTerminal" class="switch-link" :to="infoLink">
-        <VIcon title="more infomation" label="more infomation" name="morehoriz" />
-      </RouterLink>
+  <Transition name="fade">
+    <div
+      v-if="isTerminalVisible"
+      :class="type"
+      class="terminal"
+      @mouseenter="clearSwiper"
+      @mouseleave="startSwiper"
+      @touchstart="clearSwiper"
+    >
+      <div class="switch-btns">
+        <span class="switch-btn"></span>
+        <span class="switch-btn"></span>
+        <span class="switch-btn"></span>
+        <RouterLink v-if="isHomeTerminal" class="switch-link" :to="infoLink">
+          <VIcon title="more infomation" label="more infomation" name="morehoriz" />
+        </RouterLink>
+      </div>
+      <TerminalCommand
+        v-for="terminalCommand in terminalCommands"
+        :key="terminalCommand.key"
+        :terminal-command="terminalCommand"
+      />
     </div>
-    <TerminalCommand
-      v-for="terminalCommand in terminalCommands"
-      :key="terminalCommand.key"
-      :terminal-command="terminalCommand"
+  </Transition>
+  <Transition name="fade">
+    <TermianlButtonGroup
+      v-if="isHomeTerminal"
+      :active-index="activeIndex"
+      :termianl-container="termianlContainer"
+      @toggle-active="toggleActive"
     />
-  </div>
-  <TermianlButtonGroup
-    v-if="isHomeTerminal"
-    :active-index="activeIndex"
-    :termianl-container="termianlContainer"
-    @toggle-active="toggleActive"
-  />
+  </Transition>
 </template>
 
 <script setup lang="ts">

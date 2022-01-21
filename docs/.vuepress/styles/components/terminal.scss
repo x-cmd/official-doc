@@ -141,3 +141,14 @@
     height: 13rem;
   }
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transform: translateZ(0);
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
