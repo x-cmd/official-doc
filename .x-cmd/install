@@ -8,8 +8,10 @@ WORK_DIR="$(x wsroot)"
 # Section: Main
 use_npm_verison() {
 	[ -z "$(command -v nvm)" ] \
-		&& printf "%s\n" "not command nvm, try run \`x install nvm\`" \
-		&& return 0
+		&& printf "%s\n" "Not command nvm" \
+		&& xrc install  \
+		&& install nvm \
+		&& return 1
 	nvm use
 }
 
