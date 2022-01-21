@@ -16,15 +16,7 @@ export const useBaiduAnalytics = (id: string): void => {
 
   // insert btag `<script>` tag
   const btagScript = document.createElement("script");
-  btagScript.text = `
-  var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?${id}";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-  `;
+  btagScript.src = `https://hm.baidu.com/hm.js?${id}`;
   btagScript.async = true;
   document.head.appendChild(btagScript);
 
