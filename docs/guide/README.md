@@ -3,6 +3,9 @@ title: 介绍
 description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具 | x-cmd的介绍信息以及使用教程，内含终端命令行主题，补全，代理，脚本云存储，常用命令说明手册查找，无需任何环境即可让云脚本运行
 sidebarDepth: 0
 lastUpdated: true
+sitemap:
+    priority: 0.8
+    exclude: false
 ---
 
 <p align="center">

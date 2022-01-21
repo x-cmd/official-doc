@@ -3,6 +3,9 @@ title: x openssl
 description: x-cmd增强 ls 命令
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    priority: 0.6
+    exclude: true
 ---
 
 # x ls

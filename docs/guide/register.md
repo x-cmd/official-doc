@@ -3,6 +3,9 @@ title: x theme
 description: x-cmd 终端主题命令
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    priority: 0.6
+    exclude: true
 ---
 
 # x ls

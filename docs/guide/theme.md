@@ -3,6 +3,8 @@ title: x theme
 description: x-cmd 终端命令行主题 | 快速管理终端命令行主题命令，支持一键生成命令行主题 | zsh主题 | bash主题 | ash主题 | dash主题
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    exclude: false
 ---
 
 # x theme

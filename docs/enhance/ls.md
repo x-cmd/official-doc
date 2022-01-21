@@ -3,6 +3,9 @@ title: x ls
 description: x-cmd 增强 ls 命令 | 文件列表展示命令
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    priority: 0.6
+    exclude: false
 ---
 
 # x ls

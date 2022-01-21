@@ -4,6 +4,7 @@ import type { PalettePluginOptions } from "@vuepress/plugin-palette";
 import type { PwaPluginOptions } from "@vuepress/plugin-pwa";
 import type { PwaPopupPluginOptions } from "@vuepress/plugin-pwa-popup";
 import type { SearchPluginOptions } from "@vuepress/plugin-search";
+import type { SitemapOptions } from "@vuepress/plugin-sitemap";
 import { path } from "@vuepress/utils";
 import type { Page, PluginConfig } from "vuepress";
 
@@ -97,4 +98,13 @@ export const googleAnalytics: PluginConfig = [
   {
     id: "G-2FRCSZQS1X"
   } as GoogleAnalyticsPluginOptions
+];
+
+export const sitemapPlugin: PluginConfig = [
+  "@vuepress/plugin-sitemap",
+  {
+    hostname: "https://www.x-cmd.com",
+    priority: 0.6,
+    excludeUrls: ["/404.html"]
+  } as SitemapOptions
 ];

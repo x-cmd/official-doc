@@ -3,6 +3,9 @@ title: x proxy
 description: x-cmd 代理管理代理切换命令行工具，快速切换常见包管理工具的镜像源（例如：maven, npm, pip, cargo, go 等），并且可在常见的Linux系统中的包管理工具达到快速换源（例如：apt, apk, yum, pacman 等）以及命令行的代理（例如：http/https）
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    priority: 0.6
+    exclude: false
 ---
 
 # x proxy

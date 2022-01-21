@@ -21,6 +21,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     pagePlugins.pwaPlugin,
     pagePlugins.pwaPopupPlugin,
     pagePlugins.registerComponentPlugin,
+    pagePlugins.sitemapPlugin,
     pagePlugins.BaiduAnalytics,
     pagePlugins.googleAnalytics
   ],

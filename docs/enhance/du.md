@@ -2,6 +2,9 @@
 title: x du
 description: x-cmd增强 du 命令
 sidebarDepth: 1
+sitemap:
+    priority: 0.6
+    exclude: true
 ---
 
 # 一级标题 —— md效果展示

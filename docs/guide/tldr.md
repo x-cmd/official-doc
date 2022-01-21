@@ -3,6 +3,9 @@ title: x tldr
 description: x-cmd tldr | tldr，一站式快速查阅终端命令使用方式，简化版本的命令说明手册。tldr是社区维护，一个不断增长的集成了 UNIX、Linux、macOS、SunOS 和 Windows 命令行工具的示例说明手册，相对传统的手册 man 更简单，更好的用户体验，通过使用即可快速翻阅命令的使用方式。
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    priority: 0.6
+    exclude: false
 ---
 
 # x tldr

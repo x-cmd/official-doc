@@ -3,6 +3,9 @@ title: x install
 description: x install | 终端软件，命令行工具下载，终端工具，终端插件下载工具
 sidebarDepth: 1
 lastUpdated: true
+sitemap:
+    priority: 0.6
+    exclude: false
 ---
 
 # x install

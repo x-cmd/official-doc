@@ -2,6 +2,9 @@
 title: x cat
 description: x-cmd增强 cat 命令
 sidebarDepth: 1
+sitemap:
+    priority: 0.6
+    exclude: true
 ---
 
 # 一级标题 —— md效果展示
