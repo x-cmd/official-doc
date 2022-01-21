@@ -36,21 +36,21 @@
       {
         "beginRegex": "^\\s*#\\s*Section:?",
         "endRegex": "^\\s*#\\s*EndSection",
-        "autoFold": true
+        "autoFold": false
       }
     ],
     "scss": [
       {
         "beginRegex": "\\s*\\s*Section:?",
         "endRegex": "\\s*\\s*EndSection",
-        "autoFold": true
+        "autoFold": false
       }
     ],
     "shellscript": [
       {
         "beginRegex": "^\\s*#\\s*Section:?",
         "endRegex": "^\\s*#\\s*EndSection",
-        "autoFold": true
+        "autoFold": false
       }
     ]
   }
