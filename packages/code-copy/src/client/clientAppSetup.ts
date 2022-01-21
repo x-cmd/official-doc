@@ -12,9 +12,11 @@ export default defineClientAppSetup(() => {
 
   const update = () => {
     if (page.value.path === "/") return;
+    const delay = options.delay || 400;
     setTimeout(() => {
-      document.querySelectorAll(options.selector).forEach((el) => {
-        if (el.classList.contains("code-copy-added") || el.querySelector("pre, code[class*='pre-']") === null) return;
+      document.querySelectorAll(options.selector || 'div[class*="language-"]').forEach((el) => {
+        if (el.classList.contains("code-copy-added") || el.querySelector("pre, code[class*='pre-']") === null)
+          return;
         const codeContent = el.querySelector("pre, code[class*='pre-']") as HTMLElement;
         const instance = createApp(CodeCopy, {
           parent: el,
@@ -27,7 +29,7 @@ export default defineClientAppSetup(() => {
 
         el.classList.add("code-copy-added");
       });
-    }, options.delay + 100);
+    }, delay + 100);
   };
 
   onMounted(() => {
