@@ -8,6 +8,7 @@ export const DEMO_INFO: Array<TerminalInfoType> = [
     link: "/enhance/ls/",
     terminalInfo: [
       {
+        delay: 300,
         type: "input-output",
         key: "ls-1",
         inputValue: "x ls",
@@ -24,7 +25,7 @@ export const DEMO_INFO: Array<TerminalInfoType> = [
         `
       },
       {
-        delay: 1000,
+        delay: 1500,
         type: "input-output",
         key: "ls-2",
         inputValue: "x ll",
