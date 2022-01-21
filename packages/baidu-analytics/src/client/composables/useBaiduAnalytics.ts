@@ -16,13 +16,21 @@ export const useBaiduAnalytics = (id: string): void => {
 
   // insert btag `<script>` tag
   const btagScript = document.createElement("script");
-  btagScript.src = `https://hm.baidu.com/hm.js?${id}`;
+  btagScript.text = `
+  var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?${id}";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+  `;
   btagScript.async = true;
   document.head.appendChild(btagScript);
 
   // insert btag snippet
   window.baiduDataLayer = window.baiduDataLayer || [];
-  // the gtag function must use `arguments` object to forward parameters
+  // the btag function must use `arguments` object to forward parameters
   window.btag = function () {
     // eslint-disable-next-line prefer-rest-params
     baiduDataLayer.push(arguments);

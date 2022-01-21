@@ -1,1 +1,1 @@
-export * from "./useBaiduTongji";
+export * from "./useBaiduAnalytics";
