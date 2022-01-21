@@ -4,6 +4,7 @@ description: x-cmd 终端命令行主题 | 快速管理终端命令行主题命�
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
+    priority: 0.6
     exclude: false
 ---
 
