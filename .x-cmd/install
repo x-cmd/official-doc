@@ -28,6 +28,9 @@ else
 		none)
 			:
 		;;
+		plugin)
+			shift; nvm use && yarn add -D -W "$@"
+		;;
 		nvm)
 			xrc install && install nvm
 		;;
@@ -66,6 +69,7 @@ if ___x_cmd_is_suitable_advise_env; then
     advise "init" "init" - <<A
 {
     "all": "--- delete lock file and reinstall all dependencies",
+    "plugin": "--- yarn add dependencies",
     "update": "--- update all dependencies"
 }
 A

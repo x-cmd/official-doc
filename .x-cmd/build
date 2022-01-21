@@ -42,7 +42,7 @@ build_doc() {
 }
 
 build_plugin() {
-  	lerna run build && lerna bootstrap
+  	nvm use && lerna run build && lerna bootstrap
 }
 
 build_clean() {
