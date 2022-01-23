@@ -31,13 +31,20 @@ export default defineClientAppSetup(() => {
       });
     }, delay + 100);
   };
-
+  const clear = () => {
+    document.querySelectorAll(options.selector || 'div[class*="language-"]').forEach((el) => {
+      if (el.classList.contains("code-copy-added")) {
+        el.classList.remove("code-copy-added");
+      }
+    });
+  };
   onMounted(() => {
     update();
     window.addEventListener("vuepress-plugin-clipboard-update-event", update);
   });
 
   onBeforeUnmount(() => {
+    clear();
     window.removeEventListener("vuepress-plugin-clipboard-update-event", update);
   });
 
@@ -45,7 +52,13 @@ export default defineClientAppSetup(() => {
     update();
   });
 
-  watch(() => page.value.path, update);
+  watch(
+    () => page.value.path,
+    () => {
+      clear();
+      update();
+    }
+  );
 
   return update;
 });
