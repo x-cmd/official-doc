@@ -1,4 +1,4 @@
-import type { BaiduAnalyticsPluginOptions } from "@x-cmd/vuepress-plugin-baidu-analytics";
+import type { SearchConsolePluginOptions } from "@x-cmd/vuepress-plugin-china-seo";
 import type { ClipboardOptions } from "@x-cmd/vuepress-plugin-code-copy";
 import type { PluginConfig } from "vuepress";
 
@@ -15,11 +15,11 @@ export const codeCopyPlugin: PluginConfig = [
 ];
 
 /**
- * @description: Baidu Analytics Plugin
+ * @description: Baidu Analytics | 360,baidu,byteDance Autopush
  */
-export const BaiduAnalytics: PluginConfig = [
-  "@x-cmd/vuepress-plugin-baidu-analytics",
+export const ChinaSEOPlugin: PluginConfig = [
+  "@x-cmd/vuepress-plugin-china-seo",
   {
-    id: "bf054898b9d0571dbc66734813899364"
-  } as BaiduAnalyticsPluginOptions
+    baiduId: "bf054898b9d0571dbc66734813899364"
+  } as SearchConsolePluginOptions
 ];

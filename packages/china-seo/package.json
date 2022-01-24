@@ -1,13 +1,15 @@
 {
-  "name": "@x-cmd/vuepress-plugin-baidu-analytics",
+  "name": "@x-cmd/vuepress-plugin-china-seo",
   "version": "1.0.0",
-  "description": "VuePress plugin - Baidu Tongji",
+  "description": "VuePress plugin - China search console",
   "keywords": [
-    "vue",
-    "vuepress",
-    "vuepress-plugin",
-    "baidu",
+    "vuepress2",
+    "vuepress2-plugin",
+    "baidu-tongji",
     "baidu-analytics",
+    "baidu-auto-push",
+    "360-auto-push",
+    "vuepress-plugin",
     "analytics"
   ],
   "homepage": "https://www.x-cmd.com",
@@ -15,8 +17,8 @@
     "type": "git",
     "url": "https://github.com/x-cmd/x-cmd"
   },
-  "author": "zhengqbbb <zhengqiubin@x-cmd.com>",
   "license": "MIT",
+  "author": "zhengqbbb <zhengqiubin@x-cmd.com>",
   "main": "lib/node/index.js",
   "types": "lib/node/index.d.ts",
   "files": [
