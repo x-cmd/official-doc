@@ -13,7 +13,6 @@ export default defineUserConfig<DefaultThemeOptions>({
   bundler: bunderInfo.bundler,
   bundlerConfig: bunderInfo.bundlerConfig,
 
-  // eslint-disable-next-line prettier/prettier
   plugins: [
     pagePlugins.codeCopyPlugin,
     pagePlugins.sassPalettePlugin,
@@ -22,8 +21,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     pagePlugins.pwaPopupPlugin,
     pagePlugins.registerComponentPlugin,
     pagePlugins.sitemapPlugin,
-    pagePlugins.BaiduAnalytics,
-    pagePlugins.googleAnalytics
+    pagePlugins.googleAnalyticsPlugin,
+    pagePlugins.chinaSEOPlugin
   ],
   themeConfig: pageInfo.themeConfig,
   markdown: pageInfo.markdownConfig,

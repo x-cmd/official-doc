@@ -17,7 +17,7 @@ export const codeCopyPlugin: PluginConfig = [
 /**
  * @description: Baidu Analytics | 360,baidu,byteDance Autopush
  */
-export const ChinaSEOPlugin: PluginConfig = [
+export const chinaSEOPlugin: PluginConfig = [
   "@x-cmd/vuepress-plugin-china-seo",
   {
     baiduId: "bf054898b9d0571dbc66734813899364"

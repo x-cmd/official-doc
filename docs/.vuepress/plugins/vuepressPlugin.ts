@@ -93,7 +93,7 @@ export const pwaPopupPlugin: PluginConfig = [
 /**
  * @description: Google Analytics Plugin
  */
-export const googleAnalytics: PluginConfig = [
+export const googleAnalyticsPlugin: PluginConfig = [
   "@vuepress/plugin-google-analytics",
   {
     id: "G-2FRCSZQS1X"
