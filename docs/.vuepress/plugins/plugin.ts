@@ -20,6 +20,7 @@ export const codeCopyPlugin: PluginConfig = [
 export const chinaSEOPlugin: PluginConfig = [
   "@x-cmd/vuepress-plugin-china-seo",
   {
-    baiduId: "bf054898b9d0571dbc66734813899364"
+    baiduId: "bf054898b9d0571dbc66734813899364",
+    autoPush360Switch: false
   } as SearchConsolePluginOptions
 ];
