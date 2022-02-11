@@ -23,6 +23,11 @@
     "*.{js,ts,vue}": "eslint --fix",
     "package.json": "sort-package-json"
   },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
@@ -41,6 +46,7 @@
     "autoprefixer": "^10.3.1",
     "cpx2": "^4.1.2",
     "cssnano": "^5.0.14",
+    "cz-customizable": "^6.3.0",
     "eslint": "8.5.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-vuepress-typescript": "^2.2.1",
