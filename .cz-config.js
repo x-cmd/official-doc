@@ -1,11 +1,25 @@
 'use strict';
 
+const fs = require("fs");
+const path = require("path");
+
+const getDirNames = (_path) => {
+  return fs
+  .readdirSync(path.resolve(__dirname, _path))
+  .map((value) => {
+    value = value.substring(0, value.lastIndexOf('.'));
+    if (value === 'README') return null;
+    return { name: value };
+  })
+  .filter(i => i !== null);
+};
+
 module.exports = {
 
   types: [
+    {value: 'docs',     name: 'docs:     文档更新  | Documentation only changes'},
     {value: 'feat',     name: 'feat:     新特性    | A new feature'},
     {value: 'fix',      name: 'fix:      修复缺陷  | A bug fix'},
-    {value: 'docs',     name: 'docs:     文档更新  | Documentation only changes'},
     {value: 'style',    name: 'style:    样式更改  | Changes that do not affect the meaning of the code'},
     {value: 'refactor', name: 'refactor: 代码重构  | A code change that neither fixes a bug nor adds a feature'},
     {value: 'perf',     name: 'perf:     性能提升  | A code change that improves performance'},
@@ -17,10 +31,11 @@ module.exports = {
   ],
 
   scopes: [
-    {name: 'docs'},
     {name: 'theme'},
     {name: 'plugin-seo'},
-    {name: 'plugin-codecopy'}
+    {name: 'plugin-codecopy'},
+    ...getDirNames("docs/guide"),
+    ...getDirNames("docs/enhance")
   ],
 
   // 针对特别类型覆盖scopes. 例如.: 'fix'
@@ -37,7 +52,7 @@ module.exports = {
   // override the messages, defaults are as follows
   messages: {
     type: '选择你的提交类型    | Select the type of change that you\'re committing:',
-    scope: '\n选择一个模块范围(可选) | Denote the SCOPE of this change (optional):',
+    scope: '选择一个模块范围(可选) | Denote the SCOPE of this change (optional):',
     // used if allowCustomScopes is true
     customScope: '自定义修改模块名 | Denote the SCOPE of this change:',
     subject: '简短说明 | Write a SHORT, IMPERATIVE tense description of the change:\n',
