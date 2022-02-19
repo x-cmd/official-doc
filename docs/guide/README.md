@@ -18,7 +18,7 @@ sitemap:
     <a href="https://github.com/x-cmd/x-cmd" target="_blank"><img src="https://img.shields.io/badge/Github-X--CMD-lightgrey?style=social&logo=github" alt="Github" style="display:inline;margin:0 10px 0 0;"></a>
     <a href="https://gitee.com/x-cmd/x-cmd" target="_blank"><img src="https://img.shields.io/badge/Gitee-X--CMD-lightgrey?style=social&logo=gitee" alt="Gitee"></a>
     <br/>
-    <a href="https://github.com/x-cmd/x-cmd/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square" alt="license-Apache2"></a>
+    <a href="https://github.com/x-cmd/x-cmd/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square" alt="license-GPL3"></a>
 </p>
 
 <p align="center">
