@@ -12,6 +12,7 @@ const getDirNames = (_path) => {
   .filter(i => i !== null);
 };
 
+/** @type {import('cz-git').UserConfig} */
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
