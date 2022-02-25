@@ -1,6 +1,6 @@
 ---
 title: 介绍
-description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具 | x-cmd的介绍信息以及使用教程，内含终端命令行主题，补全，代理，常用命令说明手册查找
+description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具 | x-cmd的介绍信息以及使用教程，内含终端命令行主题，补全，代理，常用命令说明手册查找。
 sidebarDepth: 0
 lastUpdated: true
 sitemap:
@@ -42,24 +42,19 @@ sitemap:
 - **增强终端**：x-cmd 对社区中常用的工具进行的托管分发，使用命令行工具告别下载问题。
 
 ## 安装
-<CodeGroup>
-  <CodeGroupItem title="curl" active>
 
+:::: code-group
+::: code-group-item curl
 ```bash
 eval "$(curl https://get.x-cmd.com)"
 ```
-
-  </CodeGroupItem>
-
-  <CodeGroupItem title="wget">
-
+:::
+::: code-group-item wget
 ```bash
 eval "$(wget -qO- "https://get.x-cmd.com")"
 ```
-
-  </CodeGroupItem>
-</CodeGroup>
-
+:::
+::::
 
 ## 版权
 Copyright © 2020-present, Li Junhao (l@x-cmd.com).<br>
