@@ -1,4 +1,4 @@
-# shellcheck shell=bash disable=SC1091,SC2034,SC2002 #xsh
+# shellcheck shell=bash disable=SC1091,SC2034,SC2002,SC2154 #xsh
 
 # Section: Arg
 xrc ui
@@ -13,7 +13,19 @@ DOC_SEARCH_CONFIG_FILE=$WORK_DIR/docs/.vuepress/configs/docSearch/docSearchConfi
 # EndSection
 
 # Section: Function
-build_doc() {
+build() {
+    param:dsl       '
+type:
+    Type = all docs plugin clean
+options:
+    --p    "select target build command"        <>:Type
+'
+    param:run
+    build_"${p}"
+}
+
+
+build_docs() {
 	if [ -d "$TEMPLATE_PATH/$PACKAGE_VERSION" ];then
 		cd "$TEMPLATE_PATH" &&
 		rm -rf "${PACKAGE_VERSION}"* &&
@@ -41,32 +53,19 @@ build_doc() {
 	cd "$WORK_DIR" || exit
 }
 
-build_plugin() {
-  	nvm use && lerna run build && lerna bootstrap
-}
-
 build_clean() {
-  	lerna run clean
-}
-###
-  # 运行docSearch docker建立搜索索引
-  # 根目录需建立.env文件：https://www.algolia.com/apps/CXZ8IP0O5G/api-keys/all
-  # APPLICATION_ID=your APPLICATION_ID
-  # API_KEY=your API_KEY
-###
-build_docSearch() {
-	local env_file_path="$WORK_DIR/.env"
-  	[ ! -f "$env_file_path" ] && echo 'APPLICATION_ID=your_algolia_application_id' >> "$env_file_path" && echo 'APPLICATION_ID=your_algolia_api_key' >> "$env_file_path" && return
-	docker run -it --env-file=.env -e "CONFIG=$(cat "${DOC_SEARCH_CONFIG_FILE}" | x jq -r tostring)" algolia/docsearch-scraper
+	npx lerna run clean
 }
 
-is_need_search_collect() {
-	ui prompt "$(ui bold green 'Is need search console update (y/N)')" _IS_NEED
-	if [ "$_IS_NEED" = 'y' ] || [ "$_IS_NEED" = 'Y' ] ;then
-		x collect
-	fi
+build_plugin() {
+	npx lerna run build
 }
-# EndSection
+
+build_all() {
+	build_clean
+	build_plugin
+	build_docs
+}
 
 # Section: Main
 case "${1}" in
@@ -75,18 +74,12 @@ case "${1}" in
 	search|docSearch)				build_docSearch && is_need_search_collect   ;;
 	doc|*)							build_doc									;;
 esac
-# EndSection
 
-# Section: Advise
-if ___x_cmd_is_suitable_advise_env; then
-    x advise rm "build"
-    advise "build" - <<A
-{
-    "plugin": "--- build the plugin And link node_modules",
-    "clean": "--- plugins build file clean",
-    "search": "--- build baidu collect and document search index",
-    "doc": "--- build the doc",
-}
-A
-fi
-# EndSection
+# Section: Main
+case "${1}" in
+    docs)   	build_docs      ;;
+    plugin)   build_plugin    ;;
+    clean)  	build_clean     ;;
+    all)    	build_all       ;;
+    *)      	build           ;;
+esac

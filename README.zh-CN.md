@@ -11,7 +11,7 @@ eval "$(curl https://get.x-cmd.com)"
 ### VSCode 插件
 
 ```bash
-x install code-plugin
+x install code_plugin
 ```
 
 ### nvm
