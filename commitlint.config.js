@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require('child_process');
 
 const getDirNames = (_path) => {
   return fs
@@ -12,15 +13,17 @@ const getDirNames = (_path) => {
   .filter(i => i !== null);
 };
 
+// @tip: git branch name = feat_33_qb   =>    auto get defaultIssues = #33
+const issue = execSync('git rev-parse --abbrev-ref HEAD')
+  .toString()
+  .trim()
+  .split("_")[1]
+
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     'subject-empty': [2, 'never'], // subject（简短得描述）不能为空
-    'subject-max-length': [1, 'always', 80], // subject最大长度，超出只会警告，不阻止提交
-    'body-leading-blank': [1, 'always'],
-    'footer-leading-blank': [1, 'always'],
-    'header-max-length': [2, 'always', 72]
   },
   prompt: {
     messages: {
@@ -59,6 +62,8 @@ module.exports = {
     issuePrefixs: [
       { value: "link", name: "link:     关联issue | processing to ISSUES" },
       { value: "closed", name: "closed:   关闭issue | ISSUES has been processed" }
-    ]
+    ],
+    customIssuePrefixsAlign: !issue ? "top" : "bottom",
+    defaultIssues: !issue ? "" : `#${issue}`
   }
 };
