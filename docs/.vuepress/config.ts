@@ -24,6 +24,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     pagePlugins.googleAnalyticsPlugin,
     pagePlugins.chinaSEOPlugin
   ],
+  locales: pageInfo.locales,
   themeConfig: pageInfo.themeConfig,
   markdown: pageInfo.markdownConfig,
   extendsMarkdown: (md) => {

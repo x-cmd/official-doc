@@ -38,5 +38,43 @@ export const zh: SidebarConfig = {
         // "/enhance/openssl.md",
       ]
     }
+  ],
+  "/en": [
+    {
+      text: "Guide",
+      collapsible: false,
+      // prettier-ignore
+      children: [
+        "/en/guide/README.md",
+      ]
+    },
+    {
+      text: "Basic Commands",
+      collapsible: false,
+      // prettier-ignore
+      children: [
+      "/en/guide/theme.md",
+      "/en/guide/proxy.md",
+      "/en/guide/install.md",
+      "/en/guide/tldr.md",
+      "/en/guide/advise.md",
+      "/en/guide/workspace.md",
+      ]
+    },
+    {
+      text: "Extension Commands",
+      collapsible: false,
+      // prettier-ignore
+      children: [
+        "/en/enhance/ls.md",
+        // "/enhance/cd.md",
+        // "/enhance/du.md",
+        // "/enhance/cat.md",
+        // "/enhance/jq.md",
+        // "/enhance/yq.md",
+        // "/enhance/nmap.md",
+        // "/enhance/openssl.md",
+      ]
+    }
   ]
 };

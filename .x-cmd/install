@@ -17,12 +17,7 @@ options:
 }
 
 use_npm_verison() {
-	[ -z "$(command -v nvm)" ] \
-		&& printf "%s\n" "Not command nvm" \
-		&& xrc install  \
-		&& install nvm \
-		&& return 1
-	nvm use
+	x env download node v14 && x env try node v14
 }
 
 rm_react_type() {

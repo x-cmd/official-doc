@@ -1,12 +1,12 @@
 import type { NavbarConfig } from "@vuepress/theme-default";
 
-export const zh: NavbarConfig = [
+export const en: NavbarConfig = [
   {
-    text: "文档",
-    link: "/guide/README.md"
+    text: "Document",
+    link: "/en/guide/README.md"
   },
   {
-    text: "项目地址",
+    text: "Project Address",
     children: [
       {
         text: "Github",
