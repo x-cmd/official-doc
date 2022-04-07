@@ -12,147 +12,146 @@ sitemap:
 
 <Terminal :termIndex="0"/>
 
-## 概要
-==x ls [[ OPTION ]...](#命令选项) [ Folder ]...==  ——  增强输出文件列表
+## Summary
+==x ls [[ OPTION ]...](#command-options) [ Folder ]...==  ——  Enhance the list of output files
 
-> 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行分发托管，达到在不同环境下的快速安装使用。
+> Using x-cmd static compilation module, [exa](https://github.com/ogham/exa) is distributed and hosted to achieve rapid installation and use in different environments.
 
 <br>
 
-::: tip 提示
-`x ll` 命令等同 `x ls -l` 输出长列表命令
+::: tip Tip
+`x ll` command is equivalent to `x ls -l` output long list command
 :::
 
-## 描述
+## Describe
 
-`x ls` 是 Unix 和 Linux 操作系统附带的古老文件列表命令行程序的现代替代品，赋予它更多功能和更好的默认值。它使用颜色来区分文件类型和元数据。它了解符号链接、扩展属性和 Git。它体积小、速度快，而且只有一个二进制文件，相比传统的 `ls` 命令 `x ls` 功能更强大、对用户更友好。
+`x ls` is a modern replacement for the old file list command line program that came with Unix and Linux operating systems, giving it more features and better defaults. It uses color to distinguish between file types and metadata. It understands symbolic links, extended properties, and Git. It is small, fast, has only one binary file, and is more powerful and user-friendly than the traditional `ls` command `x ls`.
 
-- **颜色**:不同类型的文件和数据将采用不同的颜色，并且将为当前用户突出显示用户和组列。
-- **信息**:显示文件的扩展属性，以及标准文件系统信息，例如 权限，大小和文件创建更新的日期和时间。
-- **树视图**:标准tree工具是内置的。
-- **Git支持**:查看每个文件的暂存和未暂存状态，就在标准视图中。也适用于树状视图，以获取存储库的高级概览。
+- **Color**: Different types of files and data will be colored differently, and user and group columns will be highlighted for the current user.
+- **Information**: Displays the extended properties of the file, as well as standard file system information, such as permissions, size, and the date and time the file was created and updated.
+- **Tree view**: The standard Tree tool is built in.
+- **Git support**: View the staged and unstaged status of each file, right in the standard view. Also applies to the tree view to get a high-level overview of the repository.
+## Command options
 
-## 命令选项
-
-> `x ls` 命令选项几乎但不完全于 `ls`相同
+> `x ls` command options are almost but not exactly the same as `ls`
 
 -1 , --oneline
-:   每行显示一个条目
+:   Each row displays one entry
 
 -G , --grid
-: 将条目显示为网格（默认）
+: Display entries as grids (default)
 
 -l , --long
-: 显示扩展细节和属性
+: Display extension details and properties
 
 -R , --recurse
-:  递归到目录
+:  Recurse to the directory
 
 -T , --tree
-: ==作为树递归到目录中==
+: ==Recursively into a directory as a tree==
 
 -x , --across
-: 对网格进行排序，而不是向下排序
+: Sort the grid, not down
 
 -F , --classify
-: 按文件名显示类型指示器
+: Displays type indicators by filename
 
 --icons
-: 显示图标
+: Display icons
 
 --no-icons
-: 不显示图标（总是覆盖 --icons）
+: Do not display icons (always overwrite -- icons)
 
-### 过滤选项
+### Filtering options
 
 -a , --all
-: ==显示隐藏和“点”前缀文件==
+: ==Shows hidden and dot-prefixed files==
 
 -d , --list-dirs
-: 普通文件一样列出目录
+: Lists directories like normal files
 
 -L , --level=(depth)
-: 限制递归深度
+: Limit the recursion depth
 
 -r , --reverse
-: 反转排序顺序
+: Reverse sort order
 
 -s , --sort=(field)
-: 按哪个字段排序
+: Which field to sort by
 
 --group-directories-first
-: 在其他文件之前列出目录
+: List directories before other files
 
 -D , --only-dirs
-: 只列出目录
+: List only directories
 
 --git-ignore
-: 忽略中提到的文件.gitignore
+: Ignore the file mentioned in .gitignore
 
 -I , --ignore-glob=(globs)
-: 要忽略的文件的全局模式（管道分隔）
+: Global mode for files to ignore (pipe separation)
 
-### 长视图选项
+### Long view options
 
 -b , --binary
-: 列出带有二进制前缀的文件大小
+: Lists file sizes with binary prefixes
 
 -B , --bytes
-: 以字节为单位列出文件大小，不带任何前缀
+: Lists file sizes in bytes without any prefix
 
 -g , --group
-: 列出每个文件的组
+: Lists the groups for each file
 
 -h , --header
-: 为每一列添加一个标题行
+: Add a header row for each column
 
 -H , --links
-: 列出每个文件的硬链接数
+: Lists the number of hard links per file
 
 -i , --inode
-: 列出每个文件的 inode 编号
+: Lists the inode number of each file
 
 -m , --modified
-: 使用修改后的时间戳字段
+: Use the modified timestamp field
 
 -S , --blocks
-: 列出每个文件的文件系统块数
+: Lists the number of file system blocks for each file
 
 -t , --time=(field)
-: 使用哪个时间戳字段
+: Which timestamp field to use
 
 -u , --accessed
-: 使用访问的时间戳字段
+: Use the timestamp field of the access
 
 -U , --created
-: 使用创建的时间戳字段
+: Use the created timestamp field
 
 -@ , --extended
-: 列出每个文件的扩展属性和大小
+: Lists the extended attributes and sizes for each file
 
 --changed
-: 使用改变的时间戳字段
+: Use the changed timestamp field
 
 --git
-: 列出每个文件的 Git 状态，如果被跟踪或忽略
+: Lists the Git status of each file, if tracked or ignored
 
 --time-style
-: 如何格式化时间戳
+: How do I format the timestamp
 
 --no-permissions
-: 禁止权限字段
+: Forbidden permission field
 
 --octal-permissions
-: 以八进制格式列出每个文件的权限
+: List permissions for each file in octal format
 
 --no-filesize
-: 取消文件大小字段
+: Cancel the file size field
 
 --no-user
-: 禁止用户字段
+: Disable user field
 
 --no-time
-: 抑制时间字段
+: Suppression time field
 
 
-> 更多内容可查看 [exa 文档查阅](https://github.com/ogham/exa)
+> Check out more [exa document to consult](https://github.com/ogham/exa)

@@ -29,23 +29,16 @@ export const zh: SidebarConfig = {
       // prettier-ignore
       children: [
         "/enhance/ls.md",
-        // "/enhance/cd.md",
-        // "/enhance/du.md",
-        // "/enhance/cat.md",
-        // "/enhance/jq.md",
-        // "/enhance/yq.md",
-        // "/enhance/nmap.md",
-        // "/enhance/openssl.md",
       ]
     }
   ],
-  "/en": [
+  "/zh": [
     {
       text: "Guide",
       collapsible: false,
       // prettier-ignore
       children: [
-        "/en/guide/README.md",
+        "/zh/guide/README.md",
       ]
     },
     {
@@ -53,12 +46,12 @@ export const zh: SidebarConfig = {
       collapsible: false,
       // prettier-ignore
       children: [
-      "/en/guide/theme.md",
-      "/en/guide/proxy.md",
-      "/en/guide/install.md",
-      "/en/guide/tldr.md",
-      "/en/guide/advise.md",
-      "/en/guide/workspace.md",
+      "/zh/guide/theme.md",
+      "/zh/guide/proxy.md",
+      "/zh/guide/install.md",
+      "/zh/guide/tldr.md",
+      "/zh/guide/advise.md",
+      "/zh/guide/workspace.md",
       ]
     },
     {
@@ -66,14 +59,7 @@ export const zh: SidebarConfig = {
       collapsible: false,
       // prettier-ignore
       children: [
-        "/en/enhance/ls.md",
-        // "/enhance/cd.md",
-        // "/enhance/du.md",
-        // "/enhance/cat.md",
-        // "/enhance/jq.md",
-        // "/enhance/yq.md",
-        // "/enhance/nmap.md",
-        // "/enhance/openssl.md",
+        "/zh/enhance/ls.md",
       ]
     }
   ]

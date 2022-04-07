@@ -8,8 +8,6 @@ import * as sidebar from "./sidebar";
 
 export const lang = "zh-CN";
 
-export const USlang = "en-US";
-
 export const base = "/";
 
 export const title = `x-cmd`;
@@ -52,12 +50,12 @@ export const headConfig: HeadConfig[] = [
 
 export const locales: AppOptions['locales'] = {
     "/": {
-      lang: lang,
+      lang: "en-US",
       title: title,
       description: description
     },
-    "/en/": {
-      lang: USlang,
+    "/zh/": {
+      lang: lang,
       title: title,
       description: USdescription
     }
@@ -74,12 +72,12 @@ export const themeConfig: AppOptions["themeConfig"] = {
   editLinkPattern: ":repo/",
   backToHome: "> cd $HOME",
   locales: {
-    '/': {
+    '/zh/': {
       selectLanguageName: '简体中文',
       selectLanguageText: '选择语言',
       navbar: navbar.zh,
     },
-    '/en/': {
+    '/': {
       selectLanguageName: 'English',
       selectLanguageText: 'Languages',
       navbar: navbar.en,

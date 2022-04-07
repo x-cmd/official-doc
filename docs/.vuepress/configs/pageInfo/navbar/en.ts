@@ -20,27 +20,4 @@ export const en: NavbarConfig = [
       }
     ]
   }
-  // {
-  //   text: "企业版",
-  //   link: "/helloword.md"
-  // }
-  // {
-  //   text: "更多模块",
-  //   children: [
-  //     {
-  //       text: "Shell",
-  //       // prettier-ignore
-  //       children: [
-  //         "/helloword.md"
-  //       ]
-  //     },
-  //     {
-  //       text: "Rust",
-  //       // prettier-ignore
-  //       children: [
-  //         "/helloword/README.md"
-  //       ]
-  //     }
-  //   ]
-  // }
 ];

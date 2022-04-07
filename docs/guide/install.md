@@ -12,26 +12,26 @@ sitemap:
 
 <Terminal :termIndex="4"/>
 
-## 概要
+## Summary
 
-==x install [[ subcommand ]...](#子命令) [\<module\>]== ——  命令行工具/插件下载工具
+==x install [[ subcommand ]...](#subcommand) [\<module\>]== ——  Command line tool/Plug-in download tool
 
-## 描述
+## Description
 
-`x install` 命令集成了常用的命令行工具，命令行插件官方下载方式。
+`x install` command integrates common command line tools. You can download the command line plug-in.
 
-- **方便快捷**：通过命令的交互，可快速获取常用的命令行工具，命令行插件官方下载方式。
+- **Convenient and quick**：Through command interaction, you can quickly obtain common command line tools and official download methods of command line plug-ins.
 
-## 子命令
+## Subcommand
 
 ls
-:  列出所有的可下载模块列表
+:  Lists all downloadable modules
 
 run \<module name\> ,  \<module name\>
-:  提供交互式的下载模块的会话
+:  Provides an interactive session for downloading modules
 
 get
-:  输出模块的下载命令
+:  Output the download command for the module
 
 update
-:  更新下载模块列表
+:  Update the list of downloaded modules

@@ -12,22 +12,22 @@ sitemap:
 
 <Terminal :termIndex="7"/>
 
-## 概要
+## Summary
 
-==x [ 脚本文件名 ]== ——  工作区脚本运行入口
+==x [ Script file name ]== ——  Workspace script run entry
 
-## 描述
+## Description
 
-`x workspace` 提供项目Shell脚本运行入口，命令根据当前文件夹路径层层递归寻找 `.x-cmd` 文件夹下的文件，并使用Shell运行脚本。
+`x workspace` provides a project Shell script run entry, command according to the current folder path layer by layer recursion to find files under the `.x-cmd` folder, and use Shell to run scripts.
 
-- **方便管理**：提供唯一 x 入口帮助你更好管理项目中的脚本文件。
-- **无污染外部环境**：使用 `x workspace` 所运行的脚本文件，不会污染到外部的环境变量。
+- **Convenient management**：Provides a unique X entry to help you better manage script files in your project.
+- **No pollution external environment**：Scripts run using `x workspace` do not pollute external environment variables.
 
-## 使用
+## Use
 
-### 项目目录结构：
+### Project directory structure:
 
-- 项目根目录创建 `.x-cmd` 文件夹用于存放脚本，例如：
+- The project root creates an `.x-cmd` folder to store scripts, for example:
 ```${1}
 ├─ .x-cmd
 │  └── dev
@@ -39,15 +39,15 @@ sitemap:
 └─ README.md
 ```
 
-- 运行`x <对应脚本文件名>`, 例如 `x dev`即可运行 `dev` Shell脚本文件
+- Run`x <corresponding script name>`, for example, `x dev` to run the `dev` Shell script file
 
-### 脚本编写：
+### Scripting:
 
-- 脚本文件名需 **无文件后缀**
-- 脚本第一行需添加 `xsh` 标识
-- 提供 `x wsroot` 命令获取 **项目的根路径**
+- The script file name must be **without file suffix**
+- Add the 'xsh' flag at the first line of the script
+- Provide the `x wsroot` command to obtain **the root path of the project**
 
-例子：
+Example：
 
 ``` sh
 # shellcheck shell=bash #xsh

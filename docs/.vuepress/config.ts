@@ -16,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   plugins: [
     pagePlugins.codeCopyPlugin,
     pagePlugins.sassPalettePlugin,
+    // pagePlugins.vuepressSearchPlugin,
     pagePlugins.docSearchPlugin,
     pagePlugins.pwaPlugin,
     pagePlugins.pwaPopupPlugin,

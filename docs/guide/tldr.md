@@ -12,27 +12,27 @@ sitemap:
 
 <Terminal :termIndex="5"/>
 
-## 概要
+## Summary
 
-==x tldr [[ subcommand ]...](#子命令) [\<module\>]== ——  简化版本的命令说明手册
+==x tldr [[ subcommand ]...](#subcommand) [\<module\>]== ——  Simplified version of the command description manual
 
-## 描述
+## Description
 
-`x tldr` tldr 是一个由[社区](https://github.com/tldr-pages/tldr)维护，不断增长的集成了 UNIX、Linux、macOS、SunOS 和 Windows 命令行工具的示例**说明手册**，相对传统的手册 `man` 更简单，更好的用户体验，达到快速翻阅**命令的使用方式**。
+`x tldr` tldr is a[community](https://github.com/tldr-pages/tldr)maintained，growing example of integration of UNIX、Linux、macOS、SunOS and Windows command line tools**manual**，simpler than the traditional manual `man` better user experience, to **quickly browse commands**.
 
-- **语言包**：通过社区人员的维护，手册拥有了多种语言的说明，可通过 `x tldr lang` 命令进行快速的切换语言包。
-- **交互至上**：我们在注重交互的同时，对于传统的 tldr 命令有着更好的排版和使用方式。
+- **Language pack**：Through the maintenance of community staff, the manual has a variety of language instructions, can be quickly changed by the command `x tldr lang` language package.
+- **Interaction is the highest**：We have a better layout and use of traditional tldr commands while focusing on interaction.
 
-## 子命令
+## Subcommand
 
 ls
-:  列出所有命令行工具示例说明手册
+:  Lists all command line tool example manuals
 
 cat \<command\>
-:  ==输出命令的说明手册==
+:  ==Instruction manual for output commands==
 
 lang \<language\>
-:  切换说明手册语言包 | <Badge type="tip" text="提示" vertical="middle" /> 如果说明手册未拥有该语言的翻译，将自动使用英语。
+:  Switch instruction manual language package | <Badge type="tip" text="Tip" vertical="middle" /> If the instruction manual does not have a translation in that language, English will be used automatically.
 
 update
-:   更新所有命令行工具示例说明手册
+:   Updated all command line tool example manuals

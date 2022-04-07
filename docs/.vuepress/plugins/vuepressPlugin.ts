@@ -56,6 +56,9 @@ export const vuepressSearchPlugin: PluginConfig = [
     locales: {
       "/": {
         placeholder: "搜索"
+      },
+      "/en/": {
+        placeholder: "Search"
       }
     }
   } as unknown as SearchPluginOptions
