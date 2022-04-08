@@ -3,7 +3,7 @@ import type { NavbarConfig } from "@vuepress/theme-default";
 export const zh: NavbarConfig = [
   {
     text: "文档",
-    link: "/guide/README.md"
+    link: "/zh/guide/README.md"
   },
   {
     text: "项目地址",

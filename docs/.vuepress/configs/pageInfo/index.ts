@@ -14,8 +14,6 @@ export const title = `x-cmd`;
 
 export const description = "x-cmd 一个快速，跨平台功能强大的终端插件，让你的终端有无限可能!";
 
-export const USdescription =
-  "X-cmd is a fast, cross-platform powerful terminal plug-in that makes your terminal have unlimited possibilities!";
 /* eslint-disable prettier/prettier */
 export const headConfig: HeadConfig[] = [
   ["meta", { name: "google-site-verification", content: "_18qqOuIfzijSG7HV3nMHul_TLcD5hnpJBB0m3omcN0" }],
@@ -51,13 +49,13 @@ export const headConfig: HeadConfig[] = [
 export const locales: AppOptions['locales'] = {
     "/": {
       lang: "en-US",
-      title: title,
-      description: description
+      title: `x-cmd`,
+      description: "X-cmd is a fast, cross-platform powerful terminal plug-in that makes your terminal have unlimited possibilities!"
     },
     "/zh/": {
-      lang: lang,
-      title: title,
-      description: USdescription
+      lang: "zh-CN",
+      title: `x-cmd`,
+      description: "x-cmd 一个快速，跨平台功能强大的终端插件，让你的终端有无限可能!"
     }
 }
 

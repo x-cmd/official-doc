@@ -4,7 +4,7 @@ heroText: null
 tagline: null
 heroImage: null
 title: Home page
-description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具| x-cmd是符合 POSIX Shell标准 编写的命令行工具，一键开启终端命令行主题，和命令行补全等
+description: x-cmd —— Lightweight, cross-platform, powerful command line tool| x-cmd is written in line with the POSIX Shell standard command line tool, one-click open terminal command line theme, and command line completion
 pageClass: custom-home-page
 sitemap:
     priority: 1

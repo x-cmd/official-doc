@@ -1,6 +1,6 @@
 ---
 title: x proxy
-description: x-cmd 代理管理代理切换命令行工具，快速切换常见包管理工具的镜像源（例如：maven, npm, pip, cargo, go 等），并且可在常见的Linux系统中的包管理工具达到快速换源（例如：apt, apk, yum, pacman 等）以及命令行的代理（例如：http/https）
+description: x-cmd agent management Agent switch command line tool，quickly switch command line proxies of common package management tools (e.g. maven, npm, pip, cargo, go, etc.), and quickly switch sources in common Linux package management tools (e.g. apt, apk, yum, pacman, etc.) and command line agents (e.g. http/https)
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,7 +12,7 @@ sitemap:
 
 <Terminal :termIndex="2"/>
 
-## Summary
+## Synopsis
 
 ==x proxy [ \<modules\> ...](#mirror-source-modules-are-supported) [[ subcommand ]...](#subcommand)== ——  Manage the command line mirror source
 
@@ -47,19 +47,19 @@ sitemap:
 ## Subcommand
 
 set
-:  Set the HTTP/HTTPS proxy for the current terminal session
+:  Setting proxy in local shell environments: http_proxy, https_proxy
 
 unset
-:  Cancel setting all HTTP/HTTPS proxies for the current terminal session
+:  Unset all proxy in the shell environment
 
 \<module name\> url
-:   Lists all mirror sources supported by the module
+:   Provide url of mirror candidates
 
 \<module name\> set, replace [Mirror source]
-:   ==Example Change the mirror source | If you do not enter [Mirror source], the default official mirror source will be used==
+:   ==Setting the mirror | If you do not enter [Mirror source], the default official mirror source will be used==
 
 \<module name\> unset
-:   Example Cancel setting the mirror source
+:   Reset the source to the original official
 
 \<module name\> rollback
 :   Example Roll back mirror source Settings

@@ -3,7 +3,7 @@ import type { SidebarConfig } from "@vuepress/theme-default";
 export const zh: SidebarConfig = {
   "/": [
     {
-      text: "指南",
+      text: "Guide",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -11,7 +11,7 @@ export const zh: SidebarConfig = {
       ]
     },
     {
-      text: "基础命令",
+      text: "Basic Commands",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -24,7 +24,7 @@ export const zh: SidebarConfig = {
       ]
     },
     {
-      text: "扩展命令",
+      text: "Extension Commands",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -34,7 +34,7 @@ export const zh: SidebarConfig = {
   ],
   "/zh": [
     {
-      text: "Guide",
+      text: "指南",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -42,7 +42,7 @@ export const zh: SidebarConfig = {
       ]
     },
     {
-      text: "Basic Commands",
+      text: "基础命令",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -55,7 +55,7 @@ export const zh: SidebarConfig = {
       ]
     },
     {
-      text: "Extension Commands",
+      text: "扩展命令",
       collapsible: false,
       // prettier-ignore
       children: [

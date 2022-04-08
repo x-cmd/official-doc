@@ -1,6 +1,6 @@
 ---
 title: x theme
-description: x-cmd 终端命令行主题 | 快速管理终端命令行主题命令，支持一键生成命令行主题 | zsh主题 | bash主题 | ash主题 | dash主题
+description: X-cmd Indicates the subject of the terminal command line | Quick management terminal command line topics command, support one-click generation of command line topics | zsh theme | bash theme | ash theme | dash theme
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,7 +12,7 @@ sitemap:
 
 <Terminal :termIndex="1"/>
 
-## Summary
+## Synopsis
 
 ==x theme [[ subcommand ]...](#subcommand)== ——  Manage command line topics
 
@@ -28,16 +28,16 @@ sitemap:
 ## Subcommand
 
 ls
-:  Displays a list of all topics
+:  list all theme
 
 use  \<theme name\>
-:   ==Sets the current command line theme based on the theme name==
+:   ==use theme when starting the shell==
 
 try  \<theme name\>
-:   Sets the command line topic of the current terminal session based on the topic name
+:   try theme
 
 unset
-:   Cancels setting the command line theme
+:   unset the theme
 
 
 ### Zsh supports

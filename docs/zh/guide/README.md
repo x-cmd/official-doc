@@ -26,7 +26,7 @@ sitemap:
   ·
   <a href="#安装">安装</a>
   ·
-  <a href="https://x-cmd.com/guide/">文档</a>
+  <a href="https://x-cmd.com/zh/guide/">文档</a>
 </p>
 
 

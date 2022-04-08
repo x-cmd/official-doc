@@ -1,6 +1,6 @@
 ---
 title: x advise
-description: x advise, 终端命令行补全管理工具, 命令行tab补全, 终端tab补全，快速生成命令行补全
+description: x advise, terminal command line completion management tool, command line TAB completion, terminal TAB completion, quickly generate command line completion
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,7 +12,7 @@ sitemap:
 
 <Terminal :termIndex="6"/>
 
-## Summary
+## Synopsis
 
 ==x advise man[[ subcommand ]...](#subcommand) [\<command name\>]== ——  Command line completion management tool
 
@@ -21,18 +21,18 @@ sitemap:
 `x advise` command line completion management tool, in interactive `Shell` such as `Zsh` and `Bash`allows the user to use the `Tab ↹` key to fill in the rest of a command or give a prompt when using a command.
 
 - **Completion management**：Provides one-stop command completion management, eliminating configuration difficulties
-- **According to the need to load**：Load the completion of corresponding commands as required.
+- **Load on demand**：Load the completion of corresponding commands as required.
 
 ## Subcommand
 
 ls
-:  Displays a list of all loadable completion commands
+:  Show all available advise json obj
 
 load \<command name\>
 :  Load the completion of the corresponding command module
 
 rm \<command name\>
-:  Cancel loading the completion of the corresponding command module
+:  Remove one obj, if no obj is given, remove all obj.
 
 update
 :  Update the completion list of all commands

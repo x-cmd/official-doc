@@ -1,6 +1,6 @@
 ---
 title: x install
-description: x install | 终端软件，命令行工具下载，终端工具，终端插件下载工具
+description: x install | Terminal software, command line tool download, terminal tool, terminal plug-in download tool
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,7 +12,7 @@ sitemap:
 
 <Terminal :termIndex="4"/>
 
-## Summary
+## Synopsis
 
 ==x install [[ subcommand ]...](#subcommand) [\<module\>]== ——  Command line tool/Plug-in download tool
 
@@ -25,13 +25,13 @@ sitemap:
 ## Subcommand
 
 ls
-:  Lists all downloadable modules
+:  List all software
 
 run \<module name\> ,  \<module name\>
-:  Provides an interactive session for downloading modules
+:  Run software installation command
 
 get
-:  Output the download command for the module
+:  Get software installation command
 
 update
 :  Update the list of downloaded modules

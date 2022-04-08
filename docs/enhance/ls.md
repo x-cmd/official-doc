@@ -1,6 +1,6 @@
 ---
 title: x ls
-description: x-cmd 增强 ls 命令 | 文件列表展示命令
+description: x-cmd enhanced ls command | File list display command
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,8 +12,8 @@ sitemap:
 
 <Terminal :termIndex="0"/>
 
-## Summary
-==x ls [[ OPTION ]...](#command-options) [ Folder ]...==  ——  Enhance the list of output files
+## Synopsis
+==x ls [[ OPTION ]...](#options) [ Folder ]...==  ——  Enhance the list of output files
 
 > Using x-cmd static compilation module, [exa](https://github.com/ogham/exa) is distributed and hosted to achieve rapid installation and use in different environments.
 
@@ -23,7 +23,7 @@ sitemap:
 `x ll` command is equivalent to `x ls -l` output long list command
 :::
 
-## Describe
+## Description
 
 `x ls` is a modern replacement for the old file list command line program that came with Unix and Linux operating systems, giving it more features and better defaults. It uses color to distinguish between file types and metadata. It understands symbolic links, extended properties, and Git. It is small, fast, has only one binary file, and is more powerful and user-friendly than the traditional `ls` command `x ls`.
 
@@ -31,50 +31,50 @@ sitemap:
 - **Information**: Displays the extended properties of the file, as well as standard file system information, such as permissions, size, and the date and time the file was created and updated.
 - **Tree view**: The standard Tree tool is built in.
 - **Git support**: View the staged and unstaged status of each file, right in the standard view. Also applies to the tree view to get a high-level overview of the repository.
-## Command options
+## Options
 
 > `x ls` command options are almost but not exactly the same as `ls`
 
 -1 , --oneline
-:   Each row displays one entry
+:   Display one entry per line
 
 -G , --grid
-: Display entries as grids (default)
+: Display entries as a grid (default)
 
 -l , --long
-: Display extension details and properties
+: Display extended file metadata as a table
 
 -R , --recurse
-:  Recurse to the directory
+:  Recurse into directories
 
 -T , --tree
-: ==Recursively into a directory as a tree==
+: ==Recurse into directories as a tree==
 
 -x , --across
 : Sort the grid, not down
 
 -F , --classify
-: Displays type indicators by filename
+: Display type indicator by file names
 
 --icons
 : Display icons
 
 --no-icons
-: Do not display icons (always overwrite -- icons)
+: Don't display icons (always overwrite -- icons)
 
-### Filtering options
+### Filtering and sorting options
 
 -a , --all
-: ==Shows hidden and dot-prefixed files==
+: ==Show hidden and 'dot' files==
 
 -d , --list-dirs
-: Lists directories like normal files
+: List directories as files; don't list their contents
 
 -L , --level=(depth)
-: Limit the recursion depth
+: Limit the depth of recursion
 
 -r , --reverse
-: Reverse sort order
+: Reverse the sort order
 
 -s , --sort=(field)
 : Which field to sort by
@@ -89,7 +89,7 @@ sitemap:
 : Ignore the file mentioned in .gitignore
 
 -I , --ignore-glob=(globs)
-: Global mode for files to ignore (pipe separation)
+: Glob patterns (pipe-separated) of files to ignore
 
 ### Long view options
 
@@ -97,61 +97,61 @@ sitemap:
 : Lists file sizes with binary prefixes
 
 -B , --bytes
-: Lists file sizes in bytes without any prefix
+: Lists file sizes in bytes, without any prefixes
 
 -g , --group
-: Lists the groups for each file
+: List each file's group
 
 -h , --header
-: Add a header row for each column
+: Add a header row to each column
 
 -H , --links
-: Lists the number of hard links per file
+: List each file's number of hard links
 
 -i , --inode
-: Lists the inode number of each file
+: List each file's inode number
 
 -m , --modified
 : Use the modified timestamp field
 
 -S , --blocks
-: Lists the number of file system blocks for each file
+: Show number of file system blocks
 
 -t , --time=(field)
-: Which timestamp field to use
+: Which timestamp field to list (modified, accessed, created)
 
 -u , --accessed
-: Use the timestamp field of the access
+: Use the accessed timestamp field
 
 -U , --created
 : Use the created timestamp field
 
 -@ , --extended
-: Lists the extended attributes and sizes for each file
+: List each file's extended attributes and sizes
 
 --changed
 : Use the changed timestamp field
 
 --git
-: Lists the Git status of each file, if tracked or ignored
+: List each file's Git status, if tracked or ignored
 
 --time-style
-: How do I format the timestamp
+: How to format timestamps (default, iso, long-iso, full-iso)
 
 --no-permissions
-: Forbidden permission field
+: Suppress the permissions field
 
 --octal-permissions
-: List permissions for each file in octal format
+: List each file's permission in octal format
 
 --no-filesize
-: Cancel the file size field
+: Suppress the filesize field
 
 --no-user
-: Disable user field
+: Suppress the user field
 
 --no-time
-: Suppression time field
+: Suppress the time field
 
 
 > Check out more [exa document to consult](https://github.com/ogham/exa)
