@@ -1,6 +1,6 @@
 ---
 title: x advise
-description: x advise, 终端命令行补全管理工具, 命令行tab补全, 终端tab补全，快速生成命令行补全
+description: x advise, terminal command line completion management tool, command line TAB completion, terminal TAB completion, quickly generate command line completion
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,31 +12,31 @@ sitemap:
 
 <Terminal :termIndex="6"/>
 
-## 概要
+## Synopsis
 
-==x advise man[[ subcommand ]...](#子命令) [\<command name\>]== ——  命令行补全管理工具
+==x advise man[[ subcommand ]...](#subcommand) [\<command name\>]== ——  Command line completion management tool
 
-## 描述
+## Description
 
-`x advise` 命令行补全管理工具，在交互性强的 `Shell` 比如 `Zsh` 和 `Bash`中允许用户在使用命令的时候使用 `Tab ↹` 键来填充命令的剩余部分或者给予提示信息。
+`x advise` command line completion management tool, in interactive `Shell` such as `Zsh` and `Bash`allows the user to use the `Tab ↹` key to fill in the rest of a command or give a prompt when using a command.
 
-- **补全管理**：提供一站式的命令的补全管理，告别配置困难。
-- **按需加载**：按需加载对应命令的补全。
+- **Completion management**：Provides one-stop command completion management, eliminating configuration difficulties
+- **Load on demand**：Load the completion of corresponding commands as required.
 
-## 子命令
+## Subcommand
 
 ls
-:  显示所有可加载补全命令的列表
+:  Show all available advise json obj
 
 load \<command name\>
-:  加载对应命令模块的补全
+:  Load the completion of the corresponding command module
 
 rm \<command name\>
-:  取消加载对应命令模块的补全
+:  Remove one obj, if no obj is given, remove all obj.
 
 update
-:  更新所有的命令的补全列表
+:  Update the completion list of all commands
 
-::: tip 提示
-`x cmd` 的所有命令都已自动加载了补全信息，使用`x cmd` 命令的过程中可使用 `Tab ↹` 键可以大幅提升命令的使用体验
+::: tip Tip
+All the commands of `x cmd` are automatically loaded with completion information. When using the `x cmd` command, you can use the `Tab ↹` key to greatly improve the command usage experience
 :::

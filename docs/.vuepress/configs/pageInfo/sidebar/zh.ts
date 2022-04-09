@@ -3,7 +3,7 @@ import type { SidebarConfig } from "@vuepress/theme-default";
 export const zh: SidebarConfig = {
   "/": [
     {
-      text: "指南",
+      text: "Guide",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -11,7 +11,7 @@ export const zh: SidebarConfig = {
       ]
     },
     {
-      text: "基础命令",
+      text: "Basic Commands",
       collapsible: false,
       // prettier-ignore
       children: [
@@ -24,18 +24,42 @@ export const zh: SidebarConfig = {
       ]
     },
     {
-      text: "扩展命令",
+      text: "Extension Commands",
       collapsible: false,
       // prettier-ignore
       children: [
         "/enhance/ls.md",
-        // "/enhance/cd.md",
-        // "/enhance/du.md",
-        // "/enhance/cat.md",
-        // "/enhance/jq.md",
-        // "/enhance/yq.md",
-        // "/enhance/nmap.md",
-        // "/enhance/openssl.md",
+      ]
+    }
+  ],
+  "/zh": [
+    {
+      text: "指南",
+      collapsible: false,
+      // prettier-ignore
+      children: [
+        "/zh/guide/README.md",
+      ]
+    },
+    {
+      text: "基础命令",
+      collapsible: false,
+      // prettier-ignore
+      children: [
+      "/zh/guide/theme.md",
+      "/zh/guide/proxy.md",
+      "/zh/guide/install.md",
+      "/zh/guide/tldr.md",
+      "/zh/guide/advise.md",
+      "/zh/guide/workspace.md",
+      ]
+    },
+    {
+      text: "扩展命令",
+      collapsible: false,
+      // prettier-ignore
+      children: [
+        "/zh/enhance/ls.md",
       ]
     }
   ]

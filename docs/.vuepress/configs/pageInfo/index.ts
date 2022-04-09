@@ -13,6 +13,7 @@ export const base = "/";
 export const title = `x-cmd`;
 
 export const description = "x-cmd 一个快速，跨平台功能强大的终端插件，让你的终端有无限可能!";
+
 /* eslint-disable prettier/prettier */
 export const headConfig: HeadConfig[] = [
   ["meta", { name: "google-site-verification", content: "_18qqOuIfzijSG7HV3nMHul_TLcD5hnpJBB0m3omcN0" }],
@@ -45,8 +46,20 @@ export const headConfig: HeadConfig[] = [
   ["link", { rel: "manifest", href: `/manifest.webmanifest` }]
 ];
 
+export const locales: AppOptions['locales'] = {
+    "/": {
+      lang: "en-US",
+      title: `x-cmd`,
+      description: "X-cmd is a fast, cross-platform powerful terminal plug-in that makes your terminal have unlimited possibilities!"
+    },
+    "/zh/": {
+      lang: "zh-CN",
+      title: `x-cmd`,
+      description: "x-cmd 一个快速，跨平台功能强大的终端插件，让你的终端有无限可能!"
+    }
+}
+
 export const themeConfig: AppOptions["themeConfig"] = {
-  navbar: navbar.zh,
   sidebar: sidebar.zh,
   sidebarDepth: 1,
   logo: "/images/logo.png",
@@ -55,7 +68,19 @@ export const themeConfig: AppOptions["themeConfig"] = {
   docsBranch: "main",
   docsDir: "docs",
   editLinkPattern: ":repo/",
-  backToHome: "> cd $HOME"
+  backToHome: "> cd $HOME",
+  locales: {
+    '/zh/': {
+      selectLanguageName: '简体中文',
+      selectLanguageText: '选择语言',
+      navbar: navbar.zh,
+    },
+    '/': {
+      selectLanguageName: 'English',
+      selectLanguageText: 'Languages',
+      navbar: navbar.en,
+    },
+  },
 };
 
 export const markdownConfig: MarkdownOptions = {

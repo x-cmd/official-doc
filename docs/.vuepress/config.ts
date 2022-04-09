@@ -16,6 +16,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   plugins: [
     pagePlugins.codeCopyPlugin,
     pagePlugins.sassPalettePlugin,
+    // pagePlugins.vuepressSearchPlugin,
     pagePlugins.docSearchPlugin,
     pagePlugins.pwaPlugin,
     pagePlugins.pwaPopupPlugin,
@@ -24,6 +25,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     pagePlugins.googleAnalyticsPlugin,
     pagePlugins.chinaSEOPlugin
   ],
+  locales: pageInfo.locales,
   themeConfig: pageInfo.themeConfig,
   markdown: pageInfo.markdownConfig,
   extendsMarkdown: (md) => {

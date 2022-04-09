@@ -1,6 +1,6 @@
 ---
 title: x proxy
-description: x-cmd 代理管理代理切换命令行工具，快速切换常见包管理工具的镜像源（例如：maven, npm, pip, cargo, go 等），并且可在常见的Linux系统中的包管理工具达到快速换源（例如：apt, apk, yum, pacman 等）以及命令行的代理（例如：http/https）
+description: x-cmd agent management Agent switch command line tool，quickly switch command line proxies of common package management tools (e.g. maven, npm, pip, cargo, go, etc.), and quickly switch sources in common Linux package management tools (e.g. apt, apk, yum, pacman, etc.) and command line agents (e.g. http/https)
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,20 +12,20 @@ sitemap:
 
 <Terminal :termIndex="2"/>
 
-## 概要
+## Synopsis
 
-==x proxy [ \<modules\> ...](#支持镜像源模块) [[ subcommand ]...](#子命令)== ——  管理命令行镜像源
+==x proxy [ \<modules\> ...](#mirror-source-modules-are-supported) [[ subcommand ]...](#subcommand)== ——  Manage the command line mirror source
 
-## 描述
+## Description
 
-`x proxy` 命令可以帮助你管理，快速切换常见包管理工具的命令行代理（例如：maven, npm, pip, cargo, go 等），并且可在常见的Linux系统中的包管理工具达到快速换源（例如：apt, apk, yum, pacman 等）以及命令行的代理（例如：http/https）。
+`x proxy` command helps you manage, quickly switch command line proxies of common package management tools (e.g. maven, npm, pip, cargo, go, etc.), and quickly switch sources in common Linux package management tools (e.g. apt, apk, yum, pacman, etc.) and command line agents (e.g. http/https).
 
-- **方便快捷**：通过命令的交互，快速切换官方镜像源。
-- **种类多样**：涵盖常见的包管理工具。
+- **Convenient and quick**：You can quickly switch to the official mirror source through command interaction.
+- **various types**：Covers common package management tools.
 
-## 支持镜像源模块
+## Mirror source modules are supported
 
-- 语言包管理工具
+- Language pack management tool
     - npm
     - yarn
     - maven
@@ -33,7 +33,7 @@ sitemap:
     - go
     - cargo
     - gem
-- 系统包管理工具
+- System package management tool
     - apt
     - apk
     - yum
@@ -41,27 +41,27 @@ sitemap:
     - pacman
     - dnf
     - brew
-- 命令工具
+- Command tool
     - docker
 
-## 子命令
+## Subcommand
 
 set
-:  设置http/https当前终端会话的代理
+:  Setting proxy in local shell environments: http_proxy, https_proxy
 
 unset
-:  取消设置当前终端会话的所有http/https代理
+:  Unset all proxy in the shell environment
 
 \<module name\> url
-:   列出模块支持的所有的镜像源列表
+:   Provide url of mirror candidates
 
-\<module name\> set, replace [镜像源]
-:   ==设置更换镜像源 | 不输入[镜像源]将使用默认官方镜像源==
+\<module name\> set, replace [Mirror source]
+:   ==Setting the mirror | If you do not enter [Mirror source], the default official mirror source will be used==
 
 \<module name\> unset
-:   取消镜像源设置
+:   Reset the source to the original official
 
 \<module name\> rollback
-:   回退镜像源设置
+:   Example Roll back mirror source Settings
 
-<Badge type="tip" text="提示" vertical="middle" /> 在 go 包管理工具的换源操作中，提供 <code>x proxy go tutorial</code> 命令来查看具体的详细的命令。
+<Badge type="tip" text="Tip" vertical="middle" /> In the go package management tool, provide the <code>x proxy go tutorial</code> command to view the detailed commands.

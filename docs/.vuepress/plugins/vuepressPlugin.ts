@@ -41,7 +41,25 @@ export const docSearchPlugin: PluginConfig = [
     apiKey: "6a0b75ff16eb6d2f06a04fe2aed71d13",
     indexName: "x-cmd",
     appId: "FR46CTJZQV",
-    placeholder: "搜索"
+    // placeholder: "搜索"
+    locales: {
+      "/": {
+        placeholder: "Search",
+        translations: {
+          button: {
+            buttonText: "Search"
+          }
+        }
+      },
+      "/zh/": {
+        placeholder: "搜索",
+        translations: {
+          button: {
+            buttonText: "搜索"
+          }
+        }
+      }
+    }
   } as DocsearchOptions
 ];
 
@@ -54,8 +72,11 @@ export const vuepressSearchPlugin: PluginConfig = [
     // 排除首页
     isSearchable: (page: Page) => page.path !== "/",
     locales: {
-      "/": {
+      "/zh/": {
         placeholder: "搜索"
+      },
+      "/": {
+        placeholder: "Search"
       }
     }
   } as unknown as SearchPluginOptions
