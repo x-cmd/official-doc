@@ -1,6 +1,6 @@
 ---
 title: x env
-description: x-cmd 查看环境命令
+description: x env 可以帮助你管理，下载，安装，移除，快速切换常见的环境(例如：python,node,go,java等)版本
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -8,20 +8,18 @@ sitemap:
     exclude: false
 ---
 
-# x advise
+# x env
 
-<Terminal :termIndex="6"/>
+<Terminal :termIndex="9"/>
 
 ## 概要
 
-==x env [[ subcommand ]...](#子命令) [\<environment name\>]== ——  环境管理工具
+==x env [[ subcommand ]...](#子命令) [\<environment name\>]== ——  环境版本管理器
 
 ## 描述
 
-`x env` 环境管理工具，可以帮助你管理，下载，移除，快速切换环境版本。
+`x env` 环境版本管理器，可以帮助你管理，下载，安装，移除，快速切换常见的环境(例如：python,node,go,java等)版本。
 
-- **方便快捷**：通过命令的交互，快速切换环境。
-- **种类多样**：涵盖常见的环境。
 
 ## 子命令
 
@@ -69,7 +67,3 @@ exec \<environment name\>
     - ruby
     - rust
 
-
-::: tip 提示
-`x cmd` 的所有命令都已自动加载了补全信息，使用`x cmd` 命令的过程中可使用 `Tab ↹` 键可以大幅提升命令的使用体验
-:::

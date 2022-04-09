@@ -20,6 +20,7 @@ export const zh: SidebarConfig = {
       "/guide/install.md",
       "/guide/tldr.md",
       "/guide/advise.md",
+      "/guide/env.md",
       "/guide/workspace.md",
       ]
     },
@@ -51,6 +52,7 @@ export const zh: SidebarConfig = {
       "/zh/guide/install.md",
       "/zh/guide/tldr.md",
       "/zh/guide/advise.md",
+      "/zh/guide/env.md",
       "/zh/guide/workspace.md",
       ]
     },

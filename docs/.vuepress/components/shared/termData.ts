@@ -331,5 +331,58 @@ export const DEMO_INFO: Array<TerminalInfoType> = [
         `
       }
     ]
+  },
+  {
+    title: "x env",
+    textBtn: "x env",
+    isBanner: true,
+    link: "/guide/env/",
+    terminalInfo: [
+      {
+        type: "input-output",
+        key: "env-1",
+        inputValue: "x env install node v16.12.0",
+        outputValue: `
+        <p class="leading-4 my-1">
+          <span class="mr-4"><span class="term-yellow bold">[INF] &lt;env&gt;: </span>
+          <span class="term-green">Installing node v16.12.0</span>
+        </p>
+        <p class="leading-4 my-1">
+          <span class="mr-2">######################################################################## 100.0%</span>
+        </p>
+        <p class="leading-4 my-1">
+          <span class="mr-4"><span class="term-yellow bold">[INF] &lt;env&gt;: </span>
+          <span class="term-green">Downloaded https://nodejs.org/dist/v16.12.0/node-v16.12.0-linux-armv7l.tar.gz to /home/pi/.x-cmd/.env/node/archive/node-v16.12.0.tar.gz</span>
+        </p>
+        <p class="leading-4 my-1">
+          <span class="mr-4"><span class="term-yellow bold">[INF] &lt;env&gt;: </span>
+          <span class="term-green">Done unpacking!</span>
+        </p>
+        <p class="leading-4 my-1">
+          <span class="mr-4"><span class="term-yellow bold">[INF] &lt;env&gt;: </span>
+          <span class="term-green">Using node v16.12.0 -> /home/pi/.x-cmd/.env/node/version</span>
+        </p>
+        <p class="leading-4 my-1">
+          <span class="mr-4"><span class="term-yellow bold">[INF] &lt;env&gt;: </span>
+          <span class="term-green">Successfully installed node v16.12.0</span>
+        </p>
+        `
+      },
+      {
+        delay: 1400,
+        type: "input-output",
+        key: "env-2",
+        inputValue: "x env ls node",
+        outputValue: `
+        <p class="leading-4 my-1">
+          <span class="mr-2">v14.19.1</span>
+          <span class="mr-2">v16.12.0</span>
+          <span class="mr-2">v17.7.1</span>
+          <span class="mr-2">v17.7.2</span>
+          <span class="mr-2">v17.8.0</span>
+        </p>
+        `
+      }
+    ]
   }
 ];

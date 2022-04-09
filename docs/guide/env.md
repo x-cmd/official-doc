@@ -1,6 +1,6 @@
 ---
 title: x env
-description: x-cmd 查看环境命令
+description: x env It help you manage, download, install, remove, and quickly switch versions of common environments (eg:python, node, go, java, etc.).
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -8,20 +8,18 @@ sitemap:
     exclude: false
 ---
 
-# x advise
+# x env
 
-<Terminal :termIndex="6"/>
+<Terminal :termIndex="9"/>
 
-## Summary
+## Synopsis
 
-==x env [[ subcommand ]...](#subcommand) [\<environment name\>]== ——  Environmental management tools
+==x env [[ subcommand ]...](#subcommand) [\<environment name\>]== ——  Environment version manager
 
 ## Description
 
-`x env` environment management tool, can help you manage, download, remove, quickly switch environment version.
+`x env` The environment version manager can help you manage, download, install, remove, and quickly switch versions of common environments (eg: python, node, go, java, etc.).
 
-- **Convenient and quick**：Quickly switch the environment through command interaction.
-- **various types**：Cover common environments.
 
 ## Subcommand
 
@@ -70,6 +68,3 @@ exec \<environment name\>
     - rust
 
 
-<!-- ::: tip 提示
-`x cmd` 的所有命令都已自动加载了补全信息，使用`x cmd` 命令的过程中可使用 `Tab ↹` 键可以大幅提升命令的使用体验
-::: -->
