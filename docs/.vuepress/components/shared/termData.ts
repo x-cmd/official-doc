@@ -340,6 +340,17 @@ export const DEMO_INFO: Array<TerminalInfoType> = [
     terminalInfo: [
       {
         type: "input-output",
+        key: "env-2",
+        inputValue: "x env current node",
+        outputValue: `
+        <p class="leading-4 my-1">
+          <span class="mr-2">v14.19.1</span>
+        </p>
+        `
+      },
+      {
+        delay: 1400,
+        type: "input-output",
         key: "env-1",
         inputValue: "x env install node v16.12.0",
         outputValue: `
@@ -369,17 +380,25 @@ export const DEMO_INFO: Array<TerminalInfoType> = [
         `
       },
       {
-        delay: 1400,
+        delay: 2800,
         type: "input-output",
         key: "env-2",
-        inputValue: "x env ls node",
+        inputValue: "x env try node v16.12.0",
         outputValue: `
         <p class="leading-4 my-1">
-          <span class="mr-2">v14.19.1</span>
+          <span class="mr-4"><span class="term-yellow bold">[INF] &lt;env&gt;: </span>
+          <span class="term-green">Setting node v16.12.0 in current Shell.</span>
+        </p>
+        `
+      },
+      {
+        delay: 4200,
+        type: "input-output",
+        key: "env-2",
+        inputValue: "x env current node",
+        outputValue: `
+        <p class="leading-4 my-1">
           <span class="mr-2">v16.12.0</span>
-          <span class="mr-2">v17.7.1</span>
-          <span class="mr-2">v17.7.2</span>
-          <span class="mr-2">v17.8.0</span>
         </p>
         `
       }
