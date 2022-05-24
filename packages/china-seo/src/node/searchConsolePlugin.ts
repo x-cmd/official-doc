@@ -26,28 +26,32 @@ export interface SearchConsolePluginOptions {
   autoPush360Switch?: boolean;
 }
 
-export const searchConsolePlugin: Plugin<SearchConsolePluginOptions> = (
-  { baiduId = "", toutiaoAutoPushId = "", autoPushBaiduSwitch = true, autoPush360Switch = true },
-  app
-) => {
-  const plugin: PluginObject = {
-    name: "@x-cmd/vuepress-plugin-china-seo"
-  };
+export const searchConsolePlugin =
+  ({
+    baiduId = "",
+    toutiaoAutoPushId = "",
+    autoPushBaiduSwitch = true,
+    autoPush360Switch = true
+  }: SearchConsolePluginOptions): Plugin =>
+  (app) => {
+    const plugin: PluginObject = {
+      name: "@x-cmd/vuepress-plugin-china-seo"
+    };
 
-  if (app.env.isDev) {
-    return plugin;
-  }
-
-  return {
-    ...plugin,
-
-    clientAppEnhanceFiles: path.resolve(__dirname, "../client/clientAppEnhance.js"),
-
-    define: {
-      __BA_ID__: baiduId,
-      __TT_ID__: toutiaoAutoPushId,
-      __BA_AUTOPUSH__: autoPushBaiduSwitch,
-      __360_AUTOPUSH__: autoPush360Switch
+    if (app.env.isDev) {
+      return plugin;
     }
+
+    return {
+      ...plugin,
+
+      clientConfigFile: path.resolve(__dirname, "../client/config.js"),
+
+      define: {
+        __BA_ID__: baiduId,
+        __TT_ID__: toutiaoAutoPushId,
+        __BA_AUTOPUSH__: autoPushBaiduSwitch,
+        __360_AUTOPUSH__: autoPush360Switch
+      }
+    };
   };
-};

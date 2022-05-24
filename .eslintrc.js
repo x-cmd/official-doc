@@ -1,45 +1,45 @@
 module.exports = {
   root: true,
   extends: "vuepress",
+  globals: {
+    __VUEPRESS_VERSION__: "readonly",
+    __VUEPRESS_DEV__: "readonly",
+    __VUEPRESS_SSR__: "readonly",
+    __VUE_HMR_RUNTIME__: "readonly",
+    __VUE_OPTIONS_API__: "readonly",
+    __VUE_PROD_DEVTOOLS__: "readonly"
+  },
   overrides: [
     {
-      files: ["*.ts", "*.vue", "*.js"],
-      extends: ["vuepress-typescript", "prettier"],
+      files: ["*.ts", "*.vue"],
+      extends: "vuepress-typescript",
       parserOptions: {
-        project: ["tsconfig.eslint.json"]
+        project: ["tsconfig.json"]
       },
       rules: {
-        "semi": "off",
-        "linebreak-style": "off",
         "@typescript-eslint/ban-ts-comment": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/ban-types": "off",
-        "import/no-extraneous-dependencies": "off",
-        "array-callback-return": "off",
-        "vue/no-v-html": "off",
+        "vue/component-tags-order": [
+          "error",
+          {
+            order: ["script", "template", "style"]
+          }
+        ],
+        "vue/multi-word-component-names": "off",
+        "vue/no-v-html": "off"
       }
     },
     {
       files: ["*.vue"],
-      extends: "prettier",
       globals: {
         defineEmits: "readonly",
         defineProps: "readonly"
       },
       rules: {
         // disable for setup script
-        "vue/match-component-file-name": "off",
-        "semi": "off",
-        "quotes": "off",
-      }
-    },
-    {
-      files: ["clientAppEnhance.ts"],
-      rules: {
-        "vue/match-component-file-name": "off"
+        "@typescript-eslint/no-unused-vars": "off"
       }
     }
   ]

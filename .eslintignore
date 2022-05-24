@@ -5,7 +5,7 @@ dist/
 templates/
 !.vuepress/
 !.*.js
-.eslintrc.js
+!.eslintrc.js
 commitlint.config.js
 tailwind.config.js
 postcss.config.js

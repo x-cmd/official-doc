@@ -1,4 +1,4 @@
-import { defineClientAppEnhance } from "@vuepress/client";
+import { defineClientConfig } from "@vuepress/client";
 import { addIcons, OhVueIcon } from "oh-vue-icons";
 import type { CustomizeIconType } from "oh-vue-icons";
 
@@ -80,6 +80,10 @@ const icons: CustomizeIconType[] = [
 ];
 
 addIcons(...icons);
-export default defineClientAppEnhance(({ app }) => {
-  app.component("VIcon", OhVueIcon);
+
+export default defineClientConfig({
+  enhance: ({ app }) => {
+    // eslint-disable-next-line vue/match-component-file-name
+    app.component("VIcon", OhVueIcon);
+  }
 });

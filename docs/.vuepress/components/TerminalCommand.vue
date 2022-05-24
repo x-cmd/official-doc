@@ -1,11 +1,3 @@
-<template>
-  <p v-if="isShowInput" class="input leading-4 whitespace-pre">
-    <span class="symbol font-extrabold text-green-500 text-xl">❯</span>
-    {{ inputText }}
-  </p>
-  <p v-if="isShowOutput" class="output font-medium" v-html="outputText"></p>
-</template>
-
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref, toRefs, watch } from "vue";
 import type { PropType } from "vue";
@@ -88,4 +80,12 @@ onBeforeUnmount(() => {
   clear();
 });
 </script>
+
+<template>
+  <p v-if="isShowInput" class="input leading-4 whitespace-pre">
+    <span class="symbol font-extrabold text-green-500 text-xl">❯</span>
+    {{ inputText }}
+  </p>
+  <p v-if="isShowOutput" class="output font-medium" v-html="outputText"></p>
+</template>
 <style lang="scss" scoped></style>

@@ -25,28 +25,28 @@ rm_react_type() {
 }
 
 install_all() {
-	rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/yarn.lock"
-	use_npm_verison && yarn install && x build clean && x build plugin && rm_react_type
+	rm -rf "$WORK_DIR/node_modules" "$WORK_DIR/pnpm.lock"
+	use_npm_verison && pnpm install && x build clean && x build plugin && rm_react_type
 }
 
 install_plugin() {
-	shift; use_npm_verison && yarn add -D -W "$@"
+	shift; use_npm_verison && pnpm add -D -W "$@"
 }
 
 install_update() {
 	local ___X_CMD_UI_FORM_EXIT_STRATEGY="execute|exit"
     ___x_cmd_ui_form "Are you sure you want to delete $(___x_cmd_ui bold "node_modules")" tf 1 = "yes" "no"
 	if [ "$tf" != "yes" ];then
-		use_npm_verison && yarn install && x build plugin && rm_react_type
+		use_npm_verison && pnpm install && x build plugin && rm_react_type
 	else
 		rm -rf "$WORK_DIR/node_modules"
-		use_npm_verison && yarn install && x build clean && x build plugin && rm_react_type
+		use_npm_verison && pnpm install && x build clean && x build plugin && rm_react_type
 	fi
 }
 
 install_none() {
 	[ ! -d "$WORK_DIR/node_modules" ] && \
-		 use_npm_verison && yarn install && x build clean &&  x build plugin && rm_react_type
+		 use_npm_verison && pnpm install && x build clean &&  x build plugin && rm_react_type
 	return 0
 }
 

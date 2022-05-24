@@ -1,10 +1,8 @@
 # Ignore
-dist
-template
+lib
 node_modules
-/docs/.vuepress/public
 /*.md
-/*.html
 .gitee
 .git
 .vscode
+.commitlintrc.js

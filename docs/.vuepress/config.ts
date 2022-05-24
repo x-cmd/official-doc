@@ -1,32 +1,26 @@
-import { defineUserConfig } from "vuepress";
-import type { DefaultThemeOptions } from "vuepress";
+import { defaultTheme, defineUserConfig } from "vuepress";
 import { bunderInfo, pageInfo } from "./configs";
 import * as pagePlugins from "./plugins";
 
-export default defineUserConfig<DefaultThemeOptions>({
+export default defineUserConfig({
   base: pageInfo.base,
-  lang: pageInfo.lang,
-  title: pageInfo.title,
-  description: pageInfo.description,
+  locales: pageInfo.locales,
   head: pageInfo.headConfig,
 
   bundler: bunderInfo.bundler,
-  bundlerConfig: bunderInfo.bundlerConfig,
 
   plugins: [
-    pagePlugins.codeCopyPlugin,
+    pagePlugins.googleSEOPlugin,
+    pagePlugins.chinaSEOPlugin,
     pagePlugins.sassPalettePlugin,
-    // pagePlugins.vuepressSearchPlugin,
-    pagePlugins.docSearchPlugin,
-    pagePlugins.pwaPlugin,
-    pagePlugins.pwaPopupPlugin,
-    pagePlugins.registerComponentPlugin,
-    pagePlugins.sitemapPlugin,
-    pagePlugins.googleAnalyticsPlugin,
-    pagePlugins.chinaSEOPlugin
+    pagePlugins.algoliaSearchPlugin,
+    pagePlugins.genCodeCopyPlugin,
+    pagePlugins.genPwaPlugin,
+    pagePlugins.genPwaPopupPlugin,
+    pagePlugins.genComponentPlugin,
+    pagePlugins.genSitemapPlugin
   ],
-  locales: pageInfo.locales,
-  themeConfig: pageInfo.themeConfig,
+  theme: defaultTheme(pageInfo.themeConfig),
   markdown: pageInfo.markdownConfig,
   extendsMarkdown: (md) => {
     md.use(require("markdown-it-task-lists"));

@@ -1,10 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
-  "references": [],
-  "files": [],
-  "include": [
-    "docs/.vuepress/**/*",
-    "**/*.ts",
-    "**/*.vue",
-  ]
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "preserve",
+    "module": "ES2020",
+    "types": ["webpack-env", "vite/client"]
+  },
+  "include": ["**/.vuepress/**/*", "packages/**/*", "docs/tailwind.config1.js"],
+  "exclude": ["node_modules", ".temp", "lib", "dist"]
 }

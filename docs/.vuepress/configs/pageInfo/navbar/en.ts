@@ -1,8 +1,8 @@
-import type { NavbarConfig } from "@vuepress/theme-default";
+import type { NavbarConfig } from "vuepress";
 
 export const en: NavbarConfig = [
   {
-    text: "Document",
+    text: "Guide",
     link: "/guide/README.md"
   },
   {

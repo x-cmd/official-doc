@@ -1,6 +1,6 @@
+const { execSync } = require('child_process');
 const fs = require("fs");
 const path = require("path");
-const { execSync } = require('child_process');
 
 const getDirNames = (_path) => {
   return fs
@@ -27,7 +27,7 @@ module.exports = {
   },
   prompt: {
     messages: {
-      type: "选择你的提交类型    | Select the type of change that you\'re committing:",
+      type: "选择你的提交类型    | Select the type of change that you're committing:",
       scope: "选择一个模块范围(可选) | Denote the SCOPE of this change (optional)",
       customScope: "自定义修改模块名 | Denote the SCOPE of this change:",
       subject: "简短说明 | Write a SHORT, IMPERATIVE tense description of the change:\n",

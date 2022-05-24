@@ -32,7 +32,7 @@ build_docs() {
 		cd "$WORK_DIR" || exit
 	fi
 	rm -rf "$DIST_PATH"
-	yarn docs:build &&
+	pnpm docs:build &&
 	cd "$DIST_PATH" &&
 	echo "$WEB_SITE" > CNAME &&
 	cd "$WORK_DIR" &&

@@ -1,26 +1,25 @@
 {
-  "name": "x-cmd-doc",
-  "version": "0.0.1",
   "private": true,
   "description": "x-cmd document",
-  "repository": "https://github.com/Zhengqbbb/vuepress-next-template.git",
-  "license": "MIT",
+  "license": "gpl-3.0",
   "author": "Zhengqbbb <1074059947@qq.com>",
-  "main": "index.js",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "commit": "cz",
-    "docs:build": "vuepress build docs --clean-cache  --dest dist",
-    "docs:dev": "vuepress dev docs --clean-cache",
-    "docs:info": "vuepress info",
-    "lint": "eslint --ext .js,.ts,.vue .",
-    "prepare": "husky install",
-    "serve": "anywhere -h localhost -d dist"
+    "build": "pnpm build:all && pnpm build:copy",
+    "build:all": "pnpm -r --stream build",
+    "build:copy": "pnpm --parallel --stream copy",
+    "clean": "pnpm --parallel --stream clean",
+    "dev": "concurrently \"tsc -b tsconfig.build.json --watch\" \"pnpm run dev:copy\"",
+    "dev:copy": "pnpm build:copy --watch",
+    "docs:build": "pnpm --filter=docs docs:build",
+    "docs:clean": "pnpm --filter=docs docs:clean",
+    "docs:dev": "pnpm --filter=docs docs:dev",
+    "docs:serve": "pnpm --filter=docs docs:serve",
+    "lint": "eslint --ext .ts packages docs/.vuepress",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --fix",
+    "*.{json,yml,css,scss}": "prettier --write",
     "package.json": "sort-package-json"
   },
   "config": {
@@ -28,48 +27,39 @@
       "path": "node_modules/cz-git"
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
+    "@types/node": "^17.0.34",
+    "@types/webpack-env": "^1.17.0",
     "@typescript-eslint/parser": "^5.17.0",
-    "@vuepress/bundler-webpack": "^2.0.0-beta.37",
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.37",
-    "@vuepress/plugin-git": "^2.0.0-beta.37",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.37",
-    "@vuepress/plugin-palette": "^2.0.0-beta.37",
-    "@vuepress/plugin-pwa": "^2.0.0-beta.37",
-    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.37",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.37",
-    "@vuepress/plugin-search": "^2.0.0-beta.37",
-    "anywhere": "^1.5.0",
-    "autoprefixer": "^10.4.4",
+    "concurrently": "^7.2.0",
     "cpx2": "^4.2.0",
-    "cssnano": "^5.1.5",
-    "cz-git": "^1.2.2",
-    "eslint": "8.12.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-vuepress-typescript": "^2.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "8.5.0",
-    "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.4",
-    "lerna": "^4.0.0",
-    "lint-staged": "^12.3.7",
-    "markdown-it-deflist": "^2.1.0",
-    "markdown-it-mark": "^3.0.1",
-    "markdown-it-task-lists": "^2.1.1",
-    "oh-vue-icons": "^1.0.0-rc2",
-    "postcss": "^8.4.12",
-    "postcss-loader": "^6.2.1",
+    "cz-git": "^1.3.2",
+    "eslint": "^8.15.0",
+    "eslint-config-vuepress": "^3.7.1",
+    "eslint-config-vuepress-typescript": "^2.7.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.6.1",
-    "sass": "^1.49.10",
-    "sass-loader": "^12.6.0",
-    "sitemap": "^7.1.1",
-    "sort-package-json": "^1.55.0",
-    "tailwindcss": "^2.2.19",
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^1.57.0",
+    "tsconfig-vuepress": "^0.1.0",
     "typescript": "^4.6.3",
-    "vuepress": "^2.0.0-beta.37",
-    "vuepress-vite": "^2.0.0-beta.37"
+    "vite": "~2.9.9"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "@types/react",
+        "eslint-plugin-import",
+        "eslint-plugin-n",
+        "eslint-plugin-promise",
+        "react",
+        "react-dom",
+        "webpack"
+      ]
+    }
   }
 }

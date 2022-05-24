@@ -1,40 +1,43 @@
-import { defineClientAppSetup, usePageData } from "@vuepress/client";
 import { createApp, onBeforeUnmount, onMounted, onUpdated, watch } from "vue";
-import type { ClipboardOptions } from "../shared";
+import { useRoute } from "vue-router";
+import type { ClipboardOptions } from "../../shared";
 import CodeCopy from "./CodeCopy.vue";
 
-import "./style.css";
+import "../style/main.css";
 declare const __CODE_CLIPBOARD_OPTIONS__: ClipboardOptions;
 const options = __CODE_CLIPBOARD_OPTIONS__;
 
-export default defineClientAppSetup(() => {
-  const page = usePageData();
-
-  const update = () => {
-    if (page.value.path === "/") return;
+export const setupCopyCode = (): (() => void) => {
+  const router = useRoute();
+  const copyBtnClassName = `code-copy-added-${options?.align || "bottom"}`;
+  const update = (): void => {
+    if (router.path === "/") return;
     const delay = options.delay || 400;
     setTimeout(() => {
       document.querySelectorAll(options.selector || 'div[class*="language-"]').forEach((el) => {
-        if (el.classList.contains("code-copy-added") || el.querySelector("pre, code[class*='pre-']") === null)
+        if (
+          el.classList.contains(copyBtnClassName) ||
+          el.querySelector("pre, code[class*='pre-']") === null
+        )
           return;
         const codeContent = el.querySelector("pre, code[class*='pre-']") as HTMLElement;
         const instance = createApp(CodeCopy, {
           parent: el,
-          code: codeContent.innerText,
+          code: codeContent.innerText || codeContent.textContent,
           options
         });
         const childEl = document.createElement("div");
         el.appendChild(childEl);
         instance.mount(childEl);
 
-        el.classList.add("code-copy-added");
+        el.classList.add(copyBtnClassName);
       });
     }, delay + 100);
   };
-  const clear = () => {
+  const clear = (): void => {
     document.querySelectorAll(options.selector || 'div[class*="language-"]').forEach((el) => {
-      if (el.classList.contains("code-copy-added")) {
-        el.classList.remove("code-copy-added");
+      if (el.classList.contains(copyBtnClassName)) {
+        el.classList.remove(copyBtnClassName);
       }
     });
   };
@@ -53,7 +56,7 @@ export default defineClientAppSetup(() => {
   });
 
   watch(
-    () => page.value.path,
+    () => router.path,
     () => {
       clear();
       update();
@@ -61,4 +64,4 @@ export default defineClientAppSetup(() => {
   );
 
   return update;
-});
+};

@@ -2,4 +2,3 @@
 
 # Section: Main
 xrc dev && dev mod "$@"
-# EndSection

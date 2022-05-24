@@ -1,3 +1,25 @@
+<script setup lang="ts">
+import { onMounted, ref } from "vue";
+const downLoadLinksRef = ref<HTMLElement | null>(null);
+const isVisible = ref(false);
+const codeCopyOption = {
+  parent: null as HTMLElement | null,
+  options: {
+    align: "top",
+    color: "var(--c-brand)",
+    backgroundTransition: false,
+    backgroundTransitionColor: "var(--code-bg-color)",
+    successText: "Copied!",
+    successTextColor: "var(--c-brand-light)",
+    staticIcon: true
+  }
+};
+onMounted(() => {
+  codeCopyOption.parent = downLoadLinksRef.value;
+  isVisible.value = true;
+});
+</script>
+
 <template>
   <div>
     <div ref="downLoadLinksRef" class="code-group downLoadLink-group">
@@ -36,28 +58,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { onMounted, ref } from "vue";
-const downLoadLinksRef = ref<HTMLElement | null>(null);
-const isVisible = ref(false);
-const codeCopyOption = {
-  parent: null as HTMLElement | null,
-  options: {
-    align: "top",
-    color: "var(--c-brand)",
-    backgroundTransition: false,
-    backgroundTransitionColor: "var(--code-bg-color)",
-    successText: "Copied!",
-    successTextColor: "var(--c-brand-light)",
-    staticIcon: true
-  }
-};
-onMounted(() => {
-  codeCopyOption.parent = downLoadLinksRef.value;
-  isVisible.value = true;
-});
-</script>
 <style lang="scss" scoped>
 :deep(.code-copy) {
   .top {

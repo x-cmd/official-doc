@@ -1,131 +1,126 @@
-import type { DocsearchOptions } from "@vuepress/plugin-docsearch";
-import type { GoogleAnalyticsPluginOptions } from "@vuepress/plugin-google-analytics";
-import type { PalettePluginOptions } from "@vuepress/plugin-palette";
-import type { PwaPluginOptions } from "@vuepress/plugin-pwa";
-import type { PwaPopupPluginOptions } from "@vuepress/plugin-pwa-popup";
-import type { SearchPluginOptions } from "@vuepress/plugin-search";
-import type { SitemapOptions } from "@vuepress/plugin-sitemap";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import { palettePlugin } from "@vuepress/plugin-palette";
+import { pwaPlugin } from "@vuepress/plugin-pwa";
+import { pwaPopupPlugin } from "@vuepress/plugin-pwa-popup";
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { path } from "@vuepress/utils";
-import type { Page, PluginConfig } from "vuepress";
 
 /**
  * @description: Register Components
  */
-export const registerComponentPlugin: PluginConfig = [
-  "@vuepress/register-components",
-  {
-    components: {
-      HomePage: path.resolve(__dirname, "../components/pages/HomePage.vue"),
-      Terminal: path.resolve(__dirname, "../components/Terminal.vue")
-    }
+export const genComponentPlugin = registerComponentsPlugin({
+  components: {
+    HomePage: path.resolve(__dirname, "../components/pages/HomePage.vue"),
+    Terminal: path.resolve(__dirname, "../components/Terminal.vue")
   }
-];
+});
 
 /**
  * @description: sass variables import
  */
-export const sassPalettePlugin: PluginConfig = [
-  "@vuepress/plugin-palette",
-  {
-    preset: "sass",
-    userPaletteFile: ".vuepress/styles/vars/palette.scss"
-  } as PalettePluginOptions
-];
+export const sassPalettePlugin = palettePlugin({
+  preset: "sass",
+  userPaletteFile: ".vuepress/styles/vars/palette.scss"
+});
 
 /**
  * @description: Vuepress Document Search Plugin
  */
-export const docSearchPlugin: PluginConfig = [
-  "@vuepress/plugin-docsearch",
-  {
-    apiKey: "6a0b75ff16eb6d2f06a04fe2aed71d13",
-    indexName: "x-cmd",
-    appId: "FR46CTJZQV",
-    // placeholder: "搜索"
-    locales: {
-      "/": {
-        placeholder: "Search",
-        translations: {
-          button: {
-            buttonText: "Search"
-          }
-        }
-      },
-      "/zh/": {
-        placeholder: "搜索",
-        translations: {
-          button: {
-            buttonText: "搜索"
+export const algoliaSearchPlugin = docsearchPlugin({
+  apiKey: "6a0b75ff16eb6d2f06a04fe2aed71d13",
+  indexName: "x-cmd",
+  appId: "FR46CTJZQV",
+  locales: {
+    "/zh/": {
+      placeholder: "搜索文档",
+      translations: {
+        button: {
+          buttonText: "搜索文档",
+          buttonAriaLabel: "搜索文档"
+        },
+        modal: {
+          searchBox: {
+            resetButtonTitle: "清除查询条件",
+            resetButtonAriaLabel: "清除查询条件",
+            cancelButtonText: "取消",
+            cancelButtonAriaLabel: "取消"
+          },
+          startScreen: {
+            recentSearchesTitle: "搜索历史",
+            noRecentSearchesText: "没有搜索历史",
+            saveRecentSearchButtonTitle: "保存至搜索历史",
+            removeRecentSearchButtonTitle: "从搜索历史中移除",
+            favoriteSearchesTitle: "收藏",
+            removeFavoriteSearchButtonTitle: "从收藏中移除"
+          },
+          errorScreen: {
+            titleText: "无法获取结果",
+            helpText: "你可能需要检查你的网络连接"
+          },
+          footer: {
+            selectText: "选择",
+            navigateText: "切换",
+            closeText: "关闭",
+            searchByText: "搜索提供者"
+          },
+          noResultsScreen: {
+            noResultsText: "无法找到相关结果",
+            suggestedQueryText: "你可以尝试查询",
+            reportMissingResultsText: "你认为该查询应该有结果？",
+            reportMissingResultsLinkText: "点击反馈"
           }
         }
       }
     }
-  } as DocsearchOptions
-];
-
-/**
- * @description: Vuepress Search Plugin
- */
-export const vuepressSearchPlugin: PluginConfig = [
-  "@vuepress/plugin-search",
-  {
-    // 排除首页
-    isSearchable: (page: Page) => page.path !== "/",
-    locales: {
-      "/zh/": {
-        placeholder: "搜索"
-      },
-      "/": {
-        placeholder: "Search"
-      }
-    }
-  } as unknown as SearchPluginOptions
-];
+  }
+});
 
 /**
  * @description: PWA Plugin
  */
-export const pwaPlugin: PluginConfig = [
-  "@vuepress/pwa",
-  {
-    skipWaiting: false
-  } as PwaPluginOptions
-];
+export const genPwaPlugin = pwaPlugin({
+  skipWaiting: false
+});
 
 /**
  * @description: PWA Popup Plugin
  */
-export const pwaPopupPlugin: PluginConfig = [
-  "@vuepress/plugin-pwa-popup",
-  {
-    locales: {
-      // "/": {
-      //     message: "New content is available.",
-      //     buttonText: "Refresh",
-      // },
-      "/": {
-        message: "发现新内容可用",
-        buttonText: "刷新"
-      }
+export const genPwaPopupPlugin = pwaPopupPlugin({
+  locales: {
+    "/": {
+      message: "New content is available.",
+      buttonText: "Refresh"
+    },
+    "/zh/": {
+      message: "文档有新内容，已准备就绪",
+      buttonText: "刷新"
     }
-  } as PwaPopupPluginOptions
-];
+  }
+});
 
 /**
  * @description: Google Analytics Plugin
  */
-export const googleAnalyticsPlugin: PluginConfig = [
-  "@vuepress/plugin-google-analytics",
-  {
-    id: "G-2FRCSZQS1X"
-  } as GoogleAnalyticsPluginOptions
-];
+export const googleSEOPlugin = googleAnalyticsPlugin({
+  id: "G-2FRCSZQS1X"
+});
 
-export const sitemapPlugin: PluginConfig = [
-  "@vuepress/plugin-sitemap",
-  {
-    hostname: "https://www.x-cmd.com",
-    priority: 0.6,
-    excludeUrls: ["/404.html"]
-  } as SitemapOptions
-];
+/**
+ * @description: Vuepress Search Plugin
+ */
+// export const vuepressSearchPlugin: PluginConfig = [
+//   "@vuepress/plugin-search",
+//   {
+//     // 排除首页
+//     isSearchable: (page: Page) => page.path !== "/",
+//     locales: {
+//       "/zh/": {
+//         placeholder: "搜索"
+//       },
+//       "/": {
+//         placeholder: "Search"
+//       }
+//     }
+//   } as unknown as SearchPluginOptions
+// ];

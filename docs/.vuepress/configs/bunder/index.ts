@@ -1,31 +1,30 @@
-import type { AppOptions, BundlerConfig } from "vuepress";
-const isProd = process.env.NODE_ENV === "production";
+import { viteBundler } from "@vuepress/bundler-vite";
+import { webpackBundler } from "@vuepress/bundler-webpack";
+import type { Bundler } from "vuepress";
 
-export const bundler: AppOptions["bundler"] =
-  process.env.DOCS_BUNDLER ??
-  // use vite in dev, use webpack in prod
-  (isProd ? "@vuepress/webpack" : "@vuepress/vite");
-export const bundlerConfig: BundlerConfig = {
-  postcss: {
-    postcssOptions: {
-      plugins: [
-        require("tailwindcss"),
-        require("autoprefixer"),
-        require("cssnano")({
-          preset: "default"
-        })
-      ]
-    }
-  },
-  viteOptions: {
-    css: {
-      postcss: {
-        // eslint-disable-next-line prettier/prettier
-        plugins: [
-          require("tailwindcss"),
-          require("autoprefixer")
-        ]
-      }
-    }
-  }
-};
+const isProd = process.env.NODE_ENV === "production";
+export const bundler: Bundler =
+  // process.env.DOCS_BUNDLER === "webpack"
+  isProd
+    ? webpackBundler({
+        postcss: {
+          postcssOptions: {
+            plugins: [
+              require("tailwindcss"),
+              require("autoprefixer"),
+              require("cssnano")({
+                preset: "default"
+              })
+            ]
+          }
+        }
+      })
+    : viteBundler({
+        viteOptions: {
+          css: {
+            postcss: {
+              plugins: [require("tailwindcss"), require("autoprefixer")]
+            }
+          }
+        }
+      });

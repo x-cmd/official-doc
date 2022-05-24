@@ -1,21 +1,3 @@
-<template>
-  <div class="terminal-btn-group-container">
-    <div class="symbol green bold" @click="left">❮</div>
-    <div class="terminal-btn-group">
-      <button
-        v-for="(demoInfo, index) in termianlContainer"
-        :key="index"
-        class="btn"
-        :class="{ active: activeIndex === index }"
-        @click="$emit('toggle-active', index)"
-      >
-        {{ demoInfo.textBtn }}
-      </button>
-    </div>
-    <div class="symbol green bold" @click="right">❯</div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import type { PropType } from "vue";
 import type { TerminalInfoType } from "./shared";
@@ -45,9 +27,27 @@ const right = (): void => {
   });
 };
 
-const getSiteWidth = () => {
+const getSiteWidth = (): number => {
   const container = document.querySelector<HTMLElement>(".terminal-btn-group");
   return container ? container.offsetWidth : 0;
 };
 </script>
+
+<template>
+  <div class="terminal-btn-group-container">
+    <div class="symbol green bold" @click="left">❮</div>
+    <div class="terminal-btn-group">
+      <button
+        v-for="(demoInfo, index) in termianlContainer"
+        :key="index"
+        class="btn"
+        :class="{ active: activeIndex === index }"
+        @click="$emit('toggle-active', index)"
+      >
+        {{ demoInfo.textBtn }}
+      </button>
+    </div>
+    <div class="symbol green bold" @click="right">❯</div>
+  </div>
+</template>
 <style lang="scss" scoped></style>

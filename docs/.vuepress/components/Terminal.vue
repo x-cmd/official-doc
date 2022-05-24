@@ -1,38 +1,3 @@
-<template>
-  <Transition name="fade">
-    <div
-      v-if="isTerminalVisible"
-      :class="type"
-      class="terminal"
-      @mouseenter="clearSwiper"
-      @mouseleave="startSwiper"
-      @touchstart="clearSwiper"
-    >
-      <div class="switch-btns">
-        <span class="switch-btn"></span>
-        <span class="switch-btn"></span>
-        <span class="switch-btn"></span>
-        <RouterLink v-if="isHomeTerminal" class="switch-link" :to="infoLink">
-          <VIcon title="more infomation" label="more infomation" name="morehoriz" />
-        </RouterLink>
-      </div>
-      <TerminalCommand
-        v-for="terminalCommand in terminalCommands"
-        :key="terminalCommand.key"
-        :terminal-command="terminalCommand"
-      />
-    </div>
-  </Transition>
-  <Transition name="fade">
-    <TermianlButtonGroup
-      v-if="isHomeTerminal"
-      :active-index="activeIndex"
-      :termianl-container="termianlContainer"
-      @toggle-active="toggleActive"
-    />
-  </Transition>
-</template>
-
 <script setup lang="ts">
 import { isArray } from "@vuepress/shared";
 import { computed, onBeforeUnmount, onMounted, ref, toRefs } from "vue";
@@ -79,7 +44,11 @@ const startSwiper = (): void => {
 };
 
 const clearSwiper = (): void => {
-  if (!isHomeTerminal.value || termianlSwiperTimer.value === 0 || termianlSwiperTimer.value === undefined)
+  if (
+    !isHomeTerminal.value ||
+    termianlSwiperTimer.value === 0 ||
+    termianlSwiperTimer.value === undefined
+  )
     return;
   window.clearTimeout(termianlSwiperTimer.value);
   termianlSwiperTimer.value = undefined;
@@ -105,4 +74,39 @@ onBeforeUnmount(() => {
   clearSwiper();
 });
 </script>
+
+<template>
+  <Transition name="fade">
+    <div
+      v-if="isTerminalVisible"
+      :class="type"
+      class="terminal"
+      @mouseenter="clearSwiper"
+      @mouseleave="startSwiper"
+      @touchstart="clearSwiper"
+    >
+      <div class="switch-btns">
+        <span class="switch-btn"></span>
+        <span class="switch-btn"></span>
+        <span class="switch-btn"></span>
+        <RouterLink v-if="isHomeTerminal" class="switch-link" :to="infoLink">
+          <VIcon title="more infomation" label="more infomation" name="morehoriz" />
+        </RouterLink>
+      </div>
+      <TerminalCommand
+        v-for="terminalCommand in terminalCommands"
+        :key="terminalCommand.key"
+        :terminal-command="terminalCommand"
+      />
+    </div>
+  </Transition>
+  <Transition name="fade">
+    <TermianlButtonGroup
+      v-if="isHomeTerminal"
+      :active-index="activeIndex"
+      :termianl-container="termianlContainer"
+      @toggle-active="toggleActive"
+    />
+  </Transition>
+</template>
 <style lang="scss" scoped></style>

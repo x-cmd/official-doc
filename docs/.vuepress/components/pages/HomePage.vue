@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import DownloadLink from "../DownloadLink.vue";
+import Terminal from "../Terminal.vue";
+</script>
+
 <template>
   <DownloadLink />
   <Terminal type="home-terminal" />
@@ -21,9 +26,4 @@
     </div>
   </footer>
 </template>
-
-<script setup lang="ts">
-import DownloadLink from "../DownloadLink.vue";
-import Terminal from "../Terminal.vue";
-</script>
 <style lang="scss" scoped></style>
