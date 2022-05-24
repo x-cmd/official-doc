@@ -1,4 +1,1 @@
-# shellcheck shell=bash disable=SC1091,SC2034 #xsh
-
-# Section: Main
-xrc dev && dev mod "$@"
+x yanfa mod "$@"
