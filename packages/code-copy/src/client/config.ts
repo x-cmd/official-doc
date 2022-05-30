@@ -1,6 +1,6 @@
 import { defineClientConfig } from "@vuepress/client";
-import { setupCopyCode } from "./composables/codeCopy";
 import CodeCopy from "./composables/CodeCopy.vue";
+import { setupCopyCode } from "./composables/useCodeCopy";
 
 import "./style/main.css";
 
