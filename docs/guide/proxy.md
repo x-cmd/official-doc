@@ -14,7 +14,7 @@ sitemap:
 
 ## 概要
 
-==x proxy [ \<modules\> ...](#支持镜像源模块) [[ subcommand ]...](#子命令)== ——  管理命令行镜像源
+<p class="x-desc">x proxy [ modules ]... [ subcommand ]...  ——  管理命令行镜像源</p>
 
 ## 描述
 

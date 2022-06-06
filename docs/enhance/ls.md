@@ -13,7 +13,7 @@ sitemap:
 <Terminal :termIndex="0"/>
 
 ## 概要
-==x ls [[ OPTION ]...](#命令选项) [ Folder ]...==  ——  增强输出文件列表
+<p class="x-desc">x ls [ OPTION ]... [ Folder ]...  ——  增强输出文件列表</p>
 
 > 利用 x-cmd 静态编译模块，对 [exa](https://github.com/ogham/exa) 进行分发托管，达到在不同环境下的快速安装使用。
 

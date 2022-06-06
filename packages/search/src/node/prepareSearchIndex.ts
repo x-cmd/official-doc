@@ -40,6 +40,7 @@ export const prepareSearchIndex = async ({
   const pages = app.pages.filter(isSearchable);
   pages.forEach((page) => {
     const $ = cheerio.load(page.contentRendered);
+
     if ($(".x-desc").text() !== "") {
       const head = $(".x-desc").prev("h2");
       const result = genSearchIndexItem(page.path, page.pathLocale);

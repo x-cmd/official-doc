@@ -14,7 +14,7 @@ sitemap:
 
 ## 概要
 
-==x env [[ subcommand ]...](#子命令) [\<environment name\>]== ——  环境版本管理器
+<p class="x-desc">x env [ subcommand ]... [ environment name ]...  ——  环境版本管理器</p>
 
 ## 描述
 

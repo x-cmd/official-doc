@@ -14,7 +14,8 @@ sitemap:
 
 ## 概要
 
-==x theme [[ subcommand ]...](#子命令)== ——  管理命令行主题
+<p class="x-desc">x theme [ subcommand ]...  ——  管理命令行主题</p>
+
 
 ## 描述
 

@@ -105,22 +105,3 @@ export const genPwaPopupPlugin = pwaPopupPlugin({
 export const googleSEOPlugin = googleAnalyticsPlugin({
   id: "G-2FRCSZQS1X"
 });
-
-/**
- * @description: Vuepress Search Plugin
- */
-// export const vuepressSearchPlugin: PluginConfig = [
-//   "@vuepress/plugin-search",
-//   {
-//     // 排除首页
-//     isSearchable: (page: Page) => page.path !== "/",
-//     locales: {
-//       "/zh/": {
-//         placeholder: "搜索"
-//       },
-//       "/": {
-//         placeholder: "Search"
-//       }
-//     }
-//   } as unknown as SearchPluginOptions
-// ];

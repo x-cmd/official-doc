@@ -14,11 +14,11 @@ sitemap:
 
 ## 概要
 
-==x advise man[[ subcommand ]...](#子命令) [\<command name\>]== ——  命令行补全管理工具
+<p class=".">x advise man [subcommand ]... [command name]  ——  命令行补全管理工具(</p>
 
 ## 描述
 
-`x advise` 命令行补全管理工具，在交互性强的 `Shell` 比如 `Zsh` 和 `Bash`中允许用户在使用命令的时候使用 `Tab ↹` 键来填充命令的剩余部分或者给予提示信息。
+`x advise` 命令行补全管理工具，在交互性强的 `Shell` 比如 `Zsh` 和 `Bash`中允许用户在使用命令的时候使用 <kbd>Tab ↹</kbd> 键来填充命令的剩余部分或者给予提示信息。
 
 - **补全管理**：提供一站式的命令的补全管理，告别配置困难。
 - **按需加载**：按需加载对应命令的补全。

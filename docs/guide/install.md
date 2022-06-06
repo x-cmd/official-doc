@@ -14,7 +14,7 @@ sitemap:
 
 ## 概要
 
-==x install [[ subcommand ]...](#子命令) [\<module\>]== ——  命令行工具/插件下载工具
+<p class="x-desc">x install [ subcommand ]... [ module name ]...  ——  命令行工具/插件下载工具</p>
 
 ## 描述
 

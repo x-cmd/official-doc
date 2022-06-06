@@ -14,7 +14,7 @@ sitemap:
 
 ## 概要
 
-==x tldr [[ subcommand ]...](#子命令) [\<module\>]== ——  简化版本的命令说明手册
+<p class="x-desc">x tldr [ subcommand ]... [ module ]  ——  简化版本的命令说明手册</p>
 
 ## 描述
 

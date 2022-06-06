@@ -126,8 +126,7 @@ export const SearchBox = defineComponent({
               }
             }
           }),
-          // showSuggestions.value &&
-          true &&
+          showSuggestions.value &&
             h(
               "ul",
               {
