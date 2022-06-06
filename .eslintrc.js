@@ -41,6 +41,12 @@ module.exports = {
         // disable for setup script
         "@typescript-eslint/no-unused-vars": "off"
       }
+    },
+    {
+      files: ["**/client/config.ts"],
+      rules: {
+        "vue/match-component-file-name": "off"
+      }
     }
   ]
 };

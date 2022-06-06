@@ -1,5 +1,6 @@
 import { searchConsolePlugin } from "@x-cmd/vuepress-plugin-china-seo";
 import { codeCopyPlugin } from "@x-cmd/vuepress-plugin-code-copy";
+import { searchPlugin } from "@x-cmd/vuepress-plugin-search";
 import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 
 /**
@@ -20,7 +21,36 @@ export const chinaSEOPlugin = searchConsolePlugin({
 });
 
 /**
- * @description: sitemap Plugin
+ * @description: Docs Search Plugin
+ * @from prepareSearchIndex
+ */
+export const docsSearchPlugin = searchPlugin({
+  hotKeys: [
+    {
+      key: "k",
+      ctrl: true
+    },
+    {
+      key: "k",
+      command: true
+    }
+  ],
+  locales: {
+    "/": {
+      placeholder: "搜索"
+    }
+  },
+  // options
+  isSearchable: (page) => {
+    return !(page.frontmatter.home || page.frontmatter.layout === "404");
+  },
+  getExtraFields: (page) => {
+    return (page.frontmatter.tags as string[]) ?? [];
+  }
+});
+
+/**
+ * @description: Sitemap Plugin
  */
 export const genSitemapPlugin = sitemapPlugin({
   hostname: "https://www.x-cmd.com",

@@ -1,6 +1,6 @@
 ---
 title: x env
-description: x env It help you manage, download, install, remove, and quickly switch versions of common environments (eg:python, node, go, java, etc.).
+description: x env 可以帮助你管理，下载，安装，移除，快速切换常见的环境(例如：python,node,go,java等)版本
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,47 +12,47 @@ sitemap:
 
 <Terminal :termIndex="9"/>
 
-## Synopsis
+## 概要
 
-==x env [[ subcommand ]...](#subcommand) [\<environment name\>]== ——  Environment version manager
+==x env [[ subcommand ]...](#子命令) [\<environment name\>]== ——  环境版本管理器
 
-## Description
+## 描述
 
-`x env` The environment version manager can help you manage, download, install, remove, and quickly switch versions of common environments (eg: python, node, go, java, etc.).
+`x env` 环境版本管理器，可以帮助你管理，下载，安装，移除，快速切换常见的环境(例如：python,node,go,java等)版本。
 
 
-## Subcommand
+## 子命令
 
 ls \<environment name\>
-:  List all installed environments
+:  显示所有已安装的环境
 
 download \<environment name\>
-:  Download environment
+:  下载环境
 
 install \<environment name\>
-:  Install environment
+:  安装环境
 
 uninstall \<environment name\>
-:  Remove environment
+:  移除环境
 
 try \<environment name\>
-:  Set environment version in this shell session
+:  在此shell会话中设置环境版本
 
 use \<environment name\>
-:  Set global environment version
+:  设置全局环境版本
 
 current \<environment name\>
-:  Show current environment
+:  显示当前环境
 
 which \<environment name\>
-:  Display path of environment installed
+:  已安装环境的显示路径
 
 exec \<environment name\>
-:  Run an executable with the selected candidates version
+:  使用选定的候选版本运行可执行文件
 
-## Supported environment
+## 支持的环境
 
-- environment
+- 环境
     - python
     - node
     - java
@@ -66,5 +66,4 @@ exec \<environment name\>
     - perl
     - ruby
     - rust
-
 

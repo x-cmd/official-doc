@@ -12,20 +12,20 @@ strong {
 }
 table {
   padding: 0.85rem;
-
 }
 thead {
-  box-shadow: 3px 0px 6px var(--c-box-shadow-color),-3px -3px 6px var(--c-box-shadow-color-diff);
+  box-shadow: 3px 0px 6px var(--c-box-shadow-color), -3px -3px 6px var(--c-box-shadow-color-diff);
 }
 tbody {
-  box-shadow: 3px 3px 6px var(--c-box-shadow-color),-3px -0px 6px var(--c-box-shadow-color-diff);
+  box-shadow: 3px 3px 6px var(--c-box-shadow-color), -3px -0px 6px var(--c-box-shadow-color-diff);
 }
 tr {
   border: none;
   border-right: 1px solid var(--c-border-dark);
   border-bottom: 1px solid var(--c-border-dark);
 }
-th, td {
+th,
+td {
   border: none;
   padding: 0.6em 1em;
   border-right: 1px solid var(--c-border-dark);
@@ -48,7 +48,7 @@ dd {
   margin-inline-start: 3rem;
 }
 
-mark {
+.page mark {
   margin: 0;
   padding: 0 1.1rem;
   border-radius: 7.5px;
@@ -62,4 +62,3 @@ mark {
     color: var(--c-text-hightlight);
   }
 }
-

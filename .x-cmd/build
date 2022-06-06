@@ -6,7 +6,7 @@ WEB_SITE='www.x-cmd.com'
 WORK_DIR="$(x wsroot)"
 COMMIT_ID="$(git rev-parse --short HEAD)"
 BRANCH_INFO="$(git symbolic-ref -q --short HEAD 2> /dev/null || git describe --tags --exact-match 2> /dev/null)"
-DIST_PATH=$WORK_DIR/dist
+DIST_PATH=$WORK_DIR/docs/dist
 TEMPLATE_PATH=$WORK_DIR/templates
 PACKAGE_VERSION=template-${BRANCH_INFO}-${COMMIT_ID}
 DOC_SEARCH_CONFIG_FILE=$WORK_DIR/docs/.vuepress/configs/docSearch/docSearchConfig.json
@@ -54,11 +54,11 @@ build_docs() {
 }
 
 build_clean() {
-	npx lerna run clean
+	pnpm clean
 }
 
 build_plugin() {
-	npx lerna run build
+	pnpm build
 }
 
 build_all() {
@@ -69,16 +69,8 @@ build_all() {
 
 # Section: Main
 case "${1}" in
-	plugin) 						build_plugin 								;;
-	clean) 							build_clean 								;;
-	search|docSearch)				build_docSearch && is_need_search_collect   ;;
-	doc|*)							build_doc									;;
-esac
-
-# Section: Main
-case "${1}" in
     docs)   	build_docs      ;;
-    plugin)   build_plugin    ;;
+    plugin)     build_plugin    ;;
     clean)  	build_clean     ;;
     all)    	build_all       ;;
     *)      	build           ;;

@@ -1,4 +1,3 @@
-import type { MarkdownOptions } from "@vuepress/markdown";
 import type { DefaultThemeOptions, HeadConfig, SiteLocaleConfig } from "vuepress";
 import * as navbar from "./navbar";
 import * as sidebar from "./sidebar";
@@ -9,11 +8,6 @@ export const base = "/";
 
 export const locales: SiteLocaleConfig = {
   "/": {
-    lang: "en-US",
-    title: `x-cmd`,
-    description: "X-cmd is a fast, powerful terminal tool"
-  },
-  "/zh/": {
     lang: "zh-CN",
     title: `x-cmd`,
     description: "x-cmd 一个快速，跨平台功能强大的终端工具"
@@ -64,11 +58,6 @@ export const themeConfig: DefaultThemeOptions= {
   backToHome: "> cd $HOME",
   locales: {
     "/": {
-      navbar: navbar.en,
-      sidebar: sidebar.en,
-      editLinkText: "Edit this page on GitHub"
-    },
-    "/zh/": {
       // navbar
       navbar: navbar.zh,
       selectLanguageName: "简体中文",
@@ -107,7 +96,7 @@ export const themeConfig: DefaultThemeOptions= {
   }
 };
 
-export const markdownConfig: MarkdownOptions = {
+export const markdownConfig = {
   code: {
     lineNumbers: false
   }

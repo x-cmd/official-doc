@@ -1,6 +1,6 @@
 ---
-title: Document
-description: x-cmd —— a lightweight, cross-platform, powerful command line tools | x-cmd introduction and use tutorial, including terminal command line topics, completion, proxy, common command description manual search.
+title: 介绍
+description: x-cmd —— 轻量级，跨平台，功能强大的命令行工具 | x-cmd的介绍信息以及使用教程，内含终端命令行主题，补全，代理，常用命令说明手册查找。
 sidebarDepth: 0
 lastUpdated: true
 sitemap:
@@ -22,26 +22,26 @@ sitemap:
 </p>
 
 <p align="center">
-<a href="https://x-cmd.com">Official Website</a>
+<a href="https://x-cmd.com">官网</a>
   ·
-  <a href="#install">Install</a>
+  <a href="#安装">安装</a>
   ·
-  <a href="https://x-cmd.com/guide/">Document</a>
+  <a href="https://x-cmd.com/guide/">文档</a>
 </p>
 
 
 **X is everything**
 
-**Lightweight, cross-platform, powerful command line tool<br>
-Make the command line unlimited!**
+**轻量级、跨平台，功能强大的命令行工具<br>
+让命令行有无限可能！**
 
-- **Lightweight**：The x-cmd installation package does not exceed 300 KB.
-- **Compatibility**：x-cmd is POSIX compliant and can be used in common shells.
-- **Semantization**：Subcommands are semantic in object design and easy to remember how to use.
-- **Interactions**：Terminal topic? Command completion? Come and explore [x theme](/en/guide/theme.html) | [x advise](/en/guide/advise.html).
-- **Strengthen the terminal**：x-cmd hosted distribution of common tools in the community, using command line tools to say goodbye to download problems.
+- **轻量化**：x-cmd 的安装包不超过 300 KB。
+- **兼容性**：x-cmd 符合POSIX标准，可以在常见的shell当中使用。
+- **语义化**：子命令符合对象设计语义化，轻松记住使用方法。
+- **交互强**：终端主题？命令补全？快来探索 [x theme](/guide/theme.html) | [x advise](/guide/advise.html)。
+- **增强终端**：x-cmd 对社区中常用的工具进行的托管分发，使用命令行工具告别下载问题。
 
-## Install
+## 安装
 
 :::: code-group
 ::: code-group-item curl
@@ -56,6 +56,6 @@ eval "$(wget -qO- "https://get.x-cmd.com")"
 :::
 ::::
 
-## Copyright
+## 版权
 Copyright © 2020-present, Li Junhao (l@x-cmd.com).<br>
 The source code is licensed under **GPL v3**. License is available [here](https://github.com/x-cmd/x-cmd/blob/main/LICENSE).

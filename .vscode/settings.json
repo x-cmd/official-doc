@@ -63,4 +63,5 @@
     "tsconfig.json": "tsconfig.*",
     "tailwind.config.js": "postcss*",
   },
+  "volar.autoCompleteRefs": true,
 }

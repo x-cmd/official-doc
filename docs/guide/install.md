@@ -1,6 +1,6 @@
 ---
 title: x install
-description: x install | Terminal software, command line tool download, terminal tool, terminal plug-in download tool
+description: x install | 终端软件，命令行工具下载，终端工具，终端插件下载工具
 sidebarDepth: 1
 lastUpdated: true
 sitemap:
@@ -12,26 +12,26 @@ sitemap:
 
 <Terminal :termIndex="4"/>
 
-## Synopsis
+## 概要
 
-==x install [[ subcommand ]...](#subcommand) [\<module\>]== ——  Command line tool/Plug-in download tool
+==x install [[ subcommand ]...](#子命令) [\<module\>]== ——  命令行工具/插件下载工具
 
-## Description
+## 描述
 
-`x install` command integrates common command line tools. You can download the command line plug-in.
+`x install` 命令集成了常用的命令行工具，命令行插件官方下载方式。
 
-- **Convenient and quick**：Through command interaction, you can quickly obtain common command line tools and official download methods of command line plug-ins.
+- **方便快捷**：通过命令的交互，可快速获取常用的命令行工具，命令行插件官方下载方式。
 
-## Subcommand
+## 子命令
 
 ls
-:  List all software
+:  列出所有的可下载模块列表
 
 run \<module name\> ,  \<module name\>
-:  Run software installation command
+:  提供交互式的下载模块的会话
 
 get
-:  Get software installation command
+:  输出模块的下载命令
 
 update
-:  Update the list of downloaded modules
+:  更新下载模块列表

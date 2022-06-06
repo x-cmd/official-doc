@@ -13,7 +13,7 @@ export default defineUserConfig({
     pagePlugins.googleSEOPlugin,
     pagePlugins.chinaSEOPlugin,
     pagePlugins.sassPalettePlugin,
-    pagePlugins.algoliaSearchPlugin,
+    pagePlugins.docsSearchPlugin,
     pagePlugins.genCodeCopyPlugin,
     pagePlugins.genPwaPlugin,
     pagePlugins.genPwaPopupPlugin,

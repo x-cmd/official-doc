@@ -6,20 +6,20 @@ export const zh: SidebarConfig = [
     collapsible: false,
     // prettier-ignore
     children: [
-      "/zh/guide/README.md",
+      "/guide/README.md",
     ]
   },
   {
     text: "基础命令",
     collapsible: false,
     children: [
-      "/zh/guide/theme.md",
-      "/zh/guide/proxy.md",
-      "/zh/guide/install.md",
-      "/zh/guide/tldr.md",
-      "/zh/guide/advise.md",
-      "/zh/guide/env.md",
-      "/zh/guide/workspace.md"
+      "/guide/theme.md",
+      "/guide/proxy.md",
+      "/guide/install.md",
+      "/guide/tldr.md",
+      "/guide/advise.md",
+      "/guide/env.md",
+      "/guide/workspace.md"
     ]
   },
   {
@@ -27,7 +27,7 @@ export const zh: SidebarConfig = [
     collapsible: false,
     // prettier-ignore
     children: [
-      "/zh/enhance/ls.md",
+      "/enhance/ls.md",
     ]
   }
 ];

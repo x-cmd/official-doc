@@ -7,7 +7,7 @@ export * from "../shared";
 export const codeCopyPlugin =
   (options: ClipboardOptions): Plugin =>
   () => ({
-    name: "vuepress-plugin-clipboard",
+    name: "@x-cmd/vuepress-plugin-code-copy",
     multiple: false,
     define: {
       __CODE_CLIPBOARD_OPTIONS__: options
